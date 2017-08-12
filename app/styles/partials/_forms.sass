@@ -5,6 +5,27 @@
 /*----------- Form sryle *
  ------------------------------------------------------------*/
 
+.placeholder 
+  color: #222222 
+
+*:focus::-moz-placeholder 
+  color: transparent !important 
+
+*[autofocus]::-moz-placeholder:focus 
+  color: #000!important 
+
+*:focus:-moz-placeholder 
+  color: transparent !important 
+
+*[autofocus]:-moz-placeholder:focus 
+  color: #000!important 
+
+*:focus::-webkit-input-placeholder 
+  color: transparent !important 
+
+*[autofocus]::-webkit-input-placeholder 
+  color: #000!important 
+
 input, textarea
   +placeholder-color(#000)
   +border-radius(0px)
@@ -13,7 +34,7 @@ input, textarea
   height: 50px
   position: relative
   outline: none
-  font: 14px 'PT Sans', Arial, sans-serif
+  font: 14px $site-font-family
   color: #000
   background-color: #fff
   border: 1px solid #e0e0e0

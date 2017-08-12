@@ -1,0 +1,172 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      //= template/header.jade
+
+      section.middle
+        .container
+          
+          .row
+            .col-sm-3.col-md-6.col-lg-3
+
+              .main-banner
+                .owl-carousel.owl-banner
+                  .item
+                    img(src="images/banner-main-page.jpg", alt="banner-image")
+
+                    .carousel-caption
+                      .carousel-title Станьте экспертом в мире покупок на aliexpress!
+                      .carousel-text Обзоры товаров, интересные статьи, информация о продавцах и многое другое!
+                      a(href="#!").btn Регистрация
+
+              .block
+                .block__header
+                  .section-title Новые статьи
+                  a(href="#!").btn.btn-transparent Все статьи
+                  
+                
+                .block__body
+
+                  ul.article-list.article-list--hirozintal
+                    li
+                      article.article
+                        a(href="#!").article__image
+                          img(src="pictures/article-233x175-1.jpg", alt="article-image")
+                        .article__body
+                          .article__title
+                            a(href="#!").article__link Самый популярный запрос на АлиЭкспресс – спиннеры
+                          .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей.
+                        .article__footer
+                          .article__item
+                            .article__publicated 10.07.2017
+                          .article__item
+                            .article__view 655
+                            .article__comments 23
+
+                    li
+                      article.article
+                        a(href="#!").article__image
+                          img(src="pictures/article-233x175-2.jpg", alt="article-image")
+
+                        .article__body
+
+                          .article__title
+                            a(href="#!").article__link АлиЭкспресс существенно снижает партнерские выплаты
+                          .article__text С этого дня за оплаченные и завершенные заказы будет начисляться не более 6.5%
+                        .article__footer
+                          .article__item
+                            .article__publicated 9.07.2017
+                          .article__item
+                            .article__view 144
+                            .article__comments 13
+
+                    li
+                      article.article
+                        a(href="#!").article__image
+                          img(src="pictures/article-233x175-3.jpg", alt="article-image")
+                        .article__body
+                          .article__title
+                            a(href="#!").article__link Заказываем товар на АлиЭкспресс посылкой до востребования
+                          .article__text Появилась мода совершать покупки и заказывать отправку товара посылкой до востребования.
+                        .article__footer
+                          .article__item
+                            .article__publicated 8.07.2017
+                          .article__item
+                            .article__view 456
+                            .article__comments 33
+  
+              .block
+                .block__header
+                  .section-title Обзоры товаров
+                  a(href="#!").btn.btn-transparent Добавить обзор
+                
+                .block__body
+                  ul.article-list
+                    li
+                      article.article
+                        a(href="#!").article__image
+                          img(src="pictures/article-822x274-1.jpg", alt="article-image")
+                          .favorite
+
+                        .article__body
+                          .article__title
+                            a(href="#!").article__link Как я купила свое первое платье на Али-экспресс
+
+                          .article__text Вот это платье я захотела купить, благо, в горящих товарах оно продавалось за 459 рублей. А вот, что пришло: Отшито сикось-накось, швы сборят. Отдельное внимание прошу обратить на то, что прямо по переду, по подолу идет кошмарный грубый шов.
+                        .article__footer
+
+                          .article__item
+                            .article__owner-avatar
+                              img(src="pictures/article-avatar.png", alt="article-avatar")
+                            .article__owner-name Евгения Большова
+                            .article__publicated 10.07.2017
+
+                          .article__item
+                            .article__comments 13
+                            .article__view 144
+
+                    li
+                      article.article
+                        a(href="#!").article__image
+                          img(src="pictures/article-822x274-2.jpg", alt="article-image")
+                          .favorite
+
+                        .article__body
+                          .article__title
+                            a(href="#!").article__link Xiaomi Mi Band 1S – отличный и недорогой фитнес-браслет 
+
+                          .article__text Предыдущая модель получила заслуженную популярность среди покупателей во многих странах в мире, и во многом благодаря простоте использования и низкой стоимости. Основным отличием новой модели с приставкой «1S» считается наличие оптического пульсометра, при этом ценник на браслет хоть.
+                        .article__footer
+
+                          .article__item
+                            .article__owner-avatar
+                              img(src="pictures/article-avatar.png", alt="article-avatar")
+                            .article__owner-name Евгения Большова
+                            .article__publicated 10.07.2017
+
+                          .article__item
+                            .article__comments 13
+                            .article__view 144
+
+                    li
+                      article.article
+                        a(href="#!").article__image
+                          img(src="pictures/article-822x274-3.jpg", alt="article-image")
+                          .favorite
+
+                        .article__body
+                          .article__title
+                            a(href="#!").article__link Xiaomi Redmi Note 3 – мощный и доступный смартфон
+
+                          .article__text Прошло всего несколько дней с момента поступления в свободную продажу первого обладающего сканером отпечатков пальцев смартфона известного китайского вендора Xiaomi. До этого десятки тысяч покупателей сделали предзаказы. Прошло всего несколько дней с момента поступления в свободную продажу первого обладающего сканером отпечатков пальцев смартфона известного китайского вендора Xiaomi. До этого десятки тысяч покупателей сделали предзаказы. 
+                        .article__footer
+
+                          .article__item
+                            .article__owner-avatar
+                              img(src="pictures/article-avatar.png", alt="article-avatar")
+                            .article__owner-name Евгения Большова
+                            .article__publicated 10.07.2017
+
+                          .article__item
+                            .article__comments 13
+                            .article__view 144
+                  
+                  .show-more 
+                    a(href="#!") Открыть все обзоры
+
+
+
+
+
+
+            .col-sm-3.col-md-6.col-lg-2
+
+
+    //= template/footer.jade
+
+    //= template/scripts.jade
