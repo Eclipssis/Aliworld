@@ -8,14 +8,35 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
       //= template/header.jade
 
-      section.middle
+      section.middle.middle--index
         .container
           
           .row
-            .col-sm-3.col-md-6.col-lg-3
+            .col-sm-5.col-md-3.col-lg-3.col-vlg-3.first-vlg
 
               .main-banner
                 .owl-carousel.owl-banner
+                  .item
+                    img(src="images/banner-main-page.jpg", alt="banner-image")
+
+                    .carousel-caption
+                      .carousel-title Станьте экспертом в мире покупок на aliexpress!
+                      .carousel-text Обзоры товаров, интересные статьи, информация о продавцах и многое другое!
+                      a(href="#!").btn Регистрация
+                  .item
+                    img(src="images/banner-main-page.jpg", alt="banner-image")
+
+                    .carousel-caption
+                      .carousel-title Станьте экспертом в мире покупок на aliexpress!
+                      .carousel-text Обзоры товаров, интересные статьи, информация о продавцах и многое другое!
+                      a(href="#!").btn Регистрация
+                  .item
+                    img(src="images/banner-main-page.jpg", alt="banner-image")
+
+                    .carousel-caption
+                      .carousel-title Станьте экспертом в мире покупок на aliexpress!
+                      .carousel-text Обзоры товаров, интересные статьи, информация о продавцах и многое другое!
+                      a(href="#!").btn Регистрация
                   .item
                     img(src="images/banner-main-page.jpg", alt="banner-image")
 
@@ -27,7 +48,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               .block
                 .block__header
                   .section-title Новые статьи
-                  a(href="#!").btn.btn-transparent Все статьи
+                  a(href="#!").btn.btn-medium.btn-transparent Все статьи
                   
                 
                 .block__body
@@ -37,6 +58,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                       article.article
                         a(href="#!").article__image
                           img(src="pictures/article-233x175-1.jpg", alt="article-image")
+                          .article__favorite.article__favorite--small
+
                         .article__body
                           .article__title
                             a(href="#!").article__link Самый популярный запрос на АлиЭкспресс – спиннеры
@@ -52,6 +75,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                       article.article
                         a(href="#!").article__image
                           img(src="pictures/article-233x175-2.jpg", alt="article-image")
+                          .article__favorite.article__favorite--small.active
 
                         .article__body
 
@@ -69,6 +93,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                       article.article
                         a(href="#!").article__image
                           img(src="pictures/article-233x175-3.jpg", alt="article-image")
+                          .article__favorite.article__favorite--small
                         .article__body
                           .article__title
                             a(href="#!").article__link Заказываем товар на АлиЭкспресс посылкой до востребования
@@ -83,7 +108,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               .block
                 .block__header
                   .section-title Обзоры товаров
-                  a(href="#!").btn.btn-transparent Добавить обзор
+                  a(href="#!").btn.btn-medium.btn-transparent Добавить обзор
                 
                 .block__body
                   ul.article-list
@@ -91,7 +116,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                       article.article
                         a(href="#!").article__image
                           img(src="pictures/article-822x274-1.jpg", alt="article-image")
-                          .favorite
+                          .article__favorite.active
 
                         .article__body
                           .article__title
@@ -114,7 +139,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                       article.article
                         a(href="#!").article__image
                           img(src="pictures/article-822x274-2.jpg", alt="article-image")
-                          .favorite
+                          .article__favorite
 
                         .article__body
                           .article__title
@@ -137,7 +162,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                       article.article
                         a(href="#!").article__image
                           img(src="pictures/article-822x274-3.jpg", alt="article-image")
-                          .favorite
+                          .article__favorite
 
                         .article__body
                           .article__title
@@ -159,13 +184,297 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   .show-more 
                     a(href="#!") Открыть все обзоры
 
+            .col-sm-5.col-md-3.col-lg-2.col-vlg-1
+              .mini-banner.mini-banner--blue
+                .mini-banner__icon.icon-tracking
+                .mini-banner__title Трекинг посылок
+                .mini-banner__text Введите номер отправления:
+                form.tracking-form
+                  input(type="text").tracking-form__input
+                  button(type="submit").tracking-form__submit
 
+              .block.block--transparent.news-preview
+                .block__header
+                  .section-title Новости
+                  a(href="#!").btn.btn-medium.btn-transparent Все новости
 
+                .block__body
 
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-1.jpg", alt="article-image")
+                      .favorite
 
+                    .article__body
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой
 
-            .col-sm-3.col-md-6.col-lg-2
+                    .article__footer
+                      .article__item
+                        .article__publicated 10.07.2017
 
+                      .article__item
+                        .article__view 33
+                        .article__comments 456
+
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-2.jpg", alt="article-image")
+                      .favorite
+
+                    .article__body
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
+
+                    .article__footer
+                      .article__item
+                        .article__publicated 07.07.2017
+
+                      .article__item
+                        .article__view 33
+                        .article__comments 456
+
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-3.jpg", alt="article-image")
+                      .favorite
+
+                    .article__body
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                    .article__footer
+                      .article__item
+                        .article__publicated 06.07.2017
+
+                      .article__item
+                        .article__view 33
+                        .article__comments 456
+
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-4.jpg", alt="article-image")
+                      .favorite
+
+                    .article__body
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
+
+                    .article__footer
+                      .article__item
+                        .article__publicated 06.07.2017
+
+                      .article__item
+                        .article__view 33
+                        .article__comments 456
+
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-5.jpg", alt="article-image")
+                      .favorite
+
+                    .article__body
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                    .article__footer
+                      .article__item
+                        .article__publicated 16.07.2017
+
+                      .article__item
+                        .article__view 33
+                        .article__comments 456
+
+                  a(href="#!").btn.btn-max 
+                    span.icon-lamp
+                    | Предложить новость
+
+              .mini-banner.mini-banner--green
+                .mini-banner__icon.icon-tracking
+                .mini-banner__title Рассылка новостей
+                .mini-banner__text Будьте в курсе обновлений!
+                form.tracking-form
+                  input(type="text" placeholder="Ваш e-mail...").tracking-form__input
+                  button(type="submit").tracking-form__submit     
+            
+            .col-sm-5.col-md-2.col-lg-2.col-vlg-1.first-vlg
+              .mini-banner.mini-banner--red
+                .mini-banner__icon.icon-sadman
+                .mini-banner__title Жалобы
+                .mini-banner__text Магазины без доверия
+                a(href="#!").btn.btn-max Добавить жалобу
+              
+              .block
+                .article-list.article-list--small
+                  li
+                    article.article
+                      .article__body
+                        .article__title.article__title--small
+                          a(href="#!").article__link.article__link--small Lenovo Authorized Store 
+
+                        .rating-wrap
+                          .rating-value Рейтинг: 1056
+                          ul.rating
+                            li.active(style="width: 40%")
+                              span.star1
+                            li
+                              span.star2
+                            li
+                              span.star3
+                            li
+                              span.star4
+                            li
+                              span.star5
+
+                        .article__text.article__text--small Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.
+                        .article__publicated 10.07.2017
+
+                      .article__footer.article__footer--margin-top-10
+                        .article__item
+                          a(href="#!").btn.btn-transparent.btn-medium Далее
+
+                        .article__item
+                          .article__view 450
+                          .article__comments 33
+                    
+                  li
+                    article.article
+                      .article__body
+                        .article__title.article__title--small
+                          a(href="#!").article__link.article__link--small GoTop Smartphone 
+
+                        .rating-wrap
+                          .rating-value Рейтинг: 1056
+                          ul.rating
+                            li.active(style="width: 20%")
+                              span.star1
+                            li
+                              span.star2
+                            li
+                              span.star3
+                            li
+                              span.star4
+                            li
+                              span.star5
+
+                        .article__text.article__text--small Вообщем заказывал я у этого продавца два телефона в стоимость 12 тыс за единицу , ну и в итоге один из них сломался при бережном использовании. Возмещать как то или идти на...
+                        .article__publicated 15.07.2017
+
+                      .article__footer.article__footer--margin-top-10
+                        .article__item
+                          a(href="#!").btn.btn-transparent.btn-medium Далее
+
+                        .article__item
+                          .article__view 350
+                          .article__comments 11
+
+                  li
+                    article.article
+                      .article__body
+                        .article__title.article__title--small
+                          a(href="#!").article__link.article__link--small GoTop Smartphone 
+
+                        .rating-wrap
+                          .rating-value Рейтинг: 1056
+                          ul.rating
+                            li.active(style="width: 100%")
+                              span.star1
+                            li
+                              span.star2
+                            li
+                              span.star3
+                            li
+                              span.star4
+                            li
+                              span.star5
+
+                        .article__text.article__text--small Вообщем заказывал я у этого продавца два телефона в стоимость 12 тыс за единицу , ну и в итоге один из них сломался при бережном использовании. Возмещать как то или идти на...
+                        .article__publicated 15.07.2017
+
+                      .article__footer.article__footer--margin-top-10
+                        .article__item
+                          a(href="#!").btn.btn-transparent.btn-medium Далее
+
+                        .article__item
+                          .article__view 350
+                          .article__comments 11
+
+                  li
+                    article.article
+                      .article__body
+                        .article__title.article__title--small
+                          a(href="#!").article__link.article__link--small Lenovo Authorized Store 
+
+                        .rating-wrap
+                          .rating-value Рейтинг: 1056
+                          ul.rating
+                            li.active(style="width: 40%")
+                              span.star1
+                            li
+                              span.star2
+                            li
+                              span.star3
+                            li
+                              span.star4
+                            li
+                              span.star5
+
+                        .article__text.article__text--small Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.
+                        .article__publicated 10.07.2017
+
+                      .article__footer.article__footer--margin-top-10
+                        .article__item
+                          a(href="#!").btn.btn-transparent.btn-medium Далее
+
+                        .article__item
+                          .article__view 450
+                          .article__comments 33
+
+                  li
+                    article.article
+                      .article__body
+                        .article__title.article__title--small
+                          a(href="#!").article__link.article__link--small Lenovo Authorized Store 
+
+                        .rating-wrap
+                          .rating-value Рейтинг: 1056
+                          ul.rating
+                            li.active(style="width: 60%")
+                              span.star1
+                            li
+                              span.star2
+                            li
+                              span.star3
+                            li
+                              span.star4
+                            li
+                              span.star5
+
+                        .article__text.article__text--small Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.
+                        .article__publicated 10.07.2017
+
+                      .article__footer.article__footer--margin-top-10
+                        .article__item
+                          a(href="#!").btn.btn-transparent.btn-medium Далее
+
+                        .article__item
+                          .article__view 450
+                          .article__comments 33
+
+                .show-more 
+                  a(href="#!") Открыть все жалобы
+        
+      .banner
+        .container
+          .row
+            .col-sm-4
+              .banner__title Что такое AliWorld?
+              p  Каждый человек делает что-то лучше других. Мы, например, лучше других разбираемся в покупках на AliExpress.com. Что купить, как, а главное, у кого – на эти вопросы мы отвечаем каждый день, чтобы вы не волновались и не рисковали, а совершали только выгодные и честные покупки.
+              p Суть AliWorld в том, что его создают реальные покупатели. Мы заказываем товары, тестируем их, изучаем продавцов, ищем выгодные сделки и предложения. Наша цель – развивать не просто сайт, где можно хвастаться приобретенными вещами, рассказывать о неудачах, советоваться и задавать вопросы. Мы объединяем всех, кто покупает на AliExpress, в одном месте собираем покупательский опыт, информацию о тех, кому стоит доверять, а кому не стоит. 
+              .banner__footer
+                a(href="#!").btn.btn-transparent.btn-medium Подробнее о сайте
+            .col-sm-1
+              .banner__title Будьте на связи!
 
     //= template/footer.jade
 

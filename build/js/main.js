@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
   $('.owl-banner').owlCarousel({
-    loop: true,
+    loop: false,
     margin: 15,
     nav: true,
     navText: false,
+    dots: true,
     responsive: {
       0: {
         items: 1
