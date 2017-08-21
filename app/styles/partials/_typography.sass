@@ -22,12 +22,15 @@ body
 h1, .title-h1, h2, .title-h2, h3, .title-h3, h4, .title-h4, h5, .title-h5
   display: block
   font-family: $title-font-family
-  line-height: 1.1em
+  line-height: 1.3em
   color: $site-title-color
   margin: 0 0 15px
+  font-weight: 700
+  width: 100%
 
 h1, .title-h1
   font-size: $title-h1-size
+
 h2, .title-h2
   font-size: $title-h2-size
 h3, .title-h3
@@ -57,19 +60,113 @@ img
   vertical-align: middle
   max-width: 100%
 
+.page-title
+  font-size: 23px 
+  font-weight: 700
+  color: #000000
+  margin-bottom: 25px
+  &--20px
+    font-size: 20px
+
+  &__prefix
+    display: inline-block
+    vertical-align: bottom
+    margin-bottom: 1px
+    color: #a0a0a0
+    font: 14px/1.2 'PT Sans', sans-serif
 
 
+.bold
+  font-weight: 700
+
+// Content styles
+
+.text-center
+  text-align: center
+
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+.content
+  
+  p 
+    font-family: 'PT Sans', sans-serif
+    font-size: 16px 
+    line-height: 1.5
+
+  ul
+    li 
+      position: relative
+      padding-left: 20px
+      margin-bottom: 20px
+      color: #5f5f5f
+      font: 16px/1.5 'PT Sans', sans-serif
+      &:before
+        position: absolute
+        left: 0
+        top: 8px
+        content: ' '
+        width: 6px
+        height: 6px 
+        border: 2px solid #ff9900
+        border-radius: 50%
+
+  ol
+    li 
+      position: relative
+      padding-left: 40px
+      margin-bottom: 20px
+      &:before
+        position: absolute
+        left: 0
+        top: 5px
+        content: '1'
+        width: 24px
+        height: 24px
+        border: 1px solid #ff9e0c
+        color: #ff9e0c
+        text-align: center
+        line-height: 22px
+        padding-top: 1px
+        border-radius: 50%
+        font: 13px/1.5em 'PT Sans', sans-serif
+        box-sizing: border-box
+
+    @for $i from 1 through 20
+      li:nth-child(#{$i}):before
+        content: '#{$i}'
+  
 
 
+.image
+  position: relative
+  margin-bottom: 35px
+  &__caption 
+    margin-top: 15px
+    color: #a0a0a0
+    font: 14px/1.2em 'PT Sans', sans-serif
+    &--right
+      text-align: right
 
+.image-right
+  float: right
+  margin-left: 30px 
+  margin-bottom: 15px
+  max-width: 60%
+  +mobile
+    float: none
+    max-width: 100%
+    margin: 0 0 15px
 
-
-
-
-
-
-
-
-
-
-
+.image-left 
+  float: left
+  margin-right: 30px
+  margin-bottom: 15px
+  max-width: 60%
+  +mobile
+    float: none
+    max-width: 100%
+    margin: 0 0 15px

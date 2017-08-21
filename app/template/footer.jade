@@ -3,6 +3,12 @@ footer.footer
     .footer__section
       .copyright 2017 © AliWorld </br> Гид по миру покупок в AliExpress
 
+      .visible-desktop-large 
+        .footer-link.circs-icon
+          a(href="#!") Политика конфиденциальности
+        .footer-link.mail-icon
+          a(href="#!") Связь с администрацией
+
     .footer__section
       ul.footer-nav
         li
@@ -11,8 +17,14 @@ footer.footer
           a(href="#!") Статьи
         li
           a(href="#!") Обзоры товаров
+        li
+          a(href="#!").visible-desktop-large Жалобы на магазины
+        li
+          a(href="#!").visible-desktop-large Трекинг покупок
+        li
+          a(href="#!").visible-desktop-large Новости
 
-    .footer__section
+    .footer__section.hidden-desktop-large
       ul.footer-nav
         li
           a(href="#!") Жалобы на магазины
@@ -21,7 +33,7 @@ footer.footer
         li
           a(href="#!") Новости
 
-    .footer__section
+    .footer__section.hidden-desktop-large
       .footer-link.circs-icon
         a(href="#!") Политика конфиденциальности
       .footer-link.mail-icon

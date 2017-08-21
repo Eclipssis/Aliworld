@@ -10,6 +10,7 @@
 @import partials/plugins
 
 .rating-wrap
+  width: 100%
   @extend .clearfix
   margin-bottom: 15px
   .rating
@@ -20,8 +21,6 @@
   float: left
   color: #a0a0a0
   font: 14px/1.2 'PT Sans', sans-serif
-
-  
 
 .rating
   display: inline-block
@@ -34,6 +33,9 @@
   li 
     float: left
     height: $star-height
+    &:before
+      display: none
+
     span[class*="star"] 
       position: absolute
       z-index: 5
@@ -82,9 +84,8 @@
 
 .block
   margin-bottom: 30px
-  background-color: #ffffff
-  &--transparent
-    background: none
+  &--white
+    background-color: #ffffff
     
   
   &__header
@@ -94,22 +95,46 @@
     flex-wrap: wrap
     align-items: center
     justify-content: space-between
+    +tablet
+      padding: 15px 20px 
+
+    &--left 
+      justify-content: flex-start
+
+  &__head-item
+    display: inline-block
+
+  &__head-item + &__head-item
+    margin-left: 30px
 
   &__body
+    padding: 30px
+    +mobile
+      padding: 20px
 
   &__divider
+    border-bottom: 1px solid #f4f4f4
+
+  &__footer 
+    padding: 25px 30px
 
 .section-title
   font-weight: 700
   font-size: 23px
   color: #000000
+  +tablet
+    font-size: 20px
+
 
 
 .article
   display: flex
   flex-wrap: wrap
   
-  &__item 
+  &--white 
+    background-color: #ffffff
+
+  &__item
 
   &__favorite
     position: absolute
@@ -128,15 +153,23 @@
 
 
   &__image
+    display: block
     position: relative
     margin-bottom: 15px
     overflow: hidden
+
     img 
       transition: all 0.35s ease
+
     &:hover img
       transform: scale(1.15)
 
+    &--zoom-none
+      &:hover img 
+        transform: none
+
   &__body 
+    padding: 30px 30px 0
 
   &__title 
     margin-bottom: 15px
@@ -145,6 +178,7 @@
 
   &__link
     font-size: 16px
+    line-height: 1.5
     font-weight: 700
     color: #000000
     transition: all 0.2s ease
@@ -177,10 +211,30 @@
     &--margin-top-10
       margin-top: 10px
 
+    &--separate
+      border-top: 1px solid #f4f4f4
+      padding: 20px 30px
+
+  .footer-btn
+    margin-left: 50px
+
   &__publicated 
     @extend .inline-middle
     color: #a0a0a0
     font-size: 14px
+
+  &__date
+    position: relative
+    padding-left: 28px
+    &:before
+      position: absolute
+      left: 0
+      top: 50%
+      margin-top: -7px
+      content: ' '
+      width: 18px
+      height: 14px
+      background: url('../images/calendar.svg') 0 0 no-repeat
 
   &__owner-name
     @extend .inline-middle
@@ -199,7 +253,7 @@
   &__view
     @extend .inline-middle
     position: relative
-    padding-left: 27px
+    padding-left: 24px
     &:before
       position: absolute
       top: 50%
@@ -216,6 +270,9 @@
     position: relative
     padding-left: 23px
     margin-left: 20px
+    +desktop-large
+      margin-left: 10px
+
     &:before
       position: absolute
       top: 50%
@@ -226,18 +283,93 @@
       height: 15px
       background: url('../images/comment-icon.svg') 0 0 no-repeat
 
+.add-to-favorite
+  position: relative
+  padding-left: 24px
+  color: #000000
+  font: 14px/1 'PT Sans', sans-serif
+  text-decoration: underline
+  &:before
+    position: absolute
+    content: ' '
+    top: 50%
+    margin-top: -6px
+    left: 0
+    width: 19px
+    height: 12px
+    background: url('../images/heart(like-dark).svg') 0 0 no-repeat
+  &:hover, &:focus
+    text-decoration: none
+
+.product-label
+  display: inline-block
+  position: absolute
+  bottom: 16px
+  left: 0
+  height: 35px 
+  line-height: 35px
+  &__price
+    display: inline-block
+    vertical-align: middle
+    padding: 0 30px 0 20px
+    background-color: #e62e04
+    color: #ffffff
+    font-size: 18px 
+    font-weight: 700
+    .rouble 
+      display: inline-block
+      vertical-align: middle
+      margin-bottom: 9px
+      margin-left: 5px
+      width: 10px
+      height: 11px
+      background: url('../images/rouble-white.svg') 0 0 no-repeat
+
+  &__text
+    position: relative
+    left: -5px
+    display: inline-block
+    vertical-align: middle
+    padding: 0 15px 0 10px
+    text-align: center
+    color: #000000
+    font: 14px/35px 'PT Sans', sans-serif
+    position: relative
+    background-color: #ffffff
+    &:before
+      position: absolute
+      left: -11px
+      top: 0
+      content: ' '
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 17.5px 11px 17.5px 0
+      border-color: transparent #ffffff transparent transparent 
+
+.article-single
+  margin-bottom: 30px 
+
+  .footer-btn
+    margin-left: 70px
+
 .article-list
   margin-bottom: 0
   list-style-type: none
+  @extend .clearfix
+
+
   > li 
     border-bottom: 1px solid #f4f4f4
     padding: 30px 30px 20px
+    +tablet
+      padding: 20px
 
   &--hirozintal
     display: flex
     flex-wrap: wrap
     padding: 0 30px
-    @extend .clearfix
+    
     margin-right: -30px 
     margin-left: -30px
     > li 
@@ -246,29 +378,104 @@
       display: flex
       flex-wrap: wrap
       padding: 30px 30px 20px
+      +tablet
+        width: 50%
+        padding: 20px
+      +mobile
+        width: 100%
+
+    li:last-child
+      +tablet
+        display: none
+
     > li + li 
       border-left: 1px solid #f4f4f4
 
   &--small 
     > li 
       padding: 22px 30px 22px
+      +desktop-large
+        padding: 20px
+  
+  &--max
+    > li
+      background-color: #ffffff
+      margin-bottom: 30px
+      padding: 0
+
+  &--two-col
+    margin-right: -15px 
+    margin-left: -15px
+    margin-bottom: 20px
+    > li
+      width: 50%
+      float: left
+      padding: 0 15px
+      margin-bottom: 30px
+
+  &--four-col
+    margin-right: -15px 
+    margin-left: -15px
+    margin-bottom: 20px
+    > li
+      width: 25%
+      float: left
+      padding: 0 15px
+      margin-bottom: 30px 
+      +desktop
+        width: 33.333333%
+      +tablet
+        width: 50%
+      +mobile
+        width: 100%
+
+
+.other-articles
+
+  .article-list li:last-child
+    +desktop
+      display: none
+
+  .article-list li:nth-child(3)
+    +tablet
+      display: none
+      
+
 
 .show-more
+  display: block
   text-align: center
   padding: 21px 10px
-  a
+  color: #a0a0a0
+  font-size: 16px
+  font-weight: 700
+  &:hover, &:focus
     color: #a0a0a0
-    font-size: 16px
-    font-weight: 700
 
 .owl-banner
 
 .owl-carousel
+  
+  .owl-item 
+    overflow: hidden
+    img
+      min-height: 260px
+      +tablet
+        position: relative
+        left: 45%
+        margin-left: -450px
+        max-height: 300px
+        max-width: initial
+        width: initial
 
   .owl-dots
     position: absolute
     bottom: 35px
     right: 60px
+    +tablet
+      bottom: 20px 
+      right: 25px
+
     .owl-dot + .owl-dot
       margin-left: 20px
     .owl-dot
@@ -294,7 +501,11 @@
   position: absolute
   top: 0
   left: 0
-  padding: 40px 20px 20px 50px 
+  padding: 30px 20px 20px 45px 
+  +tablet
+    padding: 30px
+  +mobile
+    padding: 20px
 
 .carousel-title
   font-size: 30px
@@ -302,11 +513,18 @@
   color: #ffffff
   margin-bottom: 10px
   font-weight: 700
+  +tablet
+    font-size: 23px
+  +mobile
+    font-size: 20px
 
 .carousel-text
   font: 16px/1.5 'PT Sans', sans-serif
   color: #ffffff
-  margin-bottom: 25px
+  margin-bottom: 20px
+  +tablet
+    font-size: 15px
+    margin-bottom: 10px
 
 
 
@@ -347,6 +565,31 @@
 
   .article
     margin-bottom: 35px
+    +desktop
+      width: 33.333333%
+      float: left
+      padding: 0 10px
+    +tablet
+      width: 50%
+    +mobile
+      width: 100%
+  
+  .arcticle-wrap
+    @extend .clearfix
+    +desktop
+      margin-right: -10px
+      margin-left: -10px
+
+    .article
+      display: none
+
+    .article:nth-child(1), .article:nth-child(2), .article:nth-child(3)
+      display: block
+
+    +tablet
+      .article:nth-child(3)
+        display: none
+      
 
 
 .banner
@@ -365,3 +608,253 @@
 
   &__footer
     margin-top: 30px
+
+  .col-sm-4
+    +desktop-large
+      flex-basis: 50%
+      max-width: 50%
+    +tablet
+      flex-basis: 100%
+      max-width: 100%
+      margin-bottom: 25px
+
+  .col-sm-1
+    +desktop-large
+      flex-basis: 50%
+      max-width: 50%
+    +tablet
+      flex-basis: 100%
+      max-width: 100%
+
+.tag-links
+  margin-bottom: 30px
+  a 
+    color: #a0a0a0
+    font: 16px/1.5 'PT Sans', sans-serif
+
+.tags-block
+
+  .btn
+    margin-bottom: 10px
+    margin-right: 10px
+
+.aside-comment 
+  color: #5f5f5f
+  font: 16px/1.5 'PT Sans', sans-serif
+  margin-bottom: 20px
+  a 
+    border-bottom: 1px solid #cfcfcf
+    &:hover, &:focus
+      text-decoration: none
+      border: none
+
+.coments-block
+  background-color: #ffffff
+  &__section
+    padding: 25px 30px
+
+.coments-counter
+  color: #a0a0a0
+  font: 14px/1.2 'PT Sans', sans-serif
+  padding-left: 23px
+  margin-left: 18px
+  position: relative
+  &:before
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -7.5px
+    content: ' '
+    width: 18px
+    height: 15px
+    background: url('../images/comment-icon.svg') 0 0 no-repeat
+
+ul.comments-list
+  list-style-type: none
+
+  > li 
+    padding: 8px 15px 18px
+    border-top: 1px solid #f4f4f4
+    margin: 0
+    +mobile
+      padding: 10px 0
+
+    &:before
+      display: none
+
+.comment
+  padding: 12px 15px 20px
+  textarea 
+    background-color: #ffffff
+    border-radius: 4px 
+    border: 1px solid #c0c0c0
+    font-size: 15px
+    padding: 15px 20px
+
+  &--reply 
+    margin-top: 20px
+    margin-left: 50px
+    background-color: #f4f4f4
+    +mobile
+      margin-left: 20px
+
+  &__head 
+    margin-bottom: 10px
+    @extend .clearfix
+
+  &__avatar
+    float: left
+
+  &__title 
+    margin-left: 50px
+    +mobile
+      font-size: 13px
+    b  
+      display: inline-block
+      margin-right: 9px
+      margin-left: 9px
+      color: #000000
+      font: 700 15px/1.2 'PT Sans', sans-serif
+
+
+    b:first-child 
+      margin-left: 0
+
+  &__date 
+    display: inline-block
+    vertical-align: middle
+    color: #a0a0a0
+    font: 14px/1.2 'PT Sans', sans-serif
+    +mobile
+      font-size: 13px
+
+  &__body 
+    margin-left: 53px
+    +mobile
+      margin-left: 0px
+
+  &__text
+    margin-bottom: 12px
+    font: 15px/1.46 'PT Sans', sans-serif
+    color: #5f5f5f
+
+.user-info-wrap
+  display: flex
+  flex-wrap: wrap
+  align-items: center 
+  justify-content: space-between
+  &__item 
+
+  .rating-value
+    float: none
+    display: inline-block
+    margin-right: 10px
+
+  .btn 
+    float: right
+
+.user-info
+  &__avatar
+    display: inline-block
+    vertical-align: middle
+
+  &__title
+    display: inline-block
+    vertical-align: middle
+    margin-left: 10px
+    margin-right: 10px
+    font-size: 14px
+    color: #000000
+    font-weight: 500
+    span
+      color: #a0a0a0
+      font: 14px/1.2 'PT Sans', sans-serif
+      margin-left: 5px
+
+.attached-images
+  padding: 30px
+  
+
+.owl-images
+  margin-top: 35px
+  .owl-dots
+    display: none
+
+  .owl-nav
+    position: absolute
+    top: -60px 
+    right: 0
+    @extend .clearfix
+    
+    > div 
+      float: left
+      width: 50px
+      height: 34px
+      border: 1px solid #c0c0c0
+      cursor: pointer
+      position: relative
+      transition: all 0.2s ease
+      &:before
+        position: absolute
+        content: ' '
+        width: 7px  
+        height: 11px
+        top: 50%
+        margin-top: -5.5px 
+        left: 50%
+        margin-left: -3.5px
+      &:hover 
+        background-color: #f5f5f5
+
+    .owl-prev
+      border-radius: 5px 0 0 5px
+      border-right: none
+      &:before
+        background: url('../images/arrow-left-grey.svg') 0 0 no-repeat
+
+    .owl-next
+      border-radius: 0 5px 5px 0
+      &:before 
+        background: url('../images/arrow-right-grey.svg') 0 0 no-repeat
+
+
+
+.block-about
+  margin-bottom: 25px
+  &__body
+    background-color: #ffffff
+    padding: 45px 30px 35px
+    @extend .clearfix
+
+  &__col
+    padding: 0 30px
+    float: left
+    width: 50%
+
+  p 
+    font-size: 17px 
+    line-height: 1.7
+
+.about-banner
+  position: relative
+  min-height: 400px
+  background-image: url('../images/Couple.png'), url("../images/pattern-2.jpg")
+  background-position: 90% 100%, 0 0
+  background-repeat: no-repeat, repeat 
+  background-size: 50%, auto
+  color: #ffffff
+  &__body
+    position: absolute
+    width: 100%
+    max-width: 640px
+    left: 0
+    top: 0
+    padding: 60px 
+  &__title
+    font-size: 50px
+    line-height: 1.2
+    font-weight: 700
+    margin-bottom: 20px 
+
+  &__text 
+    font: 17px/1.7 'PT Sans', sans-serif

@@ -19,5 +19,40 @@ $(document).ready(function(){
     }
   });
 
+  $('.owl-images').owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    navText: false,
+    dots: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      600: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      }
+    }
+  });
+
+  function close_menu(argument) {
+    $('.aside-nav').toggleClass('open');
+    $('.fade-bg').toggleClass('active');
+  }
+
+  $('.js-toggle-menu').click(function () {
+    close_menu()
+  })
+
+  $('.fade-bg').click(function () {
+    close_menu()
+  })
+
+  $('.article__favorite').click(function () {
+    $(this).toggleClass('active')
+  })
 
 });//end ready

@@ -11,8 +11,40 @@
   </head>
   <body>
     <div id="wrapper">
+      <div class="fade-bg"></div>
+      <div class="aside-nav">
+        <div class="aside-nav__header"><span class="close-btn js-toggle-menu"></span></div>
+        <div class="aside-nav__body">
+          <ul class="tablet-menu">
+            <li><a href="#!">Главная страница</a></li>
+            <li><a href="#!">О сайте</a></li>
+            <li><a href="#!">Статьи</a></li>
+            <li><a href="#!">Обзоры товаров</a></li>
+            <li><a href="#!">Жалобы на магазины</a></li>
+            <li><a href="#!">Трекинг покупок</a></li>
+            <li><a href="#!">Новости</a></li>
+          </ul>
+          <div class="user-panel visible-mobile">
+            <div class="user-panel__item">
+              <div class="header-search"><a href="#!"> <span class="header-search__text">Поиск</span><i class="search-icon"></i></a></div>
+            </div>
+            <div class="user-panel__item"><a href="#!" class="favorite-icon">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 23.25 16.88">
+                  <defs>
+                    <style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+                  </defs>
+                  <title>Artboard 2</title>
+                  <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
+                </svg><span class="favorite-icon__counter">2</span></a></div>
+            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+              <div class="user-panel__link"><a href="#!">Регистрация</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <header class="header">
         <div class="container clearfix">
+          <div class="menu-toggle js-toggle-menu"><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span></div>
           <div class="logo"><a href="#!">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 317 91">
                 <defs>
@@ -38,9 +70,9 @@
                 <path d="M274.92,52.74V22.58h6.9V51.7a4.85,4.85,0,0,0,.68,3,2.66,2.66,0,0,0,2.16.82,7.8,7.8,0,0,0,1-.05v6.08q-1.48.16-2.19.16a13.58,13.58,0,0,1-3-.3,8.83,8.83,0,0,1-2.68-1.15,5.51,5.51,0,0,1-2.13-2.76A12.87,12.87,0,0,1,274.92,52.74Z"></path>
                 <path d="M289.15,47.48q0-6.57,3.53-10.59a11.57,11.57,0,0,1,9.11-4q5.53,0,8.16,3.67h.11a10.87,10.87,0,0,1-.11-1.64V22.58h6.9V61.44h-6.51V59l.11-1.75h-.11a9.32,9.32,0,0,1-3.59,3.5,10.44,10.44,0,0,1-5.23,1.31,11.13,11.13,0,0,1-9-4.05Q289.15,54,289.15,47.48Zm7,0a9.89,9.89,0,0,0,1.92,6.35,6.12,6.12,0,0,0,5,2.41,6.48,6.48,0,0,0,5-2.22q2-2.22,2-6.59a10.18,10.18,0,0,0-1.81-6,5.93,5.93,0,0,0-5.15-2.54,6.35,6.35,0,0,0-5,2.33A9.3,9.3,0,0,0,296.16,47.48Z"></path>
               </svg></a></div>
-          <div class="user-panel">
+          <div class="user-panel hidden-mobile">
             <div class="user-panel__item">
-              <div class="header-search"><a href="#!">Поиск<i class="search-icon"></i></a></div>
+              <div class="header-search"><a href="#!"> <span class="header-search__text">Поиск</span><i class="search-icon"></i></a></div>
             </div>
             <div class="user-panel__item"><a href="#!" class="favorite-icon">
                 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 23.25 16.88">
@@ -50,9 +82,11 @@
                   <title>Artboard 2</title>
                   <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
                 </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span><a href="#!">Регистрация</a></div>
+            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+              <div class="user-panel__link"><a href="#!">Регистрация</a></div>
+            </div>
           </div>
-          <ul class="header-nav">
+          <ul class="header-nav hidden-desktop">
             <li><a href="#!">Статьи</a></li>
             <li><a href="#!">Обзоры</a></li>
             <li><a href="#!">Жалобы</a></li>
@@ -65,8 +99,8 @@
       <!-- header-->
       <section class="middle middle--index">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-5 col-md-3 col-lg-3 col-vlg-3 first-vlg">
+          <div class="index-row">
+            <div class="col-1">
               <div class="main-banner">
                 <div class="owl-carousel owl-banner">
                   <div class="item"><img src="images/banner-main-page.jpg" alt="banner-image">
@@ -95,141 +129,259 @@
                   </div>
                 </div>
               </div>
-              <div class="block">
+              <div class="block block--white">
                 <div class="block__header">
-                  <div class="section-title">Новые статьи</div><a href="#!" class="btn btn-medium btn-transparent">Все статьи</a>
+                  <div class="section-title">Новые статьи</div><a href="#!" class="btn btn-small btn-transparent">Все статьи</a>
                 </div>
-                <div class="block__body">
-                  <ul class="article-list article-list--hirozintal">
-                    <li>
-                      <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-1.jpg" alt="article-image">
-                          <div class="article__favorite article__favorite--small"></div></a>
-                        <div class="article__body">
-                          <div class="article__title"><a href="#!" class="article__link">Самый популярный запрос на АлиЭкспресс – спиннеры</a></div>
-                          <div class="article__text">К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей.</div>
+                <ul class="article-list article-list--hirozintal">
+                  <li>
+                    <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-1.jpg" alt="article-image">
+                        <div class="article__favorite article__favorite--small"></div></a>
+                      <div class="article__title"><a href="#!" class="article__link">Самый популярный запрос на АлиЭкспресс – спиннеры</a></div>
+                      <div class="article__text">К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей.</div>
+                      <div class="article__footer">
+                        <div class="article__section">
+                          <div class="article__publicated">10.07.2017</div>
                         </div>
-                        <div class="article__footer">
-                          <div class="article__item">
-                            <div class="article__publicated">10.07.2017</div>
-                          </div>
-                          <div class="article__item">
-                            <div class="article__view">655</div>
-                            <div class="article__comments">23</div>
-                          </div>
+                        <div class="article__section">
+                          <div class="article__view">655</div>
+                          <div class="article__comments">23</div>
                         </div>
-                      </article>
-                    </li>
-                    <li>
-                      <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-2.jpg" alt="article-image">
-                          <div class="article__favorite article__favorite--small active"></div></a>
-                        <div class="article__body">
-                          <div class="article__title"><a href="#!" class="article__link">АлиЭкспресс существенно снижает партнерские выплаты</a></div>
-                          <div class="article__text">С этого дня за оплаченные и завершенные заказы будет начисляться не более 6.5%</div>
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-2.jpg" alt="article-image">
+                        <div class="article__favorite article__favorite--small active"></div></a>
+                      <div class="article__title"><a href="#!" class="article__link">АлиЭкспресс существенно снижает партнерские выплаты</a></div>
+                      <div class="article__text">С этого дня за оплаченные и завершенные заказы будет начисляться не более 6.5%</div>
+                      <div class="article__footer">
+                        <div class="article__section">
+                          <div class="article__publicated">9.07.2017</div>
                         </div>
-                        <div class="article__footer">
-                          <div class="article__item">
-                            <div class="article__publicated">9.07.2017</div>
-                          </div>
-                          <div class="article__item">
-                            <div class="article__view">144</div>
-                            <div class="article__comments">13</div>
-                          </div>
+                        <div class="article__section">
+                          <div class="article__view">144</div>
+                          <div class="article__comments">13</div>
                         </div>
-                      </article>
-                    </li>
-                    <li>
-                      <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-3.jpg" alt="article-image">
-                          <div class="article__favorite article__favorite--small"></div></a>
-                        <div class="article__body">
-                          <div class="article__title"><a href="#!" class="article__link">Заказываем товар на АлиЭкспресс посылкой до востребования</a></div>
-                          <div class="article__text">Появилась мода совершать покупки и заказывать отправку товара посылкой до востребования.</div>
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-3.jpg" alt="article-image">
+                        <div class="article__favorite article__favorite--small"></div></a>
+                      <div class="article__title"><a href="#!" class="article__link">Заказываем товар на АлиЭкспресс посылкой до востребования</a></div>
+                      <div class="article__text">Появилась мода совершать покупки и заказывать отправку товара посылкой до востребования.</div>
+                      <div class="article__footer">
+                        <div class="article__section">
+                          <div class="article__publicated">8.07.2017</div>
                         </div>
-                        <div class="article__footer">
-                          <div class="article__item">
-                            <div class="article__publicated">8.07.2017</div>
-                          </div>
-                          <div class="article__item">
-                            <div class="article__view">456</div>
-                            <div class="article__comments">33</div>
-                          </div>
+                        <div class="article__section">
+                          <div class="article__view">456</div>
+                          <div class="article__comments">33</div>
                         </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
               </div>
-              <div class="block">
-                <div class="block__header">
-                  <div class="section-title">Обзоры товаров</div><a href="#!" class="btn btn-medium btn-transparent">Добавить обзор</a>
-                </div>
-                <div class="block__body">
-                  <ul class="article-list">
-                    <li>
-                      <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-1.jpg" alt="article-image">
-                          <div class="article__favorite active"></div></a>
-                        <div class="article__body">
+              <div class="inner-row">
+                <div class="col-inner">
+                  <div class="block block--white">
+                    <div class="block__header">
+                      <div class="section-title">Обзоры товаров</div><a href="#!" class="btn btn-small btn-transparent">Добавить обзор</a>
+                    </div>
+                    <ul class="article-list">
+                      <li>
+                        <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-1.jpg" alt="article-image">
+                            <div class="article__favorite active"></div></a>
                           <div class="article__title"><a href="#!" class="article__link">Как я купила свое первое платье на Али-экспресс</a></div>
                           <div class="article__text">Вот это платье я захотела купить, благо, в горящих товарах оно продавалось за 459 рублей. А вот, что пришло: Отшито сикось-накось, швы сборят. Отдельное внимание прошу обратить на то, что прямо по переду, по подолу идет кошмарный грубый шов.</div>
-                        </div>
-                        <div class="article__footer">
-                          <div class="article__item">
-                            <div class="article__owner-avatar"><img src="pictures/article-avatar.png" alt="article-avatar"></div>
-                            <div class="article__owner-name">Евгения Большова</div>
-                            <div class="article__publicated">10.07.2017</div>
+                          <div class="article__footer">
+                            <div class="article__section">
+                              <div class="article__owner-avatar"><img src="pictures/article-avatar.png" alt="article-avatar"></div>
+                              <div class="article__owner-name">Евгения Большова</div>
+                              <div class="article__publicated">10.07.2017</div>
+                            </div>
+                            <div class="article__section">
+                              <div class="article__view">144</div>
+                              <div class="article__comments">13</div>
+                            </div>
                           </div>
-                          <div class="article__item">
-                            <div class="article__comments">13</div>
-                            <div class="article__view">144</div>
-                          </div>
-                        </div>
-                      </article>
-                    </li>
-                    <li>
-                      <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-2.jpg" alt="article-image">
-                          <div class="article__favorite"></div></a>
-                        <div class="article__body">
+                        </article>
+                      </li>
+                      <li>
+                        <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-2.jpg" alt="article-image">
+                            <div class="article__favorite"></div></a>
                           <div class="article__title"><a href="#!" class="article__link">Xiaomi Mi Band 1S – отличный и недорогой фитнес-браслет </a></div>
                           <div class="article__text">Предыдущая модель получила заслуженную популярность среди покупателей во многих странах в мире, и во многом благодаря простоте использования и низкой стоимости. Основным отличием новой модели с приставкой «1S» считается наличие оптического пульсометра, при этом ценник на браслет хоть.</div>
-                        </div>
-                        <div class="article__footer">
-                          <div class="article__item">
-                            <div class="article__owner-avatar"><img src="pictures/article-avatar.png" alt="article-avatar"></div>
-                            <div class="article__owner-name">Евгения Большова</div>
-                            <div class="article__publicated">10.07.2017</div>
+                          <div class="article__footer">
+                            <div class="article__section">
+                              <div class="article__owner-avatar"><img src="pictures/article-avatar.png" alt="article-avatar"></div>
+                              <div class="article__owner-name">Евгения Большова</div>
+                              <div class="article__publicated">10.07.2017</div>
+                            </div>
+                            <div class="article__section">
+                              <div class="article__view">144</div>
+                              <div class="article__comments">13</div>
+                            </div>
                           </div>
-                          <div class="article__item">
-                            <div class="article__comments">13</div>
-                            <div class="article__view">144</div>
-                          </div>
-                        </div>
-                      </article>
-                    </li>
-                    <li>
-                      <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-3.jpg" alt="article-image">
-                          <div class="article__favorite"></div></a>
-                        <div class="article__body">
+                        </article>
+                      </li>
+                      <li>
+                        <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-3.jpg" alt="article-image">
+                            <div class="article__favorite"></div></a>
                           <div class="article__title"><a href="#!" class="article__link">Xiaomi Redmi Note 3 – мощный и доступный смартфон</a></div>
                           <div class="article__text">Прошло всего несколько дней с момента поступления в свободную продажу первого обладающего сканером отпечатков пальцев смартфона известного китайского вендора Xiaomi. До этого десятки тысяч покупателей сделали предзаказы. Прошло всего несколько дней с момента поступления в свободную продажу первого обладающего сканером отпечатков пальцев смартфона известного китайского вендора Xiaomi. До этого десятки тысяч покупателей сделали предзаказы. </div>
-                        </div>
-                        <div class="article__footer">
-                          <div class="article__item">
-                            <div class="article__owner-avatar"><img src="pictures/article-avatar.png" alt="article-avatar"></div>
-                            <div class="article__owner-name">Евгения Большова</div>
-                            <div class="article__publicated">10.07.2017</div>
+                          <div class="article__footer">
+                            <div class="article__section">
+                              <div class="article__owner-avatar"><img src="pictures/article-avatar.png" alt="article-avatar"></div>
+                              <div class="article__owner-name">Евгения Большова</div>
+                              <div class="article__publicated">10.07.2017</div>
+                            </div>
+                            <div class="article__section">
+                              <div class="article__view">144</div>
+                              <div class="article__comments">13</div>
+                            </div>
                           </div>
-                          <div class="article__item">
-                            <div class="article__comments">13</div>
-                            <div class="article__view">144</div>
+                        </article>
+                      </li>
+                    </ul><a href="#!" class="show-more">Открыть все обзоры</a>
+                  </div>
+                </div>
+                <div class="col-2 visible-desktop-large">
+                  <div class="mini-banner mini-banner--red">
+                    <div class="mini-banner__icon icon-sadman"></div>
+                    <div class="mini-banner__title">Жалобы</div>
+                    <div class="mini-banner__text">Магазины без доверия</div><a href="#!" class="btn btn-max">Добавить жалобу</a>
+                  </div>
+                  <div class="block block--white">
+                    <div class="article-list article-list--small">
+                      <li>
+                        <article class="article">
+                          <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
+                          <div class="rating-wrap">
+                            <div class="rating-value">Рейтинг: 1056</div>
+                            <ul class="rating">
+                              <li style="width: 40%" class="active"><span class="star1"></span></li>
+                              <li><span class="star2"></span></li>
+                              <li><span class="star3"></span></li>
+                              <li><span class="star4"></span></li>
+                              <li><span class="star5"></span></li>
+                            </ul>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                  <div class="show-more"> <a href="#!">Открыть все обзоры</a></div>
+                          <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
+                          <div class="article__publicated">10.07.2017</div>
+                          <div class="article__footer article__footer--margin-top-10">
+                            <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                            <div class="article__section">
+                              <div class="article__view">450</div>
+                              <div class="article__comments">33</div>
+                            </div>
+                          </div>
+                        </article>
+                      </li>
+                      <li>
+                        <article class="article">
+                          <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">GoTop Smartphone </a></div>
+                          <div class="rating-wrap">
+                            <div class="rating-value">Рейтинг: 1056</div>
+                            <ul class="rating">
+                              <li style="width: 20%" class="active"><span class="star1"></span></li>
+                              <li><span class="star2"></span></li>
+                              <li><span class="star3"></span></li>
+                              <li><span class="star4"></span></li>
+                              <li><span class="star5"></span></li>
+                            </ul>
+                          </div>
+                          <div class="article__text article__text--small">Вообщем заказывал я у этого продавца два телефона в стоимость 12 тыс за единицу , ну и в итоге один из них сломался при бережном использовании. Возмещать как то или идти на...</div>
+                          <div class="article__publicated">15.07.2017</div>
+                          <div class="article__footer article__footer--margin-top-10">
+                            <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                            <div class="article__section">
+                              <div class="article__view">350</div>
+                              <div class="article__comments">11</div>
+                            </div>
+                          </div>
+                        </article>
+                      </li>
+                      <li>
+                        <article class="article">
+                          <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">GoTop Smartphone </a></div>
+                          <div class="rating-wrap">
+                            <div class="rating-value">Рейтинг: 1056</div>
+                            <ul class="rating">
+                              <li style="width: 100%" class="active"><span class="star1"></span></li>
+                              <li><span class="star2"></span></li>
+                              <li><span class="star3"></span></li>
+                              <li><span class="star4"></span></li>
+                              <li><span class="star5"></span></li>
+                            </ul>
+                          </div>
+                          <div class="article__text article__text--small">Вообщем заказывал я у этого продавца два телефона в стоимость 12 тыс за единицу , ну и в итоге один из них сломался при бережном использовании. Возмещать как то или идти на...</div>
+                          <div class="article__publicated">15.07.2017</div>
+                          <div class="article__footer article__footer--margin-top-10">
+                            <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                            <div class="article__section">
+                              <div class="article__view">350</div>
+                              <div class="article__comments">11</div>
+                            </div>
+                          </div>
+                        </article>
+                      </li>
+                      <li>
+                        <article class="article">
+                          <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
+                          <div class="rating-wrap">
+                            <div class="rating-value">Рейтинг: 1056</div>
+                            <ul class="rating">
+                              <li style="width: 40%" class="active"><span class="star1"></span></li>
+                              <li><span class="star2"></span></li>
+                              <li><span class="star3"></span></li>
+                              <li><span class="star4"></span></li>
+                              <li><span class="star5"></span></li>
+                            </ul>
+                          </div>
+                          <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
+                          <div class="article__publicated">10.07.2017</div>
+                          <div class="article__footer article__footer--margin-top-10">
+                            <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                            <div class="article__section">
+                              <div class="article__view">450</div>
+                              <div class="article__comments">33</div>
+                            </div>
+                          </div>
+                        </article>
+                      </li>
+                      <li>
+                        <article class="article">
+                          <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
+                          <div class="rating-wrap">
+                            <div class="rating-value">Рейтинг: 1056</div>
+                            <ul class="rating">
+                              <li style="width: 60%" class="active"><span class="star1"></span></li>
+                              <li><span class="star2"></span></li>
+                              <li><span class="star3"></span></li>
+                              <li><span class="star4"></span></li>
+                              <li><span class="star5"></span></li>
+                            </ul>
+                          </div>
+                          <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
+                          <div class="article__publicated">10.07.2017</div>
+                          <div class="article__footer article__footer--margin-top-10">
+                            <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                            <div class="article__section">
+                              <div class="article__view">450</div>
+                              <div class="article__comments">33</div>
+                            </div>
+                          </div>
+                        </article>
+                      </li>
+                    </div><a href="#!" class="show-more">Открыть все жалобы</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-sm-5 col-md-3 col-lg-2 col-vlg-1">
+            <div class="col-2">
               <div class="mini-banner mini-banner--blue">
                 <div class="mini-banner__icon icon-tracking"></div>
                 <div class="mini-banner__title">Трекинг посылок</div>
@@ -239,21 +391,19 @@
                   <button type="submit" class="tracking-form__submit"></button>
                 </form>
               </div>
-              <div class="block block--transparent news-preview">
+              <div class="block news-preview">
                 <div class="block__header">
-                  <div class="section-title">Новости</div><a href="#!" class="btn btn-medium btn-transparent">Все новости</a>
+                  <div class="section-title">Новости</div><a href="#!" class="btn btn-small btn-transparent">Все новости</a>
                 </div>
-                <div class="block__body">
+                <div class="arcticle-wrap">
                   <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-1.jpg" alt="article-image">
                       <div class="favorite"></div></a>
-                    <div class="article__body">
-                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой</a></div>
-                    </div>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой</a></div>
                     <div class="article__footer">
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__publicated">10.07.2017</div>
                       </div>
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__view">33</div>
                         <div class="article__comments">456</div>
                       </div>
@@ -261,14 +411,12 @@
                   </article>
                   <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-2.jpg" alt="article-image">
                       <div class="favorite"></div></a>
-                    <div class="article__body">
-                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире</a></div>
-                    </div>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире</a></div>
                     <div class="article__footer">
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__publicated">07.07.2017</div>
                       </div>
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__view">33</div>
                         <div class="article__comments">456</div>
                       </div>
@@ -276,14 +424,12 @@
                   </article>
                   <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-3.jpg" alt="article-image">
                       <div class="favorite"></div></a>
-                    <div class="article__body">
-                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
-                    </div>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
                     <div class="article__footer">
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__publicated">06.07.2017</div>
                       </div>
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__view">33</div>
                         <div class="article__comments">456</div>
                       </div>
@@ -291,14 +437,12 @@
                   </article>
                   <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-4.jpg" alt="article-image">
                       <div class="favorite"></div></a>
-                    <div class="article__body">
-                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире</a></div>
-                    </div>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире</a></div>
                     <div class="article__footer">
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__publicated">06.07.2017</div>
                       </div>
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__view">33</div>
                         <div class="article__comments">456</div>
                       </div>
@@ -306,20 +450,18 @@
                   </article>
                   <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-5.jpg" alt="article-image">
                       <div class="favorite"></div></a>
-                    <div class="article__body">
-                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
-                    </div>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
                     <div class="article__footer">
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__publicated">16.07.2017</div>
                       </div>
-                      <div class="article__item">
+                      <div class="article__section">
                         <div class="article__view">33</div>
                         <div class="article__comments">456</div>
                       </div>
                     </div>
-                  </article><a href="#!" class="btn btn-max"> <span class="icon-lamp"></span>Предложить новость</a>
-                </div>
+                  </article>
+                </div><a href="#!" class="btn btn-max"> <span class="icon-lamp"></span>Предложить новость</a>
               </div>
               <div class="mini-banner mini-banner--green">
                 <div class="mini-banner__icon icon-tracking"></div>
@@ -331,34 +473,32 @@
                 </form>
               </div>
             </div>
-            <div class="col-sm-5 col-md-2 col-lg-2 col-vlg-1 first-vlg">
+            <div class="col-3 hidden-desktop-large">
               <div class="mini-banner mini-banner--red">
                 <div class="mini-banner__icon icon-sadman"></div>
                 <div class="mini-banner__title">Жалобы</div>
                 <div class="mini-banner__text">Магазины без доверия</div><a href="#!" class="btn btn-max">Добавить жалобу</a>
               </div>
-              <div class="block">
+              <div class="block block--white">
                 <div class="article-list article-list--small">
                   <li>
                     <article class="article">
-                      <div class="article__body">
-                        <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
-                        <div class="rating-wrap">
-                          <div class="rating-value">Рейтинг: 1056</div>
-                          <ul class="rating">
-                            <li style="width: 40%" class="active"><span class="star1"></span></li>
-                            <li><span class="star2"></span></li>
-                            <li><span class="star3"></span></li>
-                            <li><span class="star4"></span></li>
-                            <li><span class="star5"></span></li>
-                          </ul>
-                        </div>
-                        <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
-                        <div class="article__publicated">10.07.2017</div>
+                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
+                      <div class="rating-wrap">
+                        <div class="rating-value">Рейтинг: 1056</div>
+                        <ul class="rating">
+                          <li style="width: 40%" class="active"><span class="star1"></span></li>
+                          <li><span class="star2"></span></li>
+                          <li><span class="star3"></span></li>
+                          <li><span class="star4"></span></li>
+                          <li><span class="star5"></span></li>
+                        </ul>
                       </div>
+                      <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
+                      <div class="article__publicated">10.07.2017</div>
                       <div class="article__footer article__footer--margin-top-10">
-                        <div class="article__item"><a href="#!" class="btn btn-transparent btn-medium">Далее</a></div>
-                        <div class="article__item">
+                        <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                        <div class="article__section">
                           <div class="article__view">450</div>
                           <div class="article__comments">33</div>
                         </div>
@@ -367,24 +507,22 @@
                   </li>
                   <li>
                     <article class="article">
-                      <div class="article__body">
-                        <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">GoTop Smartphone </a></div>
-                        <div class="rating-wrap">
-                          <div class="rating-value">Рейтинг: 1056</div>
-                          <ul class="rating">
-                            <li style="width: 20%" class="active"><span class="star1"></span></li>
-                            <li><span class="star2"></span></li>
-                            <li><span class="star3"></span></li>
-                            <li><span class="star4"></span></li>
-                            <li><span class="star5"></span></li>
-                          </ul>
-                        </div>
-                        <div class="article__text article__text--small">Вообщем заказывал я у этого продавца два телефона в стоимость 12 тыс за единицу , ну и в итоге один из них сломался при бережном использовании. Возмещать как то или идти на...</div>
-                        <div class="article__publicated">15.07.2017</div>
+                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">GoTop Smartphone </a></div>
+                      <div class="rating-wrap">
+                        <div class="rating-value">Рейтинг: 1056</div>
+                        <ul class="rating">
+                          <li style="width: 20%" class="active"><span class="star1"></span></li>
+                          <li><span class="star2"></span></li>
+                          <li><span class="star3"></span></li>
+                          <li><span class="star4"></span></li>
+                          <li><span class="star5"></span></li>
+                        </ul>
                       </div>
+                      <div class="article__text article__text--small">Вообщем заказывал я у этого продавца два телефона в стоимость 12 тыс за единицу , ну и в итоге один из них сломался при бережном использовании. Возмещать как то или идти на...</div>
+                      <div class="article__publicated">15.07.2017</div>
                       <div class="article__footer article__footer--margin-top-10">
-                        <div class="article__item"><a href="#!" class="btn btn-transparent btn-medium">Далее</a></div>
-                        <div class="article__item">
+                        <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                        <div class="article__section">
                           <div class="article__view">350</div>
                           <div class="article__comments">11</div>
                         </div>
@@ -393,24 +531,22 @@
                   </li>
                   <li>
                     <article class="article">
-                      <div class="article__body">
-                        <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">GoTop Smartphone </a></div>
-                        <div class="rating-wrap">
-                          <div class="rating-value">Рейтинг: 1056</div>
-                          <ul class="rating">
-                            <li style="width: 100%" class="active"><span class="star1"></span></li>
-                            <li><span class="star2"></span></li>
-                            <li><span class="star3"></span></li>
-                            <li><span class="star4"></span></li>
-                            <li><span class="star5"></span></li>
-                          </ul>
-                        </div>
-                        <div class="article__text article__text--small">Вообщем заказывал я у этого продавца два телефона в стоимость 12 тыс за единицу , ну и в итоге один из них сломался при бережном использовании. Возмещать как то или идти на...</div>
-                        <div class="article__publicated">15.07.2017</div>
+                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">GoTop Smartphone </a></div>
+                      <div class="rating-wrap">
+                        <div class="rating-value">Рейтинг: 1056</div>
+                        <ul class="rating">
+                          <li style="width: 100%" class="active"><span class="star1"></span></li>
+                          <li><span class="star2"></span></li>
+                          <li><span class="star3"></span></li>
+                          <li><span class="star4"></span></li>
+                          <li><span class="star5"></span></li>
+                        </ul>
                       </div>
+                      <div class="article__text article__text--small">Вообщем заказывал я у этого продавца два телефона в стоимость 12 тыс за единицу , ну и в итоге один из них сломался при бережном использовании. Возмещать как то или идти на...</div>
+                      <div class="article__publicated">15.07.2017</div>
                       <div class="article__footer article__footer--margin-top-10">
-                        <div class="article__item"><a href="#!" class="btn btn-transparent btn-medium">Далее</a></div>
-                        <div class="article__item">
+                        <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                        <div class="article__section">
                           <div class="article__view">350</div>
                           <div class="article__comments">11</div>
                         </div>
@@ -419,24 +555,22 @@
                   </li>
                   <li>
                     <article class="article">
-                      <div class="article__body">
-                        <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
-                        <div class="rating-wrap">
-                          <div class="rating-value">Рейтинг: 1056</div>
-                          <ul class="rating">
-                            <li style="width: 40%" class="active"><span class="star1"></span></li>
-                            <li><span class="star2"></span></li>
-                            <li><span class="star3"></span></li>
-                            <li><span class="star4"></span></li>
-                            <li><span class="star5"></span></li>
-                          </ul>
-                        </div>
-                        <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
-                        <div class="article__publicated">10.07.2017</div>
+                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
+                      <div class="rating-wrap">
+                        <div class="rating-value">Рейтинг: 1056</div>
+                        <ul class="rating">
+                          <li style="width: 40%" class="active"><span class="star1"></span></li>
+                          <li><span class="star2"></span></li>
+                          <li><span class="star3"></span></li>
+                          <li><span class="star4"></span></li>
+                          <li><span class="star5"></span></li>
+                        </ul>
                       </div>
+                      <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
+                      <div class="article__publicated">10.07.2017</div>
                       <div class="article__footer article__footer--margin-top-10">
-                        <div class="article__item"><a href="#!" class="btn btn-transparent btn-medium">Далее</a></div>
-                        <div class="article__item">
+                        <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                        <div class="article__section">
                           <div class="article__view">450</div>
                           <div class="article__comments">33</div>
                         </div>
@@ -445,32 +579,29 @@
                   </li>
                   <li>
                     <article class="article">
-                      <div class="article__body">
-                        <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
-                        <div class="rating-wrap">
-                          <div class="rating-value">Рейтинг: 1056</div>
-                          <ul class="rating">
-                            <li style="width: 60%" class="active"><span class="star1"></span></li>
-                            <li><span class="star2"></span></li>
-                            <li><span class="star3"></span></li>
-                            <li><span class="star4"></span></li>
-                            <li><span class="star5"></span></li>
-                          </ul>
-                        </div>
-                        <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
-                        <div class="article__publicated">10.07.2017</div>
+                      <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Lenovo Authorized Store </a></div>
+                      <div class="rating-wrap">
+                        <div class="rating-value">Рейтинг: 1056</div>
+                        <ul class="rating">
+                          <li style="width: 60%" class="active"><span class="star1"></span></li>
+                          <li><span class="star2"></span></li>
+                          <li><span class="star3"></span></li>
+                          <li><span class="star4"></span></li>
+                          <li><span class="star5"></span></li>
+                        </ul>
                       </div>
+                      <div class="article__text article__text--small">Продавец лжец. Отправил мне нерабочий телефон с нерабочим дисплеем, я сделал видео распаковки и на видео четко видно, что телефон сразу не работал.  еще продавец заблокировал сообщения от меня и я не могу с ним поговорить, я не писал ему гадости, я хотел решить спор мирным путем.</div>
+                      <div class="article__publicated">10.07.2017</div>
                       <div class="article__footer article__footer--margin-top-10">
-                        <div class="article__item"><a href="#!" class="btn btn-transparent btn-medium">Далее</a></div>
-                        <div class="article__item">
+                        <div class="article__section"><a href="#!" class="btn btn-transparent btn-small">Далее</a></div>
+                        <div class="article__section">
                           <div class="article__view">450</div>
                           <div class="article__comments">33</div>
                         </div>
                       </div>
                     </article>
                   </li>
-                </div>
-                <div class="show-more"> <a href="#!">Открыть все жалобы</a></div>
+                </div><a href="#!" class="show-more">Открыть все жалобы</a>
               </div>
             </div>
           </div>
@@ -483,10 +614,11 @@
               <div class="banner__title">Что такое AliWorld?</div>
               <p> Каждый человек делает что-то лучше других. Мы, например, лучше других разбираемся в покупках на AliExpress.com. Что купить, как, а главное, у кого – на эти вопросы мы отвечаем каждый день, чтобы вы не волновались и не рисковали, а совершали только выгодные и честные покупки.</p>
               <p>Суть AliWorld в том, что его создают реальные покупатели. Мы заказываем товары, тестируем их, изучаем продавцов, ищем выгодные сделки и предложения. Наша цель – развивать не просто сайт, где можно хвастаться приобретенными вещами, рассказывать о неудачах, советоваться и задавать вопросы. Мы объединяем всех, кто покупает на AliExpress, в одном месте собираем покупательский опыт, информацию о тех, кому стоит доверять, а кому не стоит. </p>
-              <div class="banner__footer"><a href="#!" class="btn btn-transparent btn-medium">Подробнее о сайте</a></div>
+              <div class="banner__footer"><a href="#!" class="btn btn-transparent btn-small">Подробнее о сайте</a></div>
             </div>
             <div class="col-sm-1">
               <div class="banner__title">Будьте на связи!</div>
+              <div class="vidget-wrap"><img src="pictures/vidget.jpg" alt="vidget"></div>
             </div>
           </div>
         </div>
@@ -496,22 +628,29 @@
       <div class="container">
         <div class="footer__section">
           <div class="copyright">2017 © AliWorld </br> Гид по миру покупок в AliExpress</div>
+          <div class="visible-desktop-large"> 
+            <div class="footer-link circs-icon"><a href="#!">Политика конфиденциальности</a></div>
+            <div class="footer-link mail-icon"><a href="#!">Связь с администрацией</a></div>
+          </div>
         </div>
         <div class="footer__section">
           <ul class="footer-nav">
             <li><a href="#!">О сайте</a></li>
             <li><a href="#!">Статьи</a></li>
             <li><a href="#!">Обзоры товаров</a></li>
+            <li><a href="#!" class="visible-desktop-large">Жалобы на магазины</a></li>
+            <li><a href="#!" class="visible-desktop-large">Трекинг покупок</a></li>
+            <li><a href="#!" class="visible-desktop-large">Новости</a></li>
           </ul>
         </div>
-        <div class="footer__section">
+        <div class="footer__section hidden-desktop-large">
           <ul class="footer-nav">
             <li><a href="#!">Жалобы на магазины</a></li>
             <li><a href="#!">Трекинг покупок</a></li>
             <li><a href="#!">Новости</a></li>
           </ul>
         </div>
-        <div class="footer__section">
+        <div class="footer__section hidden-desktop-large">
           <div class="footer-link circs-icon"><a href="#!">Политика конфиденциальности</a></div>
           <div class="footer-link mail-icon"><a href="#!">Связь с администрацией</a></div>
         </div>
