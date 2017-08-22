@@ -15,6 +15,11 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
     spritesmith = require('gulp.spritesmith'),
     merge = require('merge-stream'),
+    postcss      = require('gulp-postcss'),
+    svginline    = require('postcss-inline-svg'),
+    sorting      = require('postcss-sorting'),
+    flexbugs     = require('postcss-flexbugs-fixes'),
+    autoprefixer = require('autoprefixer'),
     reload = browserSync.reload;
 
 var path = {
@@ -61,30 +66,40 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('html:build', function () {
-    gulp.src(path.src.html) 
+    gulp.src(path.src.html)
         .pipe(rigger())
         .pipe(jade({
             pretty: true
-        })) 
+        }))
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
 
 gulp.task('js:build', function () {
-    gulp.src(path.src.js) 
+    gulp.src(path.src.js)
         .pipe(rigger())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 });
 
+var processors = [
+  svginline(),
+  autoprefixer({
+    browsers: ['last 10 versions'],
+    remove: true, // remove outdated prefixes?
+  }),
+  sorting(),
+  flexbugs()
+];
+
 gulp.task('style:build', function () {
-    gulp.src(path.src.style) 
+    gulp.src(path.src.style)
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['app/styles/'],
             errLogToConsole: true
         }))
-        .pipe(prefixer())
+        .pipe(postcss(processors))
         // .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
@@ -92,7 +107,7 @@ gulp.task('style:build', function () {
 });
 
 gulp.task('image:build', function () {
-    gulp.src(path.src.img) 
+    gulp.src(path.src.img)
         // .pipe(imagemin({
         //     progressive: true,
         //     svgoPlugins: [{removeViewBox: false}],
