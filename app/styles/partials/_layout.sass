@@ -723,10 +723,15 @@ $header-margin-top: 26px
   display: none
   float: left
   padding-right: 15px
+  padding-left: 15px
   padding-top: 26px
   margin-right: 20px
   height: 70px
   border-right: 1px solid #f4f4f4
+  cursor: pointer
+  transition: all .25s ease-in-out
+  &:hover
+    background: #f4f4f4
   +desktop
     display: block
 
@@ -742,22 +747,31 @@ $header-margin-top: 26px
     margin-top: 6px
 
 .close-btn
-  display: block
-  width: 23px
-  height: 23px
-  background: url('../images/close-icon.png') 0 0 no-repeat
+  display: inline-block
+  background: url('../images/close-icon.png') no-repeat 17px center
+  height: 70px
+  width: 60px
+  background-size: 23px 23px
+  padding: 24px
+  cursor: pointer
+  transition: all .25s ease
+  &:hover
+    background-color: #f4f4f4
 
 .fade-bg
-  display: none
   position: absolute
   z-index: 2
   top: 0
   left: 0
   width: 100%
   height: 100%
+  pointer-events: none
+  opacity: 0
   background-color: rgba(0,144,255, 0.7)
+  transition: opacity .4s ease
   &.active
-    display: block
+    opacity: 1
+    pointer-events: all
 
 .aside-nav
   position: absolute
@@ -772,7 +786,7 @@ $header-margin-top: 26px
     left: 0
 
   &__header
-    padding: 24px
+    height: 70px
     border-bottom: 1px solid #f4f4f4
 
   &__body
@@ -823,21 +837,37 @@ $header-margin-top: 26px
 .header
   position: relative
   background-color: #ffffff
+  > .container
+    padding: 0
 
 .logo
   float: left
   margin: 13px 20px 9px 0
   width: 145px
+  +mobile-s
+    width: 120px
+    margin-top: 18px
+
+.header
+  .user-panel__item
+    +media(385)
+      &:nth-child(2)
+        display: none
+    +media(350)
+      &:nth-child(3)
+        display: none
 
 .user-panel
   float: right
-
+  padding-right: 15px
+  +mobile-s
+    margin-left: auto
   &__item + &__item
     margin-left: 40px
     +desktop-large
       margin-left: 25px
     +mobile-s
-      margin-right: 15px
+      margin-left: 15px
 
   &__item
     margin-top: $header-margin-top
