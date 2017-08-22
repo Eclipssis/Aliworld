@@ -16,7 +16,8 @@ $(document).ready(function(){
       1000: {
         items: 1
       }
-    }
+    },
+    responsiveRefreshRate: 50
   });
 
   $('.owl-images').owlCarousel({
@@ -35,7 +36,8 @@ $(document).ready(function(){
       1000: {
         items: 5
       }
-    }
+    },
+    responsiveRefreshRate: 50
   });
 
   function close_menu(argument) {
@@ -54,5 +56,10 @@ $(document).ready(function(){
   $('.article__favorite').click(function () {
     $(this).toggleClass('active')
   })
+
+  // Силизованый скролл
+  $(".js-custom-scroll").mCustomScrollbar({
+    theme:"dark"
+  });
 
 });//end ready

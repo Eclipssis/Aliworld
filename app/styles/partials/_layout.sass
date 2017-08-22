@@ -7,10 +7,10 @@
 html, body
   height: 100%
 
-.clear 
+.clear
   clear: both
 
-.clearfix:after 
+.clearfix:after
   content: "."
   display: block
   height: 0
@@ -60,7 +60,7 @@ html, body
     padding-top: 30px
 
   &__row
-    margin-right: -15px 
+    margin-right: -15px
     margin-left: -15px
     @extend .clearfix
 
@@ -72,7 +72,7 @@ html, body
       width: 70%
     +desktop
       width: 100%
-      
+
   &__aside
     width: 25%
     padding: 0 15px
@@ -94,9 +94,9 @@ html, body
 
   div[class^="col"]
     float: left
-    padding: 0 15px 
+    padding: 0 15px
     +desktop
-      padding: 10px 
+      padding: 10px
 
   .col-1
     width: 60%
@@ -179,7 +179,7 @@ html, body
     flex-direction: row-reverse
 
   +tablet
-    margin-right: -10px 
+    margin-right: -10px
     margin-left: -10px
 
 div[class^="col"]
@@ -317,7 +317,7 @@ div[class^="col"]
   .col-sm-5
     flex-basis: 100%
     max-width: 100%
-  
+
   .col-sm-offset-0
     margin-left: 0
   .col-sm-offset-1
@@ -392,7 +392,7 @@ div[class^="col"]
   .col-md-5
     flex-basis: 100%
     max-width: 100%
-  
+
   .col-md-offset-0
     margin-left: 0
   .col-md-offset-1
@@ -467,7 +467,7 @@ div[class^="col"]
   .col-lg-5
     flex-basis: 100%
     max-width: 100%
-  
+
   .col-lg-offset-0
     margin-left: 0
   .col-lg-offset-1
@@ -633,7 +633,7 @@ $header-margin-top: 26px
       &:before
         display: none
 
-    > a 
+    > a
       color: #a0a0a0
       font: 14px/1 'PT Sans', sans-serif
 
@@ -645,7 +645,7 @@ $header-margin-top: 26px
     display: inline-block
     vertical-align: middle
     margin-right: 12px
-    
+
     &:after
       margin-left: 2px
     &:before, &:after
@@ -662,7 +662,7 @@ $header-margin-top: 26px
     display: inline-block
     vertical-align: middle
     margin-left: 12px
-    
+
     &:after
       margin-left: 2px
     &:before, &:after
@@ -684,17 +684,17 @@ $header-margin-top: 26px
 
   > li:first-child
     margin-left: 0
-    > a 
+    > a
       padding: 0 17px 0 12px
 
   > li:last-child
-    > a 
+    > a
       padding: 0 17px 0 12px
 
-  > li 
+  > li
     float: left
     margin: 0 8px
-    > a 
+    > a
       display: block
       min-width: 34px
       height: 34px
@@ -713,7 +713,7 @@ $header-margin-top: 26px
         text-decoration: none
         color: #ffffff
 
-  > li.active 
+  > li.active
     > a
       background-color: #a0a0a0
       border-color: #a0a0a0
@@ -722,48 +722,60 @@ $header-margin-top: 26px
 .menu-toggle
   display: none
   float: left
-  padding-right: 15px 
+  padding-right: 15px
+  padding-left: 15px
   padding-top: 26px
   padding-left: 15px
-  margin-left: -15px
   margin-right: 20px
   height: 70px
   cursor: pointer
   border-right: 1px solid #f4f4f4
   &:hover 
     background-color: #f4f4f4
-
+    cursor: pointer
+    transition: all .25s ease-in-out
+  &:hover
+    background: #f4f4f4
   +desktop
     display: block
-    
 
-  &__bar 
+
+  &__bar
     display: block
     width: 30px
-    height: 3px 
+    height: 3px
     background-color: #000000
     border-radius: 5px
 
-  &__bar + &__bar 
+  &__bar + &__bar
     margin-top: 6px
 
 .close-btn
-  display: block
-  width: 23px
-  height: 23px 
-  background: url('../images/close-icon.png') 0 0 no-repeat
+  display: inline-block
+  background: url('../images/close-icon.png') no-repeat 17px center
+  height: 70px
+  width: 60px
+  background-size: 23px 23px
+  padding: 24px
+  cursor: pointer
+  transition: all .25s ease
+  &:hover
+    background-color: #f4f4f4
 
 .fade-bg
-  display: none
   position: absolute
   z-index: 2
   top: 0
   left: 0
   width: 100%
   height: 100%
+  pointer-events: none
+  opacity: 0
   background-color: rgba(0,144,255, 0.7)
+  transition: opacity .4s ease
   &.active
-    display: block
+    opacity: 1
+    pointer-events: all
 
 .aside-nav
   position: absolute
@@ -774,29 +786,29 @@ $header-margin-top: 26px
   height: 100%
   background-color: #ffffff
   transition: all 0.45s ease
-  &.open 
+  &.open
     left: 0
 
   &__header
-    padding: 24px
+    height: 70px
     border-bottom: 1px solid #f4f4f4
 
-  &__body 
+  &__body
     padding: 40px 10px 40px 30px
 
 .tablet-menu
-  > li 
+  > li
     margin-bottom: 25px
     +mobile
       margin-bottom: 20px
     > a
-      font-size: 20px 
+      font-size: 20px
       font-weight: 500
       +mobile
         font-size: 17px
 
 
-.header-nav 
+.header-nav
   float: right
   margin-right: 30px
   @extend .clearfix
@@ -805,12 +817,12 @@ $header-margin-top: 26px
   +desktop-large
     margin-right: 20px
 
-  > li + li 
+  > li + li
     margin-left: 44px
     +desktop-large
       margin-left: 25px
 
-  > li 
+  > li
     float: left
     > a
       font-size: 17px
@@ -820,7 +832,7 @@ $header-margin-top: 26px
       +desktop-large
         font-size: 15px
 
-      &:hover 
+      &:hover
         color: $hover-color
         text-decoration: none
 
@@ -829,21 +841,41 @@ $header-margin-top: 26px
 .header
   position: relative
   background-color: #ffffff
+  > .container
+    padding: 0
 
 .logo
   float: left
   margin: 13px 20px 9px 0
   width: 145px
+  margin-left: 15px
+  +desktop
+    margin-left: 0
+
+  +mobile-s
+    width: 120px
+    margin-top: 18px
+
+.header
+  .user-panel__item
+    +media(385)
+      &:nth-child(2)
+        display: none
+    +media(350)
+      &:nth-child(3)
+        display: none
 
 .user-panel
   float: right
-  +mobile
-    float: none
-
+  padding-right: 15px
+  +mobile-s
+    margin-left: auto
   &__item + &__item
     margin-left: 40px
     +desktop-large
       margin-left: 25px
+    +mobile-s
+      margin-left: 15px
 
   &__item
     margin-top: $header-margin-top
@@ -855,7 +887,7 @@ $header-margin-top: 26px
     +desktop-large
       font-size: 15px
 
-    &:first-child 
+    &:first-child
       margin-top: 0
 
   &__divider
@@ -868,9 +900,9 @@ $header-margin-top: 26px
     +tablet
       display: none
 
-  a 
+  a
     transition: all 0.2s ease
-    &:hover 
+    &:hover
       text-decoration: none
       color: $hover-color
 
@@ -887,7 +919,7 @@ $header-margin-top: 26px
       height: 17px
       transition: all 0.2s ease
       background: url('../images/user-dark.svg') 0 0 no-repeat
-    
+
     &__text
       +tablet
         display: none
@@ -895,7 +927,7 @@ $header-margin-top: 26px
     &:hover .log-in__icon
       background: url('../images/user-dark-hover.svg') 0 0 no-repeat
 
-.header-search 
+.header-search
   height: 70px
   float: right
   font-size: 17px
@@ -915,6 +947,7 @@ $header-margin-top: 26px
     padding-right: 0
     padding-left: 0
 
+
   &__text 
     &:hover 
       color: $hover-color
@@ -924,6 +957,15 @@ $header-margin-top: 26px
   a:hover .search-icon
 
     background: url('../images/search-hover.svg') 0 0 no-repeat    
+
+  &__text
+    transition: all 0.2s ease
+    &:hover
+      color: $hover-color
+      text-decoration: none
+    &:hover .search-icon
+      background: url('../images/search-hover.svg') 0 0 no-repeat
+
     +tablet
       display: none
 
@@ -955,11 +997,6 @@ $header-margin-top: 26px
     font-family: 'PT Sans', sans-serif
     font-size: 13px
 
-
-
-
-
-
 /*----------- Footer *
  ------------------------------------------------------------*/
 
@@ -979,7 +1016,7 @@ $header-margin-top: 26px
       order: 1
     &__section:nth-child(2)
       order: -1
-  
+
   &__section
     padding: 35px
     float: left
@@ -997,7 +1034,7 @@ $header-margin-top: 26px
       width: 100%
       border: none
       padding: 20px 15px
-      
+
 
 .copyright
   max-width: 146px
@@ -1006,14 +1043,14 @@ $header-margin-top: 26px
   line-height: 25px
   font-weight: 500
   +desktop-large
-    margin-bottom: 20px  
+    margin-bottom: 20px
 
 .footer-nav
   margin-bottom: 0
-  > li + li 
+  > li + li
     margin-top: 9px
-  > li 
-    > a 
+  > li
+    > a
       font-size: 16px
       font-weight: 500
       color: #000000
@@ -1028,8 +1065,8 @@ $header-margin-top: 26px
 .footer-link
   padding-left: 28px
   position: relative
-  
-  a 
+
+  a
     color: #a0a0a0
     font: 14px/1.2 'PT Sans', sans-serif
     &:before
@@ -1102,31 +1139,3 @@ $header-margin-top: 26px
 
 /*----------- Main blocks *
  ------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
