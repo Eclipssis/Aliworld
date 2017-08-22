@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "autoprefixer": "^7.1.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-inline-svg": "^3.0.0",

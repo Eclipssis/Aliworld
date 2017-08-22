@@ -20,6 +20,8 @@ var gulp = require('gulp'),
     sorting      = require('postcss-sorting'),
     flexbugs     = require('postcss-flexbugs-fixes'),
     autoprefixer = require('autoprefixer'),
+    notify       = require('gulp-notify'),
+    plumber      = require('gulp-plumber'),
     reload = browserSync.reload;
 
 var path = {
@@ -57,6 +59,16 @@ var config = {
     logPrefix: "Eclipssis"
 };
 
+var errorHandler = function() {
+  var args = Array.prototype.slice.call(arguments);
+  notify.onError({
+      title: 'Compile Error',
+      message: '<%= error.message %>',
+      sound: 'Submarine'
+  }).apply(this, args);
+  this.emit('end');
+};
+
 gulp.task('webserver', function () {
     browserSync(config);
 });
@@ -70,6 +82,9 @@ gulp.task('html:build', function () {
         .pipe(rigger())
         .pipe(jade({
             pretty: true
+        }))
+        .pipe(plumber({
+          errorHandler: errorHandler
         }))
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
@@ -99,7 +114,11 @@ gulp.task('style:build', function () {
             includePaths: ['app/styles/'],
             errLogToConsole: true
         }))
+        .on('error', errorHandler)
         .pipe(postcss(processors))
+        .pipe(plumber({
+          errorHandler: errorHandler
+        }))
         // .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
