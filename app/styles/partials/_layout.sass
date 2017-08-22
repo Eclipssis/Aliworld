@@ -724,9 +724,15 @@ $header-margin-top: 26px
   float: left
   padding-right: 15px 
   padding-top: 26px
+  padding-left: 15px
+  margin-left: -15px
   margin-right: 20px
   height: 70px
+  cursor: pointer
   border-right: 1px solid #f4f4f4
+  &:hover 
+    background-color: #f4f4f4
+
   +desktop
     display: block
     
@@ -898,6 +904,7 @@ $header-margin-top: 26px
   border-left: 1px solid #f4f4f4
   border-right: 1px solid #f4f4f4
   padding: $header-margin-top 30px 0
+  transition: all 0.2s ease
   +desktop-large
     font-size: 15px
     padding: $header-margin-top 20px 0
@@ -909,12 +916,14 @@ $header-margin-top: 26px
     padding-left: 0
 
   &__text 
-    transition: all 0.2s ease
     &:hover 
       color: $hover-color
       text-decoration: none
-    &:hover .search-icon
-      background: url('../images/search-hover.svg') 0 0 no-repeat    
+  a 
+    transition: all 0.2s ease
+  a:hover .search-icon
+
+    background: url('../images/search-hover.svg') 0 0 no-repeat    
     +tablet
       display: none
 

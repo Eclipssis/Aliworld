@@ -1,0 +1,128 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      //= template/header.jade
+
+      section.middle
+        .container
+          
+          //= template/breadcrumb.jade
+
+          .page-title Отслеживание почтового отправления
+
+          form.tracking-parcel.tracking-parcel--purple-bg
+            .tracking-parcel__body
+            
+              button(type="submit").btn.tracking-parcel__submit Отследить посылку
+              .tracking-parcel__input
+                input(type="text" placeholder="Необходимо ввести трек-код...")
+
+            .tracking-parcel__footer
+              .tracking-parcel__description Пример : 
+                a(href="#!") RA219828196FI
+                | , 
+                a(href="#!") RS806954342NL
+              .tracking-parcel__description Для того, что бы отследить посылку, укажите трек-код полученный у продавца, кликните по кнопке «Отследить посылку»
+            
+
+          .middle__row
+            .middle__content
+
+              .block.block--white
+                .block__header
+
+                  .section-subtitle Отслеживание почтового отправления: RS806954342NL
+
+                  .tracking-status
+                    .tracking-status__value(style="width:50%")
+
+                    .tracking-status__caption В пути 102 дня  
+                      a(href="#!").question-icon
+                      | /  Отслеживается 99 дней  
+                      a(href="#!").question-icon
+
+                .block__header
+                  .section-subtitle.margin-0 Прогнозируемый период поступления посылки: 
+                    span.color-grey.medium 24.04.2017 — 02.05.2017
+                    a(href="#!").question-icon
+
+                .tracking-steps
+                  .tracking-steps__item
+                    .tracking-steps__section
+                      .tracking-steps__date 12.04.2017
+                      .tracking-steps__time 09:16
+                      .tracking-steps__duration 7 день
+
+                    .tracking-steps__section
+                      .tracking-steps__icon.icon-1
+
+                    .tracking-steps__section
+                      .tracking-steps__title Прибыло в страну назначения 
+                        a(href="#!").question-icon
+
+                      .tracking-steps__description Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта
+
+                  
+
+                  .tracking-steps__item
+                    .tracking-steps__section
+                      .tracking-steps__date 10.04.2017
+                      .tracking-steps__time 09:16
+                      .tracking-steps__duration 5 день
+
+                    .tracking-steps__section
+                      .tracking-steps__icon.icon-2
+
+                    .tracking-steps__section
+                      .tracking-steps__title Отправлено в страну назначения
+                        a(href="#!").question-icon 
+
+                      .tracking-steps__description Почтовое отправление в процессе передачи почте страны назначения, для доставки в одно из мест международного обмена, и последующих операция импорта / экспорта. 
+
+                  .tracking-steps__item
+                    .tracking-steps__section
+                      .tracking-steps__date 11.04.2017
+                      .tracking-steps__time 09:16
+                      .tracking-steps__duration 6 день
+
+                    .tracking-steps__section
+                      .tracking-steps__icon.icon-3
+
+                    .tracking-steps__section
+                      .tracking-steps__title Прибыло в сортировочный центр – Нидерланды 
+                        a(href="#!").question-icon
+
+                      .tracking-steps__description Прибытие почтового отправления в промежуточный узел почтовой связи для сортировки, выбора маршрута и отправкив сторону получателя.
+
+                  .tracking-steps__item
+                    .tracking-steps__section
+                      .tracking-steps__date 5.04.2017
+                      .tracking-steps__time 09:16
+                      .tracking-steps__duration 1 день
+
+                    .tracking-steps__section
+                      .tracking-steps__icon.icon-4
+
+                    .tracking-steps__section
+                      .tracking-steps__title Подготовaка к отправке
+                        a(href="#!").question-icon
+
+                      .tracking-steps__description Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта
+
+
+
+
+
+
+            .middle__aside
+              
+          
+
+    //= template/footer.jade
+
+    //= template/scripts.jade
