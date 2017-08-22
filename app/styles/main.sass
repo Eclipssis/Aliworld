@@ -1,4 +1,4 @@
-@import partials/reset 
+@import partials/reset
 @import partials/sprite
 @import partials/fonts
 @import partials/mixins
@@ -16,7 +16,7 @@
   .rating
     float: right
     margin-top: 2px
-  
+
 .rating-value
   float: left
   color: #a0a0a0
@@ -25,55 +25,55 @@
 .rating
   display: inline-block
   list-style-type: none
-  margin-bottom: 0 
+  margin-bottom: 0
   background: url('../images/rating.png') 0 0 repeat
   position: relative
   height: $star-height
   width: $star-width * 5
-  li 
+  li
     float: left
     height: $star-height
     &:before
       display: none
 
-    span[class*="star"] 
+    span[class*="star"]
       position: absolute
       z-index: 5
       display: block
       width: $star-width
       height: $star-height
       // cursor: pointer
-      // &:hover 
+      // &:hover
       //   z-index: 2
       //   left: 0
-      //   background: url('../images/rating.png') left bottom repeat 
-      
-    span.star1  
+      //   background: url('../images/rating.png') left bottom repeat
+
+    span.star1
       left: 0
-      &:hover 
+      &:hover
         width: $star-width
 
-    span.star2  
+    span.star2
       left: $star-width
-      &:hover 
+      &:hover
         width: $star-width * 2
-      
-    span.star3  
+
+    span.star3
       left: $star-width * 2
-      &:hover 
+      &:hover
         width: $star-width * 3
-      
-    span.star4  
+
+    span.star4
       left: $star-width * 3
-      &:hover 
+      &:hover
         width: $star-width * 4
-      
-    span.star5  
+
+    span.star5
       left: $star-width * 4
       &:hover
         width: $star-width * 5
-      
-  li.active 
+
+  li.active
     background: url('../images/rating.png') left bottom repeat
     z-index: 1
 
@@ -86,19 +86,19 @@
   margin-bottom: 30px
   &--white
     background-color: #ffffff
-    
-  
+
+
   &__header
-    padding: 20px 30px 
-    border-bottom: 1px solid #f4f4f4
+    padding: 20px 30px
+    border-bottom: 1px solid $border-color
     display: flex
     flex-wrap: wrap
     align-items: center
     justify-content: space-between
     +tablet
-      padding: 15px 20px 
+      padding: 15px 20px
 
-    &--left 
+    &--left
       justify-content: flex-start
 
   &__head-item
@@ -113,9 +113,9 @@
       padding: 20px
 
   &__divider
-    border-bottom: 1px solid #f4f4f4
+    border-bottom: 1px solid $border-color
 
-  &__footer 
+  &__footer
     padding: 25px 30px
 
 .section-title
@@ -130,8 +130,8 @@
 .article
   display: flex
   flex-wrap: wrap
-  
-  &--white 
+
+  &--white
     background-color: #ffffff
 
   &__item
@@ -145,7 +145,7 @@
     background: url('../images/heart(like-light).svg') 0 0 no-repeat
     cursor: pointer
     z-index: 10
-    &--small 
+    &--small
       top: 12px
       right: 12px
     &.active
@@ -155,23 +155,43 @@
   &__image
     display: block
     position: relative
+    z-index: 1
+    width: 100%
     margin-bottom: 15px
     overflow: hidden
-
-    img 
+    font-size: 0
+    img
+      min-width: 100%
       transition: all 0.35s ease
 
-    &:hover img
-      transform: scale(1.15)
+    // height: 200px
+    //
+    // img
+    //   position: absolute
+    //   top: 50%
+    //   left: 50%
+    //   transform: translate(-50%,-50%)
+    //   min-height: 100%
+    //   min-width: 100%
+    //   max-width: none !important
+    //   width: auto
+    //   height: auto
+    //   transition: all 0.35s ease
+    //
+    // &:hover img
+    //   transform: translate(-50%,-50%) scale(1.1)
+    &:hover
+      img
+        transform: scale(1.1)
 
     &--zoom-none
-      &:hover img 
+      &:hover img
         transform: none
 
-  &__body 
+  &__body
     padding: 30px 30px 0
 
-  &__title 
+  &__title
     margin-bottom: 15px
     &--small
       margin-bottom: 7px
@@ -183,26 +203,26 @@
     color: #000000
     transition: all 0.2s ease
     &--small
-      font-size: 14px 
+      font-size: 14px
       font-weight: 500
 
-    &:hover 
+    &:hover
       color: $hover-color
       text-decoration: none
 
-  &__text 
+  &__text
     color: #5f5f5f
-    font-size: 15px 
+    font-size: 15px
     font-family: 'PT Sans', sans-serif
     margin-bottom: 20px
     &--small
       font-size: 14px
       margin-bottom: 10px
 
-  &__footer 
+  &__footer
     width: 100%
     color: #a0a0a0
-    font-size: 14px 
+    font-size: 14px
     font-family: 'PT Sans', sans-serif
     margin-top: auto
     justify-content: space-between
@@ -212,13 +232,13 @@
       margin-top: 10px
 
     &--separate
-      border-top: 1px solid #f4f4f4
+      border-top: 1px solid $border-color
       padding: 20px 30px
 
   .footer-btn
     margin-left: 50px
 
-  &__publicated 
+  &__publicated
     @extend .inline-middle
     color: #a0a0a0
     font-size: 14px
@@ -238,12 +258,12 @@
 
   &__owner-name
     @extend .inline-middle
-    font-size: 14px 
+    font-size: 14px
     font-weight: 500
     color: #000000
     font-family: 'MuseoSans', Arial, sans-serif
     margin-right: 12px
-  
+
   &__owner-avatar
     @extend .inline-middle
     border-radius: 50%
@@ -260,8 +280,8 @@
       margin-top: -6px
       left: 0
       content: ' '
-      width: 19px 
-      height: 12px 
+      width: 19px
+      height: 12px
       background: url('../images/eye-icon.svg') 0 0 no-repeat
 
 
@@ -277,7 +297,7 @@
       position: absolute
       top: 50%
       left: 0
-      margin-top: -7.5px 
+      margin-top: -7.5px
       content: ' '
       width: 20px
       height: 15px
@@ -306,7 +326,7 @@
   position: absolute
   bottom: 16px
   left: 0
-  height: 35px 
+  height: 35px
   line-height: 35px
   &__price
     display: inline-block
@@ -314,9 +334,9 @@
     padding: 0 30px 0 20px
     background-color: #e62e04
     color: #ffffff
-    font-size: 18px 
+    font-size: 18px
     font-weight: 700
-    .rouble 
+    .rouble
       display: inline-block
       vertical-align: middle
       margin-bottom: 9px
@@ -345,10 +365,10 @@
       height: 0
       border-style: solid
       border-width: 17.5px 11px 17.5px 0
-      border-color: transparent #ffffff transparent transparent 
+      border-color: transparent #ffffff transparent transparent
 
 .article-single
-  margin-bottom: 30px 
+  margin-bottom: 30px
 
   .footer-btn
     margin-left: 70px
@@ -359,8 +379,8 @@
   @extend .clearfix
 
 
-  > li 
-    border-bottom: 1px solid #f4f4f4
+  > li
+    border-bottom: 1px solid $border-color
     padding: 30px 30px 20px
     +tablet
       padding: 20px
@@ -369,10 +389,10 @@
     display: flex
     flex-wrap: wrap
     padding: 0 30px
-    
-    margin-right: -30px 
+
+    margin-right: -30px
     margin-left: -30px
-    > li 
+    > li
       width: 33.3333333%
       float: left
       display: flex
@@ -388,15 +408,15 @@
       +tablet
         display: none
 
-    > li + li 
-      border-left: 1px solid #f4f4f4
+    > li + li
+      border-left: 1px solid $border-color
 
-  &--small 
-    > li 
+  &--small
+    > li
       padding: 22px 30px 22px
       +desktop-large
         padding: 20px
-  
+
   &--max
     > li
       background-color: #ffffff
@@ -404,7 +424,7 @@
       padding: 0
 
   &--two-col
-    margin-right: -15px 
+    margin-right: -15px
     margin-left: -15px
     margin-bottom: 20px
     > li
@@ -414,14 +434,14 @@
       margin-bottom: 30px
 
   &--four-col
-    margin-right: -15px 
+    margin-right: -15px
     margin-left: -15px
     margin-bottom: 20px
     > li
       width: 25%
       float: left
       padding: 0 15px
-      margin-bottom: 30px 
+      margin-bottom: 30px
       +desktop
         width: 33.333333%
       +tablet
@@ -439,7 +459,7 @@
   .article-list li:nth-child(3)
     +tablet
       display: none
-      
+
 
 
 .show-more
@@ -449,14 +469,17 @@
   color: #a0a0a0
   font-size: 16px
   font-weight: 700
+  transition: all .25s ease-in-out
   &:hover, &:focus
     color: #a0a0a0
+    text-decoration: none
+    background: rgba($border-color, .5)
 
 .owl-banner
 
 .owl-carousel
-  
-  .owl-item 
+
+  .owl-item
     overflow: hidden
     img
       min-height: 260px
@@ -473,7 +496,7 @@
     bottom: 35px
     right: 60px
     +tablet
-      bottom: 20px 
+      bottom: 20px
       right: 25px
 
     .owl-dot + .owl-dot
@@ -485,15 +508,15 @@
         border-radius: 50%
         border: 3px solid #ffffff
         width: 15px
-        height: 15px 
+        height: 15px
         display: block
         background-color: #ffffff
-        &:hover 
+        &:hover
           background-color: #e62e04
 
       &.active
         cursor: default
-        span 
+        span
           background-color: #e62e04
 
 .carousel-caption
@@ -501,7 +524,7 @@
   position: absolute
   top: 0
   left: 0
-  padding: 30px 20px 20px 45px 
+  padding: 30px 20px 20px 45px
   +tablet
     padding: 30px
   +mobile
@@ -532,15 +555,15 @@
   color: #ffffff
   text-align: center
   padding: 30px 32px
-  &--red 
+  &--red
     background-color: #e62e04
-  &--blue 
+  &--blue
     background-color: #0090ff
-  &--green 
+  &--green
     background-color: #8cc000
 
   &__icon
-    min-height: 108px 
+    min-height: 108px
     line-height: 108px
     margin-bottom: 17px
     &.icon-sadman
@@ -558,7 +581,7 @@
     margin-bottom: 15px
 
 .news-preview
-  margin-bottom: 40px 
+  margin-bottom: 40px
 
   .block__header
     padding: 20px 0
@@ -573,7 +596,7 @@
       width: 50%
     +mobile
       width: 100%
-  
+
   .arcticle-wrap
     @extend .clearfix
     +desktop
@@ -589,20 +612,20 @@
     +tablet
       .article:nth-child(3)
         display: none
-      
+
 
 
 .banner
   background-color: #ffffff
   padding: 45px 0 55px
-  &__title 
+  &__title
     color: #000000
     font-size: 23px
     font-weight: 700
     margin-bottom: 20px
 
   &__text
-    font-size: 16px 
+    font-size: 16px
     line-height: 25px
     color: #5f5f5f
 
@@ -628,7 +651,7 @@
 
 .tag-links
   margin-bottom: 30px
-  a 
+  a
     color: #a0a0a0
     font: 16px/1.5 'PT Sans', sans-serif
 
@@ -638,11 +661,11 @@
     margin-bottom: 10px
     margin-right: 10px
 
-.aside-comment 
+.aside-comment
   color: #5f5f5f
   font: 16px/1.5 'PT Sans', sans-serif
   margin-bottom: 20px
-  a 
+  a
     border-bottom: 1px solid #cfcfcf
     &:hover, &:focus
       text-decoration: none
@@ -672,9 +695,9 @@
 ul.comments-list
   list-style-type: none
 
-  > li 
+  > li
     padding: 8px 15px 18px
-    border-top: 1px solid #f4f4f4
+    border-top: 1px solid $border-color
     margin: 0
     +mobile
       padding: 10px 0
@@ -684,32 +707,32 @@ ul.comments-list
 
 .comment
   padding: 12px 15px 20px
-  textarea 
+  textarea
     background-color: #ffffff
-    border-radius: 4px 
+    border-radius: 4px
     border: 1px solid #c0c0c0
     font-size: 15px
     padding: 15px 20px
 
-  &--reply 
+  &--reply
     margin-top: 20px
     margin-left: 50px
-    background-color: #f4f4f4
+    background-color: $border-color
     +mobile
       margin-left: 20px
 
-  &__head 
+  &__head
     margin-bottom: 10px
     @extend .clearfix
 
   &__avatar
     float: left
 
-  &__title 
+  &__title
     margin-left: 50px
     +mobile
       font-size: 13px
-    b  
+    b
       display: inline-block
       margin-right: 9px
       margin-left: 9px
@@ -717,10 +740,10 @@ ul.comments-list
       font: 700 15px/1.2 'PT Sans', sans-serif
 
 
-    b:first-child 
+    b:first-child
       margin-left: 0
 
-  &__date 
+  &__date
     display: inline-block
     vertical-align: middle
     color: #a0a0a0
@@ -728,7 +751,7 @@ ul.comments-list
     +mobile
       font-size: 13px
 
-  &__body 
+  &__body
     margin-left: 53px
     +mobile
       margin-left: 0px
@@ -741,16 +764,16 @@ ul.comments-list
 .user-info-wrap
   display: flex
   flex-wrap: wrap
-  align-items: center 
+  align-items: center
   justify-content: space-between
-  &__item 
+  &__item
 
   .rating-value
     float: none
     display: inline-block
     margin-right: 10px
 
-  .btn 
+  .btn
     float: right
 
 .user-info
@@ -773,7 +796,7 @@ ul.comments-list
 
 .attached-images
   padding: 30px
-  
+
 
 .owl-images
   margin-top: 35px
@@ -782,11 +805,11 @@ ul.comments-list
 
   .owl-nav
     position: absolute
-    top: -60px 
+    top: -60px
     right: 0
     @extend .clearfix
-    
-    > div 
+
+    > div
       float: left
       width: 50px
       height: 34px
@@ -797,13 +820,13 @@ ul.comments-list
       &:before
         position: absolute
         content: ' '
-        width: 7px  
+        width: 7px
         height: 11px
         top: 50%
-        margin-top: -5.5px 
+        margin-top: -5.5px
         left: 50%
         margin-left: -3.5px
-      &:hover 
+      &:hover
         background-color: #f5f5f5
 
     .owl-prev
@@ -814,7 +837,7 @@ ul.comments-list
 
     .owl-next
       border-radius: 0 5px 5px 0
-      &:before 
+      &:before
         background: url('../images/arrow-right-grey.svg') 0 0 no-repeat
 
 
@@ -831,8 +854,8 @@ ul.comments-list
     float: left
     width: 50%
 
-  p 
-    font-size: 17px 
+  p
+    font-size: 17px
     line-height: 1.7
 
 .about-banner
@@ -840,7 +863,7 @@ ul.comments-list
   min-height: 400px
   background-image: url('../images/Couple.png'), url("../images/pattern-2.jpg")
   background-position: 90% 100%, 0 0
-  background-repeat: no-repeat, repeat 
+  background-repeat: no-repeat, repeat
   background-size: 50%, auto
   color: #ffffff
   &__body
@@ -849,12 +872,12 @@ ul.comments-list
     max-width: 640px
     left: 0
     top: 0
-    padding: 60px 
+    padding: 60px
   &__title
     font-size: 50px
     line-height: 1.2
     font-weight: 700
-    margin-bottom: 20px 
+    margin-bottom: 20px
 
-  &__text 
+  &__text
     font: 17px/1.7 'PT Sans', sans-serif
