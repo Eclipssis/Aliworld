@@ -62,4 +62,27 @@ $(document).ready(function(){
     theme:"dark"
   });
 
+
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('.js-pasteSelected').attr('src', e.target.result);
+        $('.js-pasteSelected').addClass('showing')
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+
+  $('.js-showSelectedImage').on('change', function(){
+    readURL(this);
+  });
+
+  $('.js-uploadImage').on('change', function(){
+    readURL( this );
+  });
+
 });//end ready
