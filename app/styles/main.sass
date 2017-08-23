@@ -110,9 +110,16 @@
     justify-content: space-between
     +tablet
       padding: 15px 20px
+    +mobile
+      padding: 15px 20px 5px
+      
 
     &--left
       justify-content: flex-start
+
+    .btn, .section-title
+      +mobile
+        margin-bottom: 10px 
 
   &__head-item
     display: inline-block
@@ -190,7 +197,7 @@
     &--height-275
       height: 275px
       +mobile
-        height: 175px
+        height: 140px
 
     img 
       font-size: 0
@@ -277,6 +284,10 @@
     justify-content: space-between
     display: flex
     align-items: center
+    // +mobile
+    //   flex-direction: column
+    //   text-align: center
+
     &--margin-top-10
       margin-top: 10px
 
@@ -287,10 +298,16 @@
   .footer-btn
     margin-left: 50px
 
+  &__section
+    &:last-child
+      +mobile
+        text-align: right
+
   &__publicated
     @extend .inline-middle
     color: #a0a0a0
     font-size: 14px
+    margin-right: 5px
 
   &__date
     position: relative
@@ -312,6 +329,9 @@
     color: #000000
     font-family: 'MuseoSans', Arial, sans-serif
     margin-right: 12px
+    +mobile
+      display: block
+      margin-top: 5px
 
   &__owner-avatar
     @extend .inline-middle
@@ -339,7 +359,7 @@
     position: relative
     padding-left: 23px
     margin-left: 20px
-    +desktop-large
+    +media(1400)
       margin-left: 10px
 
     &:before
@@ -463,7 +483,7 @@
   &--small
     > li
       padding: 22px 30px 22px
-      +desktop-large
+      +media(1400)
         padding: 20px
 
   &--max
@@ -524,7 +544,80 @@
     text-decoration: none
     background: rgba($border-color, .5)
 
-.owl-banner
+.owl-complaints
+  padding: 0 60px
+  .owl-dots
+    display: none
+
+  .owl-stage-outer
+    z-index: 100
+  
+  .owl-nav
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    > div 
+      position: absolute
+      top: 0
+      background-color: #ffffff
+      height: 100%
+      cursor: pointer
+
+    .owl-prev
+      width: 60px
+      left: 0 
+      border-right: 1px solid #f4f4f4
+      &:before
+        position: absolute
+        top: 50%
+        margin-top: -5.5px 
+        left: 50%
+        margin-left: -3.5px
+        content: ' '
+        width: 7px
+        height: 11px 
+        background: url('../images/arrow-left-dark.svg') 50% 50% no-repeat
+
+    .owl-next 
+      width: 60px 
+      right: 0
+      border-left: 1px solid #f4f4f4
+      &:before
+        position: absolute
+        top: 50%
+        margin-top: -5.5px 
+        left: 50%
+        margin-left: -3.5px
+        content: ' '
+        width: 7px
+        height: 11px 
+        background: url('../images/arrow-right-dark.svg') 50% 50% no-repeat
+
+.complaint
+  text-align: center
+  padding: 20px 30px 25px
+  background-color: #ffffff
+  .rating
+    margin-bottom: 10px
+
+  &__title
+    min-height: 65px 
+    a 
+      color: #000000
+      font-size: 15px 
+      font-weight: 700
+
+  &__count
+    color: #e62e04
+    font-size: 15px 
+    font-weight: 700
+
+  &__rating-value
+    color: #a0a0a0
+    font: 14px/1.5 'PT Sans', sans-serif
+    margin-bottom: 5px
 
 .owl-carousel
 

@@ -40,6 +40,27 @@ $(document).ready(function(){
     responsiveRefreshRate: 50
   });
 
+  $('.owl-complaints').owlCarousel({
+    loop: true,
+    margin: 1,
+    nav: true,
+    navText: false,
+    responsive: {
+      0: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      }
+    },
+    responsiveRefreshRate: 50
+  });
+
+  
+
   function close_menu(argument) {
     $('.aside-nav').toggleClass('open');
     $('.fade-bg').toggleClass('active');
