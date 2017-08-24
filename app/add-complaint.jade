@@ -1,0 +1,87 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      //= template/header.jade
+
+      section.middle
+        .container
+          
+          //= template/breadcrumb.jade
+
+          .info-panel.info-panel--red
+
+            .info-panel__left
+              .info-panel__title Добавление жалобы на магазин
+              .info-panel__text Поделитесь своими впечатлениями о продавце с миром!
+              .info-panel__text Заполните поля ниже и после короткой модерации ваш обзор будет опубликован.
+
+            .info-panel__right
+              span.panel-icon-2
+
+
+          .adding-form-wrap
+            form.adding-form(id="my-awesome-dropzone")
+
+              .form-group
+                label.label(for="input-1") Ссылка на продавца:
+                  span.red-color  *
+                input#input-1.adding-form__input(type="text", placeholder="Введите ссылку на магазин...")
+              
+                
+              .form-group
+                label.label(for="input-4") Основной текст:
+                  span.red-color  *
+                textarea#input-4.adding-form__input(type="text", placeholder="Введите текст вашей жалобы...")
+
+              .form-group
+                label.label(for="input-5") Метки:
+                  span.red-color  *
+                input#input-5.adding-form__input(type="text", placeholder="Перечислите метки обзора. Например: телефоны, электроника...")
+              
+              .label Добавить изображения:
+              .extra-images
+                .extra-images__image
+                  img().js-pasteSelected
+                a.chose_file(href='#')
+                input.chose_file_input.js-uploadImage(type='file', name='file', id='')
+
+              .rating-section
+                .label.rating-section-title Ваша оценка магазина:
+                  span.red-color  *
+
+                ul.rating.rating--big
+                  li.active(style="width: 0%")
+                    span.star1
+                  li
+                    span.star2
+                  li
+                    span.star3
+                  li
+                    span.star4
+                  li
+                    span.star5
+
+              .divider-grey
+              
+              .text-center.form-group
+                button(type="submit").btn Опубликовать жалобу
+
+              .form-caption Вы авторизованы под ником 
+                span.bold.color-black Nikolay1975.
+              .form-caption После модерации ваша жалоба будет опубликована. Поля, отмеченные звёздочкой, обязательны для заполнения.
+
+        
+
+
+              
+
+              
+
+    //= template/footer.jade
+
+    //= template/scripts.jade

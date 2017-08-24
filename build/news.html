@@ -110,9 +110,11 @@
               <div class="article-single">
                 <article class="article article--white">
                   <div class="article__body">
-                    <div class="article__image article__image--zoom-none"><img src="pictures/news-big.jpg" alt="articel-image"></div>
+                    <div class="article__image article__image--max"><img src="pictures/news-big.jpg" alt="articel-image">
+                      <div class="article__favorite"></div>
+                    </div>
                     <div class="article__title">
-                      <div class="article__favorite"></div><a .article__favoritehref="#!">article__link Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой</a>
+                      <div class="article__favorite"></div><a href="#!" class="article__link">Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой</a>
                     </div>
                     <div class="article__text">На АлиЭкспресс начались продажи совсем недавно представленного нового бюджетного смартфона Leagoo M5 Edge. Несмотря на то, что он явно относится к начальному сегменту мобильных гаджетов, компания-производитель смогла вложить в него несколько очень интересных «изюминок», благодаря которым он неплохо выделяется среди прочих телефонов своего класса. </div>
                   </div>
@@ -131,7 +133,7 @@
                 <li>
                   <article class="article article--white">
                     <div class="article__body">
-                      <div class="article__image"><img src="pictures/news-480x240.jpg" alt="articel-image">
+                      <div class="article__image article__image--height-240"><img src="pictures/news-480x240.jpg" alt="articel-image">
                         <div class="article__favorite"></div>
                       </div>
                       <div class="article__title"><a href="#!" class="article__link">Самый популярный запрос на АлиЭкспресс – спиннеры</a></div>
@@ -151,7 +153,7 @@
                 <li>
                   <article class="article article--white">
                     <div class="article__body">
-                      <div class="article__image"><img src="pictures/news-480x240.jpg" alt="articel-image">
+                      <div class="article__image article__image--height-240"><img src="pictures/news-480x240.jpg" alt="articel-image">
                         <div class="article__favorite active"></div>
                       </div>
                       <div class="article__title"><a href="#!" class="article__link">Самый популярный запрос на АлиЭкспресс – спиннеры</a></div>
@@ -171,7 +173,7 @@
                 <li>
                   <article class="article article--white">
                     <div class="article__body">
-                      <div class="article__image"><img src="pictures/news-480x240.jpg" alt="articel-image">
+                      <div class="article__image article__image--height-240"><img src="pictures/news-480x240.jpg" alt="articel-image">
                         <div class="article__favorite"></div>
                       </div>
                       <div class="article__title"><a href="#!" class="article__link">Самый популярный запрос на АлиЭкспресс – спиннеры</a></div>
@@ -191,7 +193,7 @@
                 <li>
                   <article class="article article--white">
                     <div class="article__body">
-                      <div class="article__image"><img src="pictures/news-480x240.jpg" alt="articel-image">
+                      <div class="article__image article__image--height-240"><img src="pictures/news-480x240.jpg" alt="articel-image">
                         <div class="article__favorite"></div>
                       </div>
                       <div class="article__title"><a href="#!" class="article__link">Самый популярный запрос на АлиЭкспресс – спиннеры</a></div>
@@ -210,15 +212,13 @@
                 </li>
               </div>
               <ul class="pagination">
-                <li><a href="#"><span class="prev-arrow"></span>Предыдущая</a></li>
+                <li><a href="#"><span class="prev-arrow"></span><span class="hidden-tablet">Предыдущая</span></a></li>
                 <li><a href="#">5</a></li>
                 <li><a href="#">6</a></li>
                 <li class="active"><a href="#">7</a></li>
                 <li><a href="#">8</a></li>
                 <li><a href="#">9</a></li>
-                <li><a href="#">
-                     
-                    Следующая<span class="next-arrow"></span></a></li>
+                <li><a href="#"> <span class="hidden-tablet">Следующая</span><span class="next-arrow"></span></a></li>
               </ul>
             </div>
             <div class="middle__aside">
@@ -276,6 +276,7 @@
     </footer>
     <!-- #footer-->
     <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/dropzone.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/main.js"></script>

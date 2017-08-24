@@ -104,24 +104,50 @@
             <li><a href="#!">Внутренняя страница</a></li>
             <li class="active">Активная страница</li>
           </ul>
-          <div class="block-about">
-            <div class="about-banner">
-              <div class="about-banner__body">
-                <div class="about-banner__title">Что такое AliWorld?</div>
-                <div class="about-banner__text">Каждый человек делает что-то лучше других. Мы, например, лучше других разбираемся в покупках на AliExpress.com. Что купить, как, а главное, у кого – на эти вопросы мы отвечаем каждый день, чтобы вы не волновались и не рисковали, а совершали только выгодные и честные покупки. </div>
-              </div>
+          <div class="info-panel info-panel--red">
+            <div class="info-panel__left">
+              <div class="info-panel__title">Добавление жалобы на магазин</div>
+              <div class="info-panel__text">Поделитесь своими впечатлениями о продавце с миром!</div>
+              <div class="info-panel__text">Заполните поля ниже и после короткой модерации ваш обзор будет опубликован.</div>
             </div>
-            <div class="block-about__body">
-              <div class="block-about__col">
-                <p>AliWorld.ru - это информационный портал, посвящённый покупкам в интернет-магазине AliExpress.com, а также методам и службам доставки товаров покупателям.</p>
-                <p>На текущий момент AliTrack.ru представляет собой сервис отслеживания почтовых отправлений, новостную ленту, каталог обзоров товаров, на которые стоит обратить внимание и форум для общения покупателей.</p>
-                <p>Проект активно развивается, поэтому в ближайшее время вас ждёт много приятных сюрпризов.</p>
+            <div class="info-panel__right"><span class="panel-icon-2"></span></div>
+          </div>
+          <div class="adding-form-wrap">
+            <form id="my-awesome-dropzone" class="adding-form">
+              <div class="form-group">
+                <label for="input-1" class="label">Ссылка на продавца:<span class="red-color"> *</span></label>
+                <input id="input-1" type="text" placeholder="Введите ссылку на магазин..." class="adding-form__input">
               </div>
-              <div class="block-about__col">
-                <p>Суть AliWorld в том, что его создают реальные покупатели. Мы заказываем товары, тестируем их, изучаем продавцов, ищем выгодные сделки и предложения. Наша цель – развивать не просто сайт, где можно хвастаться приобретенными вещами, рассказывать о неудачах, советоваться и задавать вопросы.</p>
-                <p>Мы объединяем всех, кто покупает на AliExpress, в одном месте собираем покупательский опыт, информацию о тех, кому стоит доверять, а кому не стоит. </p>
+              <div class="form-group">
+                <label for="input-4" class="label">Основной текст:<span class="red-color"> *</span></label>
+                <textarea id="input-4" type="text" placeholder="Введите текст вашей жалобы..." class="adding-form__input"></textarea>
               </div>
-            </div>
+              <div class="form-group">
+                <label for="input-5" class="label">Метки:<span class="red-color"> *</span></label>
+                <input id="input-5" type="text" placeholder="Перечислите метки обзора. Например: телефоны, электроника..." class="adding-form__input">
+              </div>
+              <div class="label">Добавить изображения:</div>
+              <div class="extra-images">
+                <div class="extra-images__image"><img class="js-pasteSelected"></div><a href="#" class="chose_file"></a>
+                <input type="file" name="file" id="" class="chose_file_input js-uploadImage">
+              </div>
+              <div class="rating-section">
+                <div class="label rating-section-title">Ваша оценка магазина:<span class="red-color"> *</span></div>
+                <ul class="rating rating--big">
+                  <li style="width: 0%" class="active"><span class="star1"></span></li>
+                  <li><span class="star2"></span></li>
+                  <li><span class="star3"></span></li>
+                  <li><span class="star4"></span></li>
+                  <li><span class="star5"></span></li>
+                </ul>
+              </div>
+              <div class="divider-grey"></div>
+              <div class="text-center form-group">
+                <button type="submit" class="btn">Опубликовать жалобу</button>
+              </div>
+              <div class="form-caption">Вы авторизованы под ником <span class="bold color-black">Nikolay1975.</span></div>
+              <div class="form-caption">После модерации ваша жалоба будет опубликована. Поля, отмеченные звёздочкой, обязательны для заполнения.</div>
+            </form>
           </div>
         </div>
       </section>

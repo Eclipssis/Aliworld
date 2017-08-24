@@ -16,27 +16,22 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           .middle__row
             .middle__content
 
-              .block.block--white
+              .complaint-detailed.block.block--white
                 .content
-                  .block__header.block__header
+                  .block__header
                     h1.title-h1 Hao Han YingGuang Store 
-                    
-
-                    
                     .block__head-item
-                      .rating-wrap
+                      .diamond-rating-wrap
+
                         .rating-value Рейтинг: 1056
-                        ul.rating
-                          li.active(style="width: 40%")
-                            span.star1
+
+                        ul.diamond-rating
                           li
-                            span.star2
                           li
-                            span.star3
                           li
-                            span.star4
                           li
-                            span.star5
+                          li
+                            
 
                     .block__head-item
                       .article__date 10 июля 2017, 13:25
@@ -59,20 +54,21 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                           .user-info__avatar
                             img(src="pictures/article-avatar.png", alt="avatar")
                           .user-info__title Александр Бывало
+                          
+                          .rating-section
+                            .rating-value Оценка:
 
-                          .rating-value Оценка:
-
-                          ul.rating
-                            li.active(style="width: 40%")
-                              span.star1
-                            li
-                              span.star2
-                            li
-                              span.star3
-                            li
-                              span.star4
-                            li
-                              span.star5
+                            ul.rating
+                              li.active(style="width: 40%")
+                                span.star1
+                              li
+                                span.star2
+                              li
+                                span.star3
+                              li
+                                span.star4
+                              li
+                                span.star5
 
                       .user-info-wrap__item
                         .block__head-item
@@ -83,7 +79,9 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   .block__divider
 
                   .attached-images
-                    .page-title.page-title--20px Прикреплённые изображения 
+                    .page-title.page-title--20px 
+                      span Прикреплённые изображения 
+
                       span.page-title__prefix  — 15 штук
 
                     .owl-carousel.owl-images

@@ -25,6 +25,8 @@ html, body
 .container
   padding: 0 15px
 
+// Hidden helpers
+
 .hidden-desktop-large
   +desktop-large
     display: none
@@ -33,10 +35,20 @@ html, body
   +desktop
     display: none
 
+.hidden-tablet
+  +tablet
+    display: none
+
 .hidden-mobile
   +mobile
     display: none
 
+// Visible helpers
+
+.visible-tablet
+  display: none
+  +tablet
+    display: block
 
 .visible-desktop
   display: none
@@ -52,6 +64,8 @@ html, body
   display: none
   +mobile
     display: block
+
+
 
 .middle
   padding-top: 25px
@@ -643,12 +657,16 @@ $header-margin-top: 26px
 
 .pagination
   @extend .clearfix
+  +tablet
+    text-align: center
 
   .prev-arrow
     position: relative
     display: inline-block
     vertical-align: middle
     margin-right: 12px
+    +tablet
+      margin-right: 0
 
     &:after
       margin-left: 2px
@@ -666,6 +684,8 @@ $header-margin-top: 26px
     display: inline-block
     vertical-align: middle
     margin-left: 12px
+    +tablet
+      margin-left: 0
 
     &:after
       margin-left: 2px
@@ -689,15 +709,23 @@ $header-margin-top: 26px
   > li:first-child
     margin-left: 0
     > a
-      padding: 0 17px 0 12px
+      padding: 0 15px
+      +tablet
+        padding: 0 9px
 
   > li:last-child
     > a
-      padding: 0 17px 0 12px
+      padding: 0 15px
+      +tablet
+        padding: 0 9px
 
   > li
     float: left
-    margin: 0 8px
+    margin: 5px 8px
+    +tablet
+      margin: 5px 1px
+      float: none
+      display: inline-block
     > a
       display: block
       min-width: 34px

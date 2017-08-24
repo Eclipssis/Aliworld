@@ -47,12 +47,18 @@ $(document).ready(function(){
     navText: false,
     responsive: {
       0: {
+        items: 1
+      },
+      480: {
         items: 2
       },
-      600: {
+      768: {
         items: 3
       },
-      1000: {
+      1024: {
+        items: 4
+      },
+      1200: {
         items: 5
       }
     },
@@ -97,13 +103,38 @@ $(document).ready(function(){
     }
   }
 
-
   $('.js-showSelectedImage').on('change', function(){
     readURL(this);
   });
 
   $('.js-uploadImage').on('change', function(){
     readURL( this );
+  });
+
+  $('.chose_file').each(function(indx, elem) {
+    var parent = $(elem).parent();
+    $(elem).click(function() {
+        $(parent).find('.chose_file_input').click();
+        return (false);
+    });
+    // $(parent).find('.chose_file_input').change(function() {
+    //     $(parent).find('.chose_file_text').html($(this).val()).show();
+    //     $(elem).hide();
+    // });
+    $(parent).find('.chose_file_text').on('click', function() {
+        $(this).hide();
+        $(elem).show();
+        $(parent).find('.chose_file_input').val('');
+    })
+  });
+
+  // dropzone
+
+  $("#dropzone").dropzone({ 
+    url: "/file/post",
+    resizeWidth: 800,
+    resizeHeight: 270,
+    maxFilesize: 1
   });
 
 });//end ready

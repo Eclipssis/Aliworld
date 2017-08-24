@@ -17,7 +17,19 @@
     float: right
     margin-top: 2px
 
+.rating-section
+  margin-bottom: 40px
 
+.rating-section-title
+  margin-bottom: 0
+  margin-right: 15px
+  display: inline-block
+  vertical-align: middle
+
+.divider-grey
+  margin-bottom: 50px 
+  height: 1px 
+  background-color: #f4f4f4
 
 .rating-value
   float: left
@@ -32,6 +44,21 @@
     vertical-align: middle
     margin-right: 10px
 
+ul.diamond-rating
+  margin-bottom: 0
+  @extend .clearfix
+  margin-right: 10px
+  float: left
+  > li 
+    float: left
+    width: 15px
+    height: 13px
+    background: url('../images/diamond.jpg') 0 0 no-repeat
+    margin-bottom: 0
+    padding: 0
+    margin-right: 2px
+    &:before
+      display: none 
 
 
 .rating
@@ -43,6 +70,7 @@
   position: relative
   height: $star-height
   width: $star-width * 5
+
   li
     float: left
     height: $star-height
@@ -90,6 +118,51 @@
     background: url('../images/rating.png') left bottom repeat
     z-index: 1
 
+  &--big
+    height: $star-height2
+    width: $star-width2 * 5
+    background: url('../images/rating-20x20.png') 0 0 repeat
+    li 
+      height: $star-height2
+
+      span[class*="star"]
+        width: $star-width2
+        height: $star-height2
+        cursor: pointer
+        &:hover
+          z-index: 2
+          left: 0
+          background: url('../images/rating-20x20.png') left bottom repeat
+
+      span.star1
+        left: 0
+        &:hover
+          width: $star-width2
+
+      span.star2
+        left: $star-width2
+        &:hover
+          width: $star-width2 * 2
+
+      span.star3
+        left: $star-width2 * 2
+        &:hover
+          width: $star-width2 * 3
+
+      span.star4
+        left: $star-width2 * 3
+        &:hover
+          width: $star-width2 * 4
+
+      span.star5
+        left: $star-width2 * 4
+        &:hover
+          width: $star-width2 * 5
+
+    li.active
+      background: url('../images/rating-20x20.png') left bottom repeat
+      z-index: 1
+
 
 .inline-middle
   display: inline-block
@@ -112,6 +185,8 @@
       padding: 15px 20px
     +mobile
       padding: 15px 20px 5px
+      flex-direction: column
+      align-items: start
       
 
     &--left
@@ -123,9 +198,12 @@
 
   &__head-item
     display: inline-block
+    margin-bottom: 5px
 
   &__head-item + &__head-item
-    margin-left: 30px
+    margin-left: 15px 
+    +mobile
+      margin-left: 0
 
   &__body
     padding: 30px
@@ -155,6 +233,7 @@
 
 
 .article
+
   display: flex
   flex-wrap: wrap
 
@@ -186,18 +265,6 @@
     width: 100%
     margin-bottom: 15px
     overflow: hidden
-    width: 100%
-
-    &--height-137
-      height: 137px
-
-    &--height-175
-      height: 175px
-
-    &--height-275
-      height: 275px
-      +mobile
-        height: 140px
 
     img 
       font-size: 0
@@ -212,6 +279,43 @@
       left: 50%
       top: 50%
       transform: translate(-50%, -50%)
+
+    &--max 
+      img 
+        position: static
+        transform: none
+        max-width: 100%
+
+    &--height-115
+      height: 115px
+
+    &--height-137
+      height: 137px
+
+    &--height-175
+      height: 175px
+
+    &--height-240
+      height: 240px
+      +mobile
+        height: 140px
+
+    &--height-260
+      height: 260px
+      +mobile
+        height: 140px
+
+    &--height-275
+      height: 275px
+      +mobile
+        height: 140px
+
+    &--height-350
+      height: 350px
+      +mobile
+        height: 140px
+
+    
 
     // &:hover img
     //   transform: scale(1.15) translate(-50%, -50%)
@@ -243,8 +347,11 @@
 
   &__body
     padding: 30px 30px 0
+    +mobile
+      padding: 20px 20px 0
 
   &__title
+    position: relative
     margin-bottom: 15px
     &--small
       margin-bottom: 7px
@@ -294,9 +401,17 @@
     &--separate
       border-top: 1px solid $border-color
       padding: 20px 30px
+      flex-wrap: wrap
+      +tablet
+        flex-direction: column
+      +mobile
+        padding: 20px
 
   .footer-btn
-    margin-left: 50px
+    margin-left: 45px
+    +desktop-large
+      margin-left: 20px
+      min-width: 80px
 
   &__section
     &:last-child
@@ -312,6 +427,8 @@
   &__date
     position: relative
     padding-left: 28px
+    color: #a0a0a0
+    font: 14px/1.5 'PT Sans', sans-serif
     &:before
       position: absolute
       left: 0
@@ -343,6 +460,8 @@
     @extend .inline-middle
     position: relative
     padding-left: 24px
+    color: #a0a0a0
+    font: 14px/1.5 'PT Sans', sans-serif
     &:before
       position: absolute
       top: 50%
@@ -397,6 +516,10 @@
   left: 0
   height: 35px
   line-height: 35px
+  +mobile
+    bottom: initial
+    top: 5px
+
   &__price
     display: inline-block
     vertical-align: middle
@@ -441,6 +564,20 @@
 
   .footer-btn
     margin-left: 70px
+    +tablet
+      display: block
+      margin-left: 0
+      margin-top: 15px
+
+  .article__section
+    +tablet
+      text-align: center
+
+  .article__section + .article__section
+    +tablet
+      margin-top: 15px
+
+
 
 .article-list
   margin-bottom: 0
@@ -501,6 +638,8 @@
       float: left
       padding: 0 15px
       margin-bottom: 30px
+      +tablet
+        width: 100%
 
   &--four-col
     margin-right: -15px
@@ -517,6 +656,18 @@
         width: 50%
       +mobile
         width: 100%
+  
+  .article__section
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+  .article__footer--separate
+    +tablet
+      align-items: flex-start
+
+  .btn 
+
 
 
 .other-articles
@@ -546,6 +697,8 @@
 
 .owl-complaints
   padding: 0 60px
+  +mobile
+    padding: 0 30px
   .owl-dots
     display: none
 
@@ -569,6 +722,8 @@
       width: 60px
       left: 0 
       border-right: 1px solid #f4f4f4
+      +mobile
+        width: 30px
       &:before
         position: absolute
         top: 50%
@@ -599,6 +754,9 @@
   text-align: center
   padding: 20px 30px 25px
   background-color: #ffffff
+  +mobile
+    padding: 20px 15px
+
   .rating
     margin-bottom: 10px
 
@@ -619,19 +777,35 @@
     font: 14px/1.5 'PT Sans', sans-serif
     margin-bottom: 5px
 
+.main-banner
+  
+  .owl-carousel
+
+    .owl-item
+      overflow: hidden
+      img
+        // min-height: 260px
+        +tablet
+          position: relative
+          left: 45%
+          margin-left: -450px
+          max-height: 300px
+          max-width: initial
+          width: initial
+
 .owl-carousel
 
-  .owl-item
-    overflow: hidden
-    img
-      min-height: 260px
-      +tablet
-        position: relative
-        left: 45%
-        margin-left: -450px
-        max-height: 300px
-        max-width: initial
-        width: initial
+  // .owl-item
+  //   overflow: hidden
+  //   img
+  //     // min-height: 260px
+  //     +tablet
+  //       position: relative
+  //       left: 45%
+  //       margin-left: -450px
+  //       max-height: 300px
+  //       max-width: initial
+  //       width: initial
 
   .owl-dots
     position: absolute
@@ -860,6 +1034,8 @@ ul.comments-list
     border: 1px solid #c0c0c0
     font-size: 15px
     padding: 15px 20px
+    +mobile
+      padding: 10px
 
   &--reply
     margin-top: 20px
@@ -871,12 +1047,16 @@ ul.comments-list
   &__head
     margin-bottom: 10px
     @extend .clearfix
+    display: flex
+    align-items: center
 
   &__avatar
     float: left
+    flex: 0 0 40px
+    margin-right: 15px
+    align-self: flex-start
 
   &__title
-    margin-left: 50px
     +mobile
       font-size: 13px
     b
@@ -907,13 +1087,22 @@ ul.comments-list
     margin-bottom: 12px
     font: 15px/1.46 'PT Sans', sans-serif
     color: #5f5f5f
+    +mobile
+      font-size: 14px
+      line-height: 1.35
 
 .user-info-wrap
   display: flex
   flex-wrap: wrap
   align-items: center
   justify-content: space-between
+  +tablet
+    flex-direction: column
+    align-items: start
+
   &__item
+    +tablet
+      margin-top: 10px
 
   .rating-value
     float: none
@@ -923,27 +1112,48 @@ ul.comments-list
 
   .btn
     float: right
+    +mobile
+      width: 100%
+      font-size: 16px
+      padding: 14px 10px
 
 .user-info
+  flex: 1 1 
+  display: flex
+  align-items: center
+  margin: 10px 0
+  +tablet
+    width: 100%
+  +mobile
+    flex-wrap: wrap
+
   &__avatar
-    display: inline-block
-    vertical-align: middle
+    flex: 0 0 40px
+    +mobile
+      float: left
 
   &__title
-    display: inline-block
-    vertical-align: middle
+    flex: 2 2
     margin-left: 10px
     margin-right: 10px
     font-size: 14px
     color: #000000
     font-weight: 500
+    min-width: 125px
+    +mobile
+      min-width: auto
+
     span
       color: #a0a0a0
       font: 14px/1.2 'PT Sans', sans-serif
       margin-left: 5px
 
+  
+
 .attached-images
   padding: 30px
+  +mobile
+    padding: 20px
 
 
 .owl-images
@@ -956,6 +1166,9 @@ ul.comments-list
     top: -60px
     right: 0
     @extend .clearfix
+    +tablet
+      position: static
+      margin-top: 15px
 
     > div
       float: left
@@ -996,15 +1209,24 @@ ul.comments-list
     background-color: #ffffff
     padding: 45px 30px 35px
     @extend .clearfix
+    +desktop
+      padding: 25px 10px
+    +mobile
+      padding: 20px
 
   &__col
     padding: 0 30px
     float: left
     width: 50%
+    +desktop
+      width: 100%
+      padding: 0 10px
 
   p
     font-size: 17px
     line-height: 1.7
+    +mobile
+      font-size: 15px
 
 .about-banner
   position: relative
@@ -1014,6 +1236,10 @@ ul.comments-list
   background-repeat: no-repeat, repeat
   background-size: 50%, auto
   color: #ffffff
+  +mobile
+    background-size: 100%, auto
+    min-height: 440px
+
   &__body
     position: absolute
     width: 100%
@@ -1021,14 +1247,25 @@ ul.comments-list
     left: 0
     top: 0
     padding: 60px
+    +tablet
+      padding: 40px 
+    +mobile
+      padding: 20px
+
   &__title
     font-size: 50px
     line-height: 1.2
     font-weight: 700
     margin-bottom: 20px
+    +tablet
+      font-size: 40px 
+    +mobile
+      font-size: 28px
 
   &__text 
     font: 17px/1.7 'PT Sans', sans-serif
+    +mobile
+      font-size: 14px
 
 
 .tracking-status
@@ -1054,7 +1291,9 @@ ul.comments-list
     color: #5f5f5f
     font: 14px/20px 'PT Sans', sans-serif
     +mobile
-      width: 80%
+      width: 85%
+      line-height: 14px
+      font-size: 13px
 
 .question-icon
   display: inline-block
@@ -1081,6 +1320,8 @@ ul.comments-list
     padding: 20px 0 20px 30px
     +tablet
       padding: 15px 
+    +mobile
+      padding: 10px 15px
 
     &:first-child
       min-width: 100px
@@ -1236,6 +1477,8 @@ ul.comments-list
   padding: 30px
   background-color: #ffffff
   @extend .clearfix
+  +tablet
+    padding: 20px
 
   h1 
     margin-bottom: 5px
@@ -1244,6 +1487,9 @@ ul.comments-list
     max-width: 240px
     float: left
     margin-right: 30px
+    +tablet
+      float: none
+      max-width: 100%
 
   &__image
     padding: 30px 
@@ -1252,6 +1498,8 @@ ul.comments-list
 
   &__body
     margin-left: 265px
+    +tablet
+      margin-left: 0
     p 
       color: #5e5e5e
       font: 17px/1.5 'PT Sans', sans-serif
@@ -1266,6 +1514,8 @@ ul.comments-list
 .servise-info
   padding: 30px
   background-color: #f4f4f4
+  +tablet
+    margin-bottom: 20px
 
   &__item + &__item
     margin-top: 20px 
@@ -1287,3 +1537,146 @@ ul.comments-list
     color: #a0a0a0
     font: 14px/1.6 'PT Sans', sans-serif
     float: right
+
+.cabinet-nav
+  @extend .clearfix
+  > li + li a 
+    border-top: 1px solid #4cb1ff
+  > li 
+    +tablet
+      float: left
+      width: 33.333333%
+      text-align: center
+    +media(540)
+      width: 100%
+
+    > a 
+      color: #000000
+      font-size: 500
+      font-size: 16px
+      background-color: #0090ff
+      display: block
+      padding: 20px 30px
+      transition: all 0.2s ease
+      color: #ffffff
+      +tablet
+        padding: 15px 10px
+        font-size: 15px
+
+      &:hover, &:focus
+        text-decoration: none
+        background-color: #0085eb
+
+  > li.active
+    > a 
+      color: #000000
+      background-color: #ffffff
+
+
+.cabinet-log-out
+  margin-left: 30px
+  padding-left: 23px
+  position: relative
+  font-size: 16px
+  font-weight: 500
+  +tablet
+    float: right
+
+  &:before
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -12px
+    content: ' '
+    width: 18px 
+    height: 24px
+    background: url('../images/exit-icon.svg') 0 0 no-repeat
+
+.cabinet-wrap
+
+  &__aside
+    width: 350px
+    float: left
+    +desktop
+      width: 220px
+    +tablet
+      width: 100%
+      float: none
+
+  &__body 
+    margin-left: 350px
+    padding: 60px
+    background-color: #ffffff
+    +desktop
+      margin-left: 220px
+      padding: 30px
+    +tablet
+      margin-left: 0
+    +mobile
+      padding: 20px
+
+.info-panel
+  padding: 30px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+
+  &--blue 
+    background: url('../images/pattern-1.jpg') 0 0 repeat
+  &--red 
+    background: url('../images/pattern-3.jpg') 0 0 repeat
+
+  &__left 
+    padding: 0 30px
+
+  &__right
+    padding: 0 30px
+
+  &__title
+    color: #ffffff
+    font-size: 30px 
+    font-weight: 700
+    margin-bottom: 15px
+
+  &__text
+    color: #ffffff
+    font: 16px/1.5 'PT Sans', sans-serif
+
+  .panel-icon-1
+    display: block
+    width: 230px
+    height: 102px 
+    background: url('../images/panel-icon-1.svg') 0 0 no-repeat
+  
+  .panel-icon-2
+    display: block
+    width: 270px
+    height: 110px
+    background: url('../images/panel-icon-2.svg') 0 0 no-repeat
+
+.adding-form-wrap
+  padding: 60px 15px
+  background-color: #ffffff
+  margin-bottom: 40px
+
+.complaint-detailed
+  .article__date
+    margin-bottom: 3px
+
+  .rating-value
+    margin-right: 14px
+
+  .rating-section
+    display: inline-block
+    vertical-align: middle
+    margin-bottom: 0
+    line-height: 10px
+    margin-right: 15px
+
+  .rating li
+    margin-bottom: 0
+    padding: 0
+
+.complaint-rating-footer
+  min-width: 140px

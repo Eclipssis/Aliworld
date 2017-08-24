@@ -104,24 +104,115 @@
             <li><a href="#!">Внутренняя страница</a></li>
             <li class="active">Активная страница</li>
           </ul>
-          <div class="block-about">
-            <div class="about-banner">
-              <div class="about-banner__body">
-                <div class="about-banner__title">Что такое AliWorld?</div>
-                <div class="about-banner__text">Каждый человек делает что-то лучше других. Мы, например, лучше других разбираемся в покупках на AliExpress.com. Что купить, как, а главное, у кого – на эти вопросы мы отвечаем каждый день, чтобы вы не волновались и не рисковали, а совершали только выгодные и честные покупки. </div>
-              </div>
+          <div class="info-panel info-panel--blue">
+            <div class="info-panel__left">
+              <div class="info-panel__title">Добавление обзора товара</div>
+              <div class="info-panel__text">Поделитесь своими впечатлениями о куплённом товаре с миром! </div>
+              <div class="info-panel__text">Заполните поля ниже и после короткой модерации ваш обзор будет опубликован.</div>
             </div>
-            <div class="block-about__body">
-              <div class="block-about__col">
-                <p>AliWorld.ru - это информационный портал, посвящённый покупкам в интернет-магазине AliExpress.com, а также методам и службам доставки товаров покупателям.</p>
-                <p>На текущий момент AliTrack.ru представляет собой сервис отслеживания почтовых отправлений, новостную ленту, каталог обзоров товаров, на которые стоит обратить внимание и форум для общения покупателей.</p>
-                <p>Проект активно развивается, поэтому в ближайшее время вас ждёт много приятных сюрпризов.</p>
+            <div class="info-panel__right"><span class="panel-icon-1"></span></div>
+          </div>
+          <div class="adding-form-wrap">
+            <form id="my-awesome-dropzone" class="adding-form">
+              <div class="form-group">
+                <label for="input-1" class="label">Заголовок обзора: <span class="red-color"> *</span></label>
+                <input id="input-1" type="text" placeholder="Введите название вашего обзора..." class="adding-form__input">
               </div>
-              <div class="block-about__col">
-                <p>Суть AliWorld в том, что его создают реальные покупатели. Мы заказываем товары, тестируем их, изучаем продавцов, ищем выгодные сделки и предложения. Наша цель – развивать не просто сайт, где можно хвастаться приобретенными вещами, рассказывать о неудачах, советоваться и задавать вопросы.</p>
-                <p>Мы объединяем всех, кто покупает на AliExpress, в одном месте собираем покупательский опыт, информацию о тех, кому стоит доверять, а кому не стоит. </p>
+              <div class="form-row">
+                <div class="form-col-4">
+                  <div class="form-group">
+                    <label for="input-2" class="label">Ссылка на товар:<span class="red-color"> *</span></label>
+                    <input id="input-2" type="text" placeholder="Введите ссылку на страницу товара с AliExpress..." class="adding-form__input">
+                  </div>
+                </div>
+                <div class="form-col-1">
+                  <div class="form-group">
+                    <label for="input-3" class="label">Цена товара:<span class="red-color"> *</span></label>
+                    <input id="input-3" type="text" placeholder="Введите стоимость товара..." class="adding-form__input">
+                  </div>
+                </div>
               </div>
-            </div>
+              <div class="form-group">
+                <label for="input-4" class="label">Основной текст:<span class="red-color"> *</span></label>
+                <textarea id="input-4" type="text" placeholder="Введите текст вашего обзора..." class="adding-form__input"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="input-5" class="label">Метки:<span class="red-color"> *</span></label>
+                <input id="input-5" type="text" placeholder="Перечислите метки обзора. Например: телефоны, электроника..." class="adding-form__input">
+              </div>
+              <div id="dropzone" class="dropzone"></div>
+              <div class="extra-images"></div>
+              <div class="text-center form-group">
+                <button type="submit" class="btn">Опубликовать обзор</button>
+              </div>
+              <div class="form-caption">Вы авторизованы под ником <span class="bold color-black">Nikolay1975.</span></div>
+              <div class="form-caption">После модерации ваш обзор будет опубликован. Поля, отмеченные звёздочкой, обязательны для заполнения.</div>
+            </form>
+          </div>
+          <div class="other-articles">
+            <div class="page-title">Другие статьи</div>
+            <ul class="article-list article-list--four-col">
+              <li> 
+                <article class="article">
+                  <div class="article__image article__image--height-115"><img src="pictures/article-350x117-2.jpg" alt=".article__image"></div>
+                  <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
+                  <div class="article__footer article__footer--margin-top-10">
+                    <div class="article__section">
+                      <div class="article__publicated">10.07.2017</div>
+                    </div>
+                    <div class="article__section">
+                      <div class="article__view">450</div>
+                      <div class="article__comments">33</div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li> 
+                <article class="article">
+                  <div class="article__image article__image--height-115"><img src="pictures/article-350x117-2.jpg" alt=".article__image"></div>
+                  <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
+                  <div class="article__footer article__footer--margin-top-10">
+                    <div class="article__section">
+                      <div class="article__publicated">10.07.2017</div>
+                    </div>
+                    <div class="article__section">
+                      <div class="article__view">450</div>
+                      <div class="article__comments">33</div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li> 
+                <article class="article">
+                  <div class="article__image article__image--height-115"><img src="pictures/article-350x117-2.jpg" alt=".article__image"></div>
+                  <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
+                  <div class="article__footer article__footer--margin-top-10">
+                    <div class="article__section">
+                      <div class="article__publicated">10.07.2017</div>
+                    </div>
+                    <div class="article__section">
+                      <div class="article__view">450</div>
+                      <div class="article__comments">33</div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li> 
+                <article class="article">
+                  <div class="article__image article__image--height-115"><img src="pictures/article-350x117-2.jpg" alt=".article__image"></div>
+                  <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
+                  <div class="article__footer article__footer--margin-top-10">
+                    <div class="article__section">
+                      <div class="article__publicated">10.07.2017</div>
+                    </div>
+                    <div class="article__section">
+                      <div class="article__view">450</div>
+                      <div class="article__comments">33</div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

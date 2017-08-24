@@ -104,10 +104,65 @@
             <li><a href="#!">Внутренняя страница</a></li>
             <li class="active">Активная страница</li>
           </ul>
-          <div class="page-title">Личный кабинет</div>
-          <div class="middle__row">
-            <div class="middle__content"></div>
-            <div class="middle__aside"></div>
+          <div class="page-title">Личный кабинет<a href="#!" class="cabinet-log-out visible-tablet">Выход</a></div>
+          <div class="cabinet-wrap">
+            <div class="cabinet-wrap__aside">
+              <ul class="cabinet-nav">
+                <li class="active"><a href="#!">Настройки профиля</a></li>
+                <li> <a href="#!">Мои жалобы</a></li>
+                <li> <a href="#!">Мои обзоры</a></li>
+              </ul><a href="#!" class="cabinet-log-out hidden-tablet">Выход</a>
+            </div>
+            <div class="cabinet-wrap__body">
+              <div class="cabinet-form">
+                <div class="cabinet-form__left"><img src="images/avatar-preview.jpg" class="avatar-image js-pasteSelected">
+                  <div class="form-group"><a href="#" class="chose_file">Загрузить аватар</a><span class="chose_file_text"></span>
+                    <input type="file" name="file" id="" class="chose_file_input js-uploadImage">
+                  </div>
+                </div>
+                <div class="cabinet-form__right">
+                  <div class="form-group">
+                    <label>Имя:</label>
+                    <input type="text" placeholder="Николай" class="cabinet-form__input">
+                  </div>
+                  <div class="form-group">
+                    <label>Фамилия:</label>
+                    <input type="text" placeholder="Константиновский" class="cabinet-form__input">
+                  </div>
+                  <div class="form-group">
+                    <label>E-mail:</label>
+                    <input type="email" placeholder="nikolay@mail.ru" class="cabinet-form__input">
+                  </div>
+                  <div class="form-group">
+                    <label>Старый пароль:</label>
+                    <input type="password" placeholder="Введите сатрый пароль..." class="cabinet-form__input">
+                  </div>
+                  <div class="form-group">
+                    <label>Новый пароль:</label>
+                    <input type="password" placeholder="Введите новый пароль..." class="cabinet-form__input">
+                  </div>
+                  <div class="form-group">
+                    <label>Повторите новый пароль:</label>
+                    <input type="text" placeholder="Повторите новый пароль..." class="cabinet-form__input">
+                  </div>
+                  <div class="form-group">
+                    <label>Фамилия:</label>
+                    <input type="text" placeholder="Константиновский" class="cabinet-form__input">
+                  </div>
+                  <div class="form-group">
+                    <div class="checkbox-input">
+                      <input type="checkbox" id="checkbox-1" class="checkbox">
+                      <label for="checkbox-1"><span></span> 
+                        <div class="checkbox-text">Получать новости на электронную почту</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn">Сохранить изменения</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -146,6 +201,7 @@
     </footer>
     <!-- #footer-->
     <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/dropzone.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/main.js"></script>
