@@ -1621,6 +1621,8 @@ ul.comments-list
   flex-wrap: wrap
   justify-content: space-between
   align-items: center
+  +tablet
+    padding: 20px
 
   &--blue 
     background: url('../images/pattern-1.jpg') 0 0 repeat
@@ -1629,15 +1631,24 @@ ul.comments-list
 
   &__left 
     padding: 0 30px
+    +desktop
+      padding: 0
 
   &__right
     padding: 0 30px
+    +desktop
+      display: none
 
   &__title
     color: #ffffff
     font-size: 30px 
+    line-height: 1.2
     font-weight: 700
     margin-bottom: 15px
+    +desktop
+      font-size: 27px 
+    +mobile
+      font-size: 24px
 
   &__text
     color: #ffffff

@@ -89,44 +89,62 @@ $(document).ready(function(){
     theme:"dark"
   });
 
+  
+
+  
 
   function readURL(input) {
+
     if (input.files && input.files[0]) {
       var reader = new FileReader();
 
       reader.onload = function (e) {
-        $('.js-pasteSelected').attr('src', e.target.result);
-        $('.js-pasteSelected').addClass('showing')
+        $(input).parent(".item").find('img').attr('src', e.target.result);
+        $(input).parent(".item").find('img').addClass('showing');
+        $(input).parent(".item").find('.extra-images__close').addClass('active')
       }
 
       reader.readAsDataURL(input.files[0]);
+
+      $('.extra-images').append("<div class='item'><div class='extra-images__close'></div><div class='extra-images__image'><img class='js-pasteSelected'></div><span class='chose_file'></span><input type='file' class='chose_file_input js-uploadImage'></div>");
     }
   }
 
-  $('.js-showSelectedImage').on('change', function(){
+  function readAvatar(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $('.js-pasteSelected').attr('src', e.target.result);
+          $('.js-pasteSelected').addClass('showing')
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+
+  $(document).on('change', '.js-uploadAvatar', function () {
+    readAvatar(this);
+  });   
+
+
+  $(document).on('change', '.js-uploadImage', function () {
     readURL(this);
   });
 
-  $('.js-uploadImage').on('change', function(){
-    readURL( this );
+
+
+  $(document).on('click', '.extra-images__close', function () {
+    $(this).parent().remove()
   });
 
-  $('.chose_file').each(function(indx, elem) {
-    var parent = $(elem).parent();
-    $(elem).click(function() {
-        $(parent).find('.chose_file_input').click();
-        return (false);
-    });
-    // $(parent).find('.chose_file_input').change(function() {
-    //     $(parent).find('.chose_file_text').html($(this).val()).show();
-    //     $(elem).hide();
-    // });
-    $(parent).find('.chose_file_text').on('click', function() {
-        $(this).hide();
-        $(elem).show();
-        $(parent).find('.chose_file_input').val('');
-    })
+  $(document).on('click', '.chose_file', function (event) {
+    var parent = $(event.target).parent();
+    $(parent).find('.chose_file_input').click();
+    return (false);
   });
+
 
   // dropzone
 

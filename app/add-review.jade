@@ -57,7 +57,22 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               
               #dropzone.dropzone
 
+              .label Добавить изображения:
               .extra-images
+                .item
+                  .extra-images__close
+                  .extra-images__image
+                    img().js-pasteSelected
+                  span.chose_file
+                  input.chose_file_input.js-uploadImage(type='file')
+
+
+                //- .item
+                //-   .extra-images__close
+                //-   .extra-images__image
+                //-     img().js-pasteSelected
+                //-   a.chose_file(href='#')
+                //-   input.chose_file_input.js-uploadImage(type='file', name='file', id='')
               
               .text-center.form-group
                 button(type="submit").btn Опубликовать обзор
