@@ -1,0 +1,37 @@
+ProjectTitle: Aliworld
+
+PageList:
+- file: homepage.html
+  ready: 100
+- file: about-site.html
+  ready: 100
+- file: add-complaint.html
+  ready: 100
+- file: add-review.html
+  ready: 100
+- file: article-detail.html
+  ready: 100
+- file: articles.html
+  ready: 100
+- file: cabinet.html
+  ready: 100
+- file: complaint-detail.html
+  ready: 100
+- file: complaints.html
+  ready: 100
+- file: news-detail.html
+  ready: 100
+- file: news.html
+  ready: 100
+- file: overview-detail.html
+  ready: 100
+- file: parcel-tracking.html
+  ready: 100
+- file: product-overview.html
+  ready: 100
+- file: registration.html
+  ready: 100
+- file: tracking-detailed.html
+  ready: 100
+- file: 404.html
+  ready: 100

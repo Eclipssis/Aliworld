@@ -3,7 +3,7 @@
 <head lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aliworld</title>
+  <title><%= pages.ProjectTitle %></title>
   <style>
     *{margin:0;padding: 0;box-sizing: border-box}
 
@@ -387,10 +387,17 @@
   <!-- content -->
   <header class="header">
     <h1>
-      <span>Aliworld</span>
+      <span><%= pages.ProjectTitle %></span>
     </h1>
-    
-    <div class="header__updated"><em>Aliworld</em> updated 01.09.2017, 17 pages</div>
+    <%
+		date = new Date(_.now());
+		if(date.getMonth()+1<10){ month = '0' + (date.getMonth()+1);}
+		else{ month = date.getMonth()+1; }
+
+		if(date.getDate()<10){ day = '0' + (date.getDate());}
+		else{ day = date.getDate(); }
+    %>
+    <div class="header__updated"><em><%= pages.ProjectTitle %></em> updated <%= day %>.<%= month %>.<%= date.getFullYear() %>, <%= pages.PageList.length %> pages</div>
     <nav class="types">
       <button data-mode="mobile" data-width="375">
         <svg class="icon icon-mobile"><use xlink:href="#icon-mobile"></use></svg>
@@ -414,251 +421,27 @@
   </header>
   <section>
     <ol class="pagelist">
-      
-      
-          <li >
+      <% i = 0;%>
+      <% _.each(pages.PageList, function(page) { i++; %>
+          <li <% if(!page.ready) { %> class="is-notready" <% } %>>
 
-                <a class="pagelist__title  is-active " target="_blank" href="homepage.html"><span>1.</span><em>homepage</em></a>
-                <a href="homepage.html" class="pagelist__url" target="_blank">
+                <a class="pagelist__title <% if(i==1){ %> is-active <% } %>" target="_blank" href="<%= page.file %>"><span><%= i %>.</span><em><%= _.split(page.file, '.', 1) %></em></a>
+                <a href="<%= page.file %>" class="pagelist__url" target="_blank">
                   <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
                 </a>
 
                 <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
+                  <% if(!page.ready) page.ready = 0; %>
+                  <i style="width:<%= page.ready %>%"></i>
                 </div>
 
           </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="about-site.html"><span>2.</span><em>about-site</em></a>
-                <a href="about-site.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="add-complaint.html"><span>3.</span><em>add-complaint</em></a>
-                <a href="add-complaint.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="add-review.html"><span>4.</span><em>add-review</em></a>
-                <a href="add-review.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="article-detail.html"><span>5.</span><em>article-detail</em></a>
-                <a href="article-detail.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="articles.html"><span>6.</span><em>articles</em></a>
-                <a href="articles.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="cabinet.html"><span>7.</span><em>cabinet</em></a>
-                <a href="cabinet.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="complaint-detail.html"><span>8.</span><em>complaint-detail</em></a>
-                <a href="complaint-detail.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="complaints.html"><span>9.</span><em>complaints</em></a>
-                <a href="complaints.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="news-detail.html"><span>10.</span><em>news-detail</em></a>
-                <a href="news-detail.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="news.html"><span>11.</span><em>news</em></a>
-                <a href="news.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="overview-detail.html"><span>12.</span><em>overview-detail</em></a>
-                <a href="overview-detail.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="parcel-tracking.html"><span>13.</span><em>parcel-tracking</em></a>
-                <a href="parcel-tracking.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="product-overview.html"><span>14.</span><em>product-overview</em></a>
-                <a href="product-overview.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="registration.html"><span>15.</span><em>registration</em></a>
-                <a href="registration.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="tracking-detailed.html"><span>16.</span><em>tracking-detailed</em></a>
-                <a href="tracking-detailed.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
-          <li >
-
-                <a class="pagelist__title " target="_blank" href="404.html"><span>17.</span><em>404</em></a>
-                <a href="404.html" class="pagelist__url" target="_blank">
-                  <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-                </a>
-
-                <div class="pagelist__progress">
-                  
-                  <i style="width:100%"></i>
-                </div>
-
-          </li>
-        
+        <% }) %>
     </ol>
   </section>
 
   <aside class="preview" id="preview-wrapper">
-    <iframe id="preview"  width="1600" height="600" src="homepage.html"  frameborder="0"></iframe>
+    <iframe id="preview"  width="1600" height="600" src="<%= pages.PageList[0].file %>"  frameborder="0"></iframe>
   </aside>
 
 
