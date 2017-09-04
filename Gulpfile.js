@@ -22,6 +22,8 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     notify       = require('gulp-notify'),
     plumber      = require('gulp-plumber'),
+    consolidate = require('gulp-consolidate'),
+    yaml        = require('require-yaml'),
     reload = browserSync.reload;
 
 var path = {
@@ -165,9 +167,20 @@ gulp.task('build', [
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+    'list-pages'
 ]);
 
+gulp.task('list-pages', function() {
+	delete require.cache[require.resolve('./app/index/index.yaml')]
+  var pages = require('./app/index/index.yaml');
+  return gulp
+    .src('./app/index/index.html')
+    .pipe(consolidate('lodash', {
+      pages: pages
+    }))
+    .pipe(gulp.dest('build'));
+});
 
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
@@ -184,6 +197,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
+    });
+    watch('./app/index/index.yaml', function(event, cb) {
+        gulp.start('list-pages');
     });
 });
 
