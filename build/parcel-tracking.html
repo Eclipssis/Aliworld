@@ -11,6 +11,39 @@
   </head>
   <body>
     <div id="wrapper">
+      <form id="login-form" class="white-popup-block mfp-hide">
+        <div class="login-form-section"><button type="button" class="mfp-close"></button>
+          <div class="login-form-title">Авторизация</div>
+          <div class="form-group">
+            <label for="input-1">E-mail:</label>
+            <input id="input-1" type="text" placeholder="Электронная почта...">
+          </div>
+          <div class="form-group">
+            <label for="input-1">Пароль:</label>
+            <input id="input-1" type="password" placeholder="Введите пароль...">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn">Войти</button><a href="#!" class="fogot-password">Забыли пароль?</a>
+          </div>
+          <div class="form-group">
+            <div class="checkbox-input">
+              <input type="checkbox" id="checkbox-1" class="checkbox">
+              <label for="checkbox-1"><span></span> 
+                <div class="checkbox-text">Получать новости на электронную почту</div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="login-form-section"><span class="socials-title">Вход через социальную сеть:</span>
+          <ul class="socials">
+            <li><a href="#!" class="fb"></a></li>
+            <li><a href="#!" class="vk"></a></li>
+            <li><a href="#!" class="mail"></a></li>
+            <li><a href="#!" class="ok"></a></li>
+          </ul>
+        </div>
+        <div class="login-form-section text-center"><a href="#!">Регистрация нового пользователя</a></div>
+      </form>
       <div class="fade-bg"></div>
       <div class="aside-nav">
         <div class="aside-nav__header"><span class="close-btn js-toggle-menu"></span></div>
@@ -36,7 +69,7 @@
                   <title>Artboard 2</title>
                   <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
                 </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+            <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
               <div class="user-panel__link"><a href="#!">Регистрация</a></div>
             </div>
           </div>
@@ -82,7 +115,7 @@
                   <title>Artboard 2</title>
                   <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
                 </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+            <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
               <div class="user-panel__link"><a href="#!">Регистрация</a></div>
             </div>
           </div>
@@ -124,11 +157,11 @@
                   <div class="section-subtitle">Отслеживание почтового отправления: RS806954342NL</div>
                   <div class="tracking-status">
                     <div style="width:50%" class="tracking-status__value"></div>
-                    <div class="tracking-status__caption">В пути 102 дня  <a href="#!" class="question-icon"></a>/  Отслеживается 99 дней  <a href="#!" class="question-icon"></a></div>
+                    <div class="tracking-status__caption"> <span>В пути 102 дня /  </span><a href="#!" title="That&amp;apos;s what this widget is" class="question-icon"></a><span>Отслеживается 99 дней  </span><a href="#!" title="Another tooltip" class="question-icon"></a></div>
                   </div>
                 </div>
                 <div class="block__header">
-                  <div class="section-subtitle margin-0">Прогнозируемый период поступления посылки: <span class="color-grey medium">24.04.2017 — 02.05.2017</span><a href="#!" class="question-icon"></a></div>
+                  <div class="section-subtitle margin-0">Прогнозируемый период поступления посылки: <span class="color-grey medium">24.04.2017 — 02.05.2017</span><a href="#!" title="Another tooltip 2" class="question-icon"></a></div>
                 </div>
                 <div class="tracking-steps">
                   <div class="tracking-steps__item">
@@ -141,7 +174,7 @@
                       <div class="tracking-steps__icon icon-1"></div>
                     </div>
                     <div class="tracking-steps__section">
-                      <div class="tracking-steps__title">Прибыло в страну назначения <a href="#!" class="question-icon"></a></div>
+                      <div class="tracking-steps__title">Прибыло в страну назначения <a href="#!" title="Another tooltip 3" class="question-icon"></a></div>
                       <div class="tracking-steps__description">Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта</div>
                     </div>
                   </div>
@@ -155,7 +188,7 @@
                       <div class="tracking-steps__icon icon-2"></div>
                     </div>
                     <div class="tracking-steps__section">
-                      <div class="tracking-steps__title">Отправлено в страну назначения<a href="#!" class="question-icon"> </a></div>
+                      <div class="tracking-steps__title">Отправлено в страну назначения<a href="#!" title="Another tooltip 4" class="question-icon"> </a></div>
                       <div class="tracking-steps__description">Почтовое отправление в процессе передачи почте страны назначения, для доставки в одно из мест международного обмена, и последующих операция импорта / экспорта. </div>
                     </div>
                   </div>
@@ -169,7 +202,7 @@
                       <div class="tracking-steps__icon icon-3"></div>
                     </div>
                     <div class="tracking-steps__section">
-                      <div class="tracking-steps__title">Прибыло в сортировочный центр – Нидерланды<a href="#!" class="question-icon"></a></div>
+                      <div class="tracking-steps__title">Прибыло в сортировочный центр – Нидерланды<a href="#!" title="Another tooltip 5" class="question-icon"></a></div>
                       <div class="tracking-steps__description">Прибытие почтового отправления в промежуточный узел почтовой связи для сортировки, выбора маршрута и отправкив сторону получателя.</div>
                     </div>
                   </div>
@@ -183,7 +216,7 @@
                       <div class="tracking-steps__icon icon-4"></div>
                     </div>
                     <div class="tracking-steps__section">
-                      <div class="tracking-steps__title">Подготовaка к отправке<a href="#!" class="question-icon"></a></div>
+                      <div class="tracking-steps__title">Подготовaка к отправке<a href="#!" title="Another tooltip 6" class="question-icon"></a></div>
                       <div class="tracking-steps__description">Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта</div>
                     </div>
                   </div>
@@ -339,7 +372,7 @@
                 </ul>
               </div>
             </div>
-            <div class="middle__aside">
+            <div class="middle__aside parcsel-tracking-aside">
               <div class="block">
                 <div class="page-title">Службы доставки</div>
                 <ul class="deliveries-list js-custom-scroll">
@@ -555,7 +588,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="block">
+              <div class="block new-comments">
                 <div class="page-title">Новые комментарии</div>
                 <div class="aside-comments">
                   <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
@@ -608,6 +641,8 @@
     <script src="js/dropzone.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

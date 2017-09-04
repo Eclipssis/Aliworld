@@ -11,6 +11,39 @@
   </head>
   <body>
     <div id="wrapper">
+      <form id="login-form" class="white-popup-block mfp-hide">
+        <div class="login-form-section"><button type="button" class="mfp-close"></button>
+          <div class="login-form-title">Авторизация</div>
+          <div class="form-group">
+            <label for="input-1">E-mail:</label>
+            <input id="input-1" type="text" placeholder="Электронная почта...">
+          </div>
+          <div class="form-group">
+            <label for="input-1">Пароль:</label>
+            <input id="input-1" type="password" placeholder="Введите пароль...">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn">Войти</button><a href="#!" class="fogot-password">Забыли пароль?</a>
+          </div>
+          <div class="form-group">
+            <div class="checkbox-input">
+              <input type="checkbox" id="checkbox-1" class="checkbox">
+              <label for="checkbox-1"><span></span> 
+                <div class="checkbox-text">Получать новости на электронную почту</div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="login-form-section"><span class="socials-title">Вход через социальную сеть:</span>
+          <ul class="socials">
+            <li><a href="#!" class="fb"></a></li>
+            <li><a href="#!" class="vk"></a></li>
+            <li><a href="#!" class="mail"></a></li>
+            <li><a href="#!" class="ok"></a></li>
+          </ul>
+        </div>
+        <div class="login-form-section text-center"><a href="#!">Регистрация нового пользователя</a></div>
+      </form>
       <div class="fade-bg"></div>
       <div class="aside-nav">
         <div class="aside-nav__header"><span class="close-btn js-toggle-menu"></span></div>
@@ -36,7 +69,7 @@
                   <title>Artboard 2</title>
                   <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
                 </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+            <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
               <div class="user-panel__link"><a href="#!">Регистрация</a></div>
             </div>
           </div>
@@ -82,7 +115,7 @@
                   <title>Artboard 2</title>
                   <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
                 </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+            <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
               <div class="user-panel__link"><a href="#!">Регистрация</a></div>
             </div>
           </div>
@@ -135,7 +168,7 @@
                 </div>
                 <ul class="article-list article-list--hirozintal">
                   <li>
-                    <article class="article"><a href="#!" class="article__image article__image--height-175"><img src="pictures/article-233x175-1.jpg" alt="article-image">
+                    <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-1.jpg" alt="article-image">
                         <div class="article__favorite article__favorite--small"></div></a>
                       <div class="article__title"><a href="#!" class="article__link">Самый популярный запрос на АлиЭкспресс – спиннеры</a></div>
                       <div class="article__text">К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей.</div>
@@ -151,7 +184,7 @@
                     </article>
                   </li>
                   <li>
-                    <article class="article"><a href="#!" class="article__image article__image--height-175"><img src="pictures/article-233x175-2.jpg" alt="article-image">
+                    <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-2.jpg" alt="article-image">
                         <div class="article__favorite article__favorite--small active"></div></a>
                       <div class="article__title"><a href="#!" class="article__link">АлиЭкспресс существенно снижает партнерские выплаты</a></div>
                       <div class="article__text">С этого дня за оплаченные и завершенные заказы будет начисляться не более 6.5%</div>
@@ -167,7 +200,7 @@
                     </article>
                   </li>
                   <li>
-                    <article class="article"><a href="#!" class="article__image article__image--height-175"><img src="pictures/article-233x175-3.jpg" alt="article-image">
+                    <article class="article"><a href="#!" class="article__image"><img src="pictures/article-233x175-3.jpg" alt="article-image">
                         <div class="article__favorite article__favorite--small"></div></a>
                       <div class="article__title"><a href="#!" class="article__link">Заказываем товар на АлиЭкспресс посылкой до востребования</a></div>
                       <div class="article__text">Появилась мода совершать покупки и заказывать отправку товара посылкой до востребования.</div>
@@ -186,13 +219,13 @@
               </div>
               <div class="inner-row">
                 <div class="col-inner">
-                  <div class="block block--white">
+                  <div class="block block-product-review block--white">
                     <div class="block__header">
                       <div class="section-title">Обзоры товаров</div><a href="#!" class="btn btn-small btn-transparent">Добавить обзор</a>
                     </div>
-                    <ul class="article-list">
+                    <ul class="article-list index-list">
                       <li>
-                        <article class="article"><a href="#!" class="article__image article__image--height-275"><img src="pictures/article-822x274-1.jpg" alt="article-image">
+                        <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-1.jpg" alt="article-image">
                             <div class="article__favorite active"></div></a>
                           <div class="article__title"><a href="#!" class="article__link">Как я купила свое первое платье на Али-экспресс</a></div>
                           <div class="article__text">Вот это платье я захотела купить, благо, в горящих товарах оно продавалось за 459 рублей. А вот, что пришло: Отшито сикось-накось, швы сборят. Отдельное внимание прошу обратить на то, что прямо по переду, по подолу идет кошмарный грубый шов.</div>
@@ -210,7 +243,7 @@
                         </article>
                       </li>
                       <li>
-                        <article class="article"><a href="#!" class="article__image article__image--height-275"><img src="pictures/article-822x274-2.jpg" alt="article-image">
+                        <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-2.jpg" alt="article-image">
                             <div class="article__favorite"></div></a>
                           <div class="article__title"><a href="#!" class="article__link">Xiaomi Mi Band 1S – отличный и недорогой фитнес-браслет </a></div>
                           <div class="article__text">Предыдущая модель получила заслуженную популярность среди покупателей во многих странах в мире, и во многом благодаря простоте использования и низкой стоимости. Основным отличием новой модели с приставкой «1S» считается наличие оптического пульсометра, при этом ценник на браслет хоть.</div>
@@ -228,7 +261,7 @@
                         </article>
                       </li>
                       <li>
-                        <article class="article"><a href="#!" class="article__image article__image--height-275"><img src="pictures/article-822x274-3.jpg" alt="article-image">
+                        <article class="article"><a href="#!" class="article__image"><img src="pictures/article-822x274-3.jpg" alt="article-image">
                             <div class="article__favorite"></div></a>
                           <div class="article__title"><a href="#!" class="article__link">Xiaomi Redmi Note 3 – мощный и доступный смартфон</a></div>
                           <div class="article__text">Прошло всего несколько дней с момента поступления в свободную продажу первого обладающего сканером отпечатков пальцев смартфона известного китайского вендора Xiaomi. До этого десятки тысяч покупателей сделали предзаказы. Прошло всего несколько дней с момента поступления в свободную продажу первого обладающего сканером отпечатков пальцев смартфона известного китайского вендора Xiaomi. До этого десятки тысяч покупателей сделали предзаказы. </div>
@@ -251,8 +284,10 @@
                 <div class="col-2 visible-desktop-large">
                   <div class="mini-banner mini-banner--red">
                     <div class="mini-banner__icon icon-sadman"></div>
-                    <div class="mini-banner__title">Жалобы</div>
-                    <div class="mini-banner__text">Магазины без доверия</div><a href="#!" class="btn btn-max">Добавить жалобу</a>
+                    <div class="mini-banner__body">
+                      <div class="mini-banner__title">Жалобы</div>
+                      <div class="mini-banner__text">Магазины без доверия</div><a href="#!" class="btn btn-max">Добавить жалобу</a>
+                    </div>
                   </div>
                   <div class="block block--white">
                     <div class="article-list article-list--small">
@@ -381,103 +416,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-2">
-              <div class="mini-banner mini-banner--blue">
-                <div class="mini-banner__icon icon-tracking"></div>
-                <div class="mini-banner__title">Трекинг посылок</div>
-                <div class="mini-banner__text">Введите номер отправления:</div>
-                <form class="tracking-form">
-                  <input type="text" class="tracking-form__input">
-                  <button type="submit" class="tracking-form__submit"></button>
-                </form>
-              </div>
-              <div class="block news-preview">
-                <div class="block__header">
-                  <div class="section-title">Новости</div><a href="#!" class="btn btn-small btn-transparent">Все новости</a>
-                </div>
-                <div class="arcticle-wrap">
-                  <article class="article"><a href="#!" class="article__image article__image--height-137"><img src="pictures/article-274x137-1.jpg" alt="article-image">
-                      <div class="favorite"></div></a>
-                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой</a></div>
-                    <div class="article__footer">
-                      <div class="article__section">
-                        <div class="article__publicated">10.07.2017</div>
-                      </div>
-                      <div class="article__section">
-                        <div class="article__view">33</div>
-                        <div class="article__comments">456</div>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="article"><a href="#!" class="article__image article__image--height-137"><img src="pictures/article-274x137-2.jpg" alt="article-image">
-                      <div class="favorite"></div></a>
-                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире</a></div>
-                    <div class="article__footer">
-                      <div class="article__section">
-                        <div class="article__publicated">07.07.2017</div>
-                      </div>
-                      <div class="article__section">
-                        <div class="article__view">33</div>
-                        <div class="article__comments">456</div>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="article"><a href="#!" class="article__image article__image--height-137"><img src="pictures/article-274x137-3.jpg" alt="article-image">
-                      <div class="favorite"></div></a>
-                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
-                    <div class="article__footer">
-                      <div class="article__section">
-                        <div class="article__publicated">06.07.2017</div>
-                      </div>
-                      <div class="article__section">
-                        <div class="article__view">33</div>
-                        <div class="article__comments">456</div>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="article"><a href="#!" class="article__image article__image--height-137"><img src="pictures/article-274x137-4.jpg" alt="article-image">
-                      <div class="favorite"></div></a>
-                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире</a></div>
-                    <div class="article__footer">
-                      <div class="article__section">
-                        <div class="article__publicated">06.07.2017</div>
-                      </div>
-                      <div class="article__section">
-                        <div class="article__view">33</div>
-                        <div class="article__comments">456</div>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="article"><a href="#!" class="article__image article__image--height-137"><img src="pictures/article-274x137-5.jpg" alt="article-image">
-                      <div class="favorite"></div></a>
-                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
-                    <div class="article__footer">
-                      <div class="article__section">
-                        <div class="article__publicated">16.07.2017</div>
-                      </div>
-                      <div class="article__section">
-                        <div class="article__view">33</div>
-                        <div class="article__comments">456</div>
-                      </div>
-                    </div>
-                  </article>
-                </div><a href="#!" class="btn btn-max"> <span class="icon-lamp"></span>Предложить новость</a>
-              </div>
-              <div class="mini-banner mini-banner--green">
-                <div class="mini-banner__icon icon-tracking"></div>
-                <div class="mini-banner__title">Рассылка новостей</div>
-                <div class="mini-banner__text">Будьте в курсе обновлений!</div>
-                <form class="tracking-form">
-                  <input type="text" placeholder="Ваш e-mail..." class="tracking-form__input">
-                  <button type="submit" class="tracking-form__submit">    </button>
-                </form>
-              </div>
-            </div>
             <div class="col-3 hidden-desktop-large">
               <div class="mini-banner mini-banner--red">
                 <div class="mini-banner__icon icon-sadman"></div>
-                <div class="mini-banner__title">Жалобы</div>
-                <div class="mini-banner__text">Магазины без доверия</div><a href="#!" class="btn btn-max">Добавить жалобу</a>
+                <div class="mini-banner__body">
+                  <div class="mini-banner__title">Жалобы</div>
+                  <div class="mini-banner__text">Магазины без доверия</div><a href="#!" class="btn btn-max">Добавить жалобу</a>
+                </div>
               </div>
               <div class="block block--white">
                 <div class="article-list article-list--small">
@@ -604,6 +549,102 @@
                 </div><a href="#!" class="show-more">Открыть все жалобы</a>
               </div>
             </div>
+            <div class="col-2">
+              <div class="mini-banner mini-banner--blue">
+                <div class="mini-banner__icon icon-tracking"></div>
+                <div class="mini-banner__body">
+                  <div class="mini-banner__title">Трекинг посылок</div>
+                  <div class="mini-banner__text">Введите номер отправления:</div>
+                  <form class="tracking-form">
+                    <input type="text" class="tracking-form__input">
+                    <button type="submit" class="tracking-form__submit"></button>
+                  </form>
+                </div>
+              </div>
+              <div class="block news-preview">
+                <div class="block__header">
+                  <div class="section-title">Новости</div><a href="#!" class="btn btn-small btn-transparent">Все новости</a>
+                </div>
+                <div class="arcticle-wrap">
+                  <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-1.jpg" alt="article-image">
+                      <div class="favorite"></div></a>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой</a></div>
+                    <div class="article__footer">
+                      <div class="article__section">
+                        <div class="article__publicated">10.07.2017</div>
+                      </div>
+                      <div class="article__section">
+                        <div class="article__view">33</div>
+                        <div class="article__comments">456</div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-2.jpg" alt="article-image">
+                      <div class="favorite"></div></a>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире</a></div>
+                    <div class="article__footer">
+                      <div class="article__section">
+                        <div class="article__publicated">07.07.2017</div>
+                      </div>
+                      <div class="article__section">
+                        <div class="article__view">33</div>
+                        <div class="article__comments">456</div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-3.jpg" alt="article-image">
+                      <div class="favorite"></div></a>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
+                    <div class="article__footer">
+                      <div class="article__section">
+                        <div class="article__publicated">06.07.2017</div>
+                      </div>
+                      <div class="article__section">
+                        <div class="article__view">33</div>
+                        <div class="article__comments">456</div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-4.jpg" alt="article-image">
+                      <div class="favorite"></div></a>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире</a></div>
+                    <div class="article__footer">
+                      <div class="article__section">
+                        <div class="article__publicated">06.07.2017</div>
+                      </div>
+                      <div class="article__section">
+                        <div class="article__view">33</div>
+                        <div class="article__comments">456</div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="article"><a href="#!" class="article__image"><img src="pictures/article-274x137-5.jpg" alt="article-image">
+                      <div class="favorite"></div></a>
+                    <div class="article__title article__title--small"><a href="#!" class="article__link article__link--small">Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком</a></div>
+                    <div class="article__footer">
+                      <div class="article__section">
+                        <div class="article__publicated">16.07.2017</div>
+                      </div>
+                      <div class="article__section">
+                        <div class="article__view">33</div>
+                        <div class="article__comments">456</div>
+                      </div>
+                    </div>
+                  </article>
+                </div><a href="#!" class="btn btn-max"> <span class="icon-lamp"></span>Предложить новость</a>
+              </div>
+              <div class="mini-banner mini-banner--green">
+                <div class="mini-banner__icon icon-mail"></div>
+                <div class="mini-banner__body">
+                  <div class="mini-banner__title">Рассылка новостей</div>
+                  <div class="mini-banner__text">Будьте в курсе обновлений!</div>
+                  <form class="tracking-form">
+                    <input type="text" placeholder="Ваш e-mail..." class="tracking-form__input">
+                    <button type="submit" class="tracking-form__submit">    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -613,9 +654,8 @@
             <div class="banner__content">
               <div class="banner__title">Что такое AliWorld?</div>
               <p> Каждый человек делает что-то лучше других. Мы, например, лучше других разбираемся в покупках на AliExpress.com. Что купить, как, а главное, у кого – на эти вопросы мы отвечаем каждый день, чтобы вы не волновались и не рисковали, а совершали только выгодные и честные покупки.</p>
-              <p>Суть AliWorld в том, что его создают реальные покупатели. Мы заказываем товары, тестируем их, изучаем продавцов, ищем выгодные сделки и предложения. Наша цель – развивать не просто сайт, где можно хвастаться приобретенными вещами, рассказывать о неудачах, советоваться и задавать вопросы. Мы объединяем всех, кто покупает на AliExpress, в одном месте собираем покупательский опыт, информацию о тех, кому стоит доверять, а кому не стоит. 
-                <div class="banner__footer"><a href="#!" class="btn btn-transparent btn-small">Подробнее о сайте</a></div>
-              </p>
+              <p>Суть AliWorld в том, что его создают реальные покупатели. Мы заказываем товары, тестируем их, изучаем продавцов, ищем выгодные сделки и предложения. Наша цель – развивать не просто сайт, где можно хвастаться приобретенными вещами, рассказывать о неудачах, советоваться и задавать вопросы. Мы объединяем всех, кто покупает на AliExpress, в одном месте собираем покупательский опыт, информацию о тех, кому стоит доверять, а кому не стоит. </p>
+              <div class="banner__footer"><a href="#!" class="btn btn-transparent btn-small">Подробнее о сайте</a></div>
             </div>
             <div class="banner__aside">
               <div class="banner__title">Будьте на связи!</div>
@@ -662,6 +702,8 @@
     <script src="js/dropzone.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

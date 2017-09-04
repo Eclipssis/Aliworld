@@ -11,6 +11,39 @@
   </head>
   <body>
     <div id="wrapper">
+      <form id="login-form" class="white-popup-block mfp-hide">
+        <div class="login-form-section"><button type="button" class="mfp-close"></button>
+          <div class="login-form-title">Авторизация</div>
+          <div class="form-group">
+            <label for="input-1">E-mail:</label>
+            <input id="input-1" type="text" placeholder="Электронная почта...">
+          </div>
+          <div class="form-group">
+            <label for="input-1">Пароль:</label>
+            <input id="input-1" type="password" placeholder="Введите пароль...">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn">Войти</button><a href="#!" class="fogot-password">Забыли пароль?</a>
+          </div>
+          <div class="form-group">
+            <div class="checkbox-input">
+              <input type="checkbox" id="checkbox-1" class="checkbox">
+              <label for="checkbox-1"><span></span> 
+                <div class="checkbox-text">Получать новости на электронную почту</div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="login-form-section"><span class="socials-title">Вход через социальную сеть:</span>
+          <ul class="socials">
+            <li><a href="#!" class="fb"></a></li>
+            <li><a href="#!" class="vk"></a></li>
+            <li><a href="#!" class="mail"></a></li>
+            <li><a href="#!" class="ok"></a></li>
+          </ul>
+        </div>
+        <div class="login-form-section text-center"><a href="#!">Регистрация нового пользователя</a></div>
+      </form>
       <div class="fade-bg"></div>
       <div class="aside-nav">
         <div class="aside-nav__header"><span class="close-btn js-toggle-menu"></span></div>
@@ -36,7 +69,7 @@
                   <title>Artboard 2</title>
                   <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
                 </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+            <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
               <div class="user-panel__link"><a href="#!">Регистрация</a></div>
             </div>
           </div>
@@ -82,7 +115,7 @@
                   <title>Artboard 2</title>
                   <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
                 </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#!" class="log-in"> <span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+            <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
               <div class="user-panel__link"><a href="#!">Регистрация</a></div>
             </div>
           </div>
@@ -104,7 +137,9 @@
             <li><a href="#!">Внутренняя страница</a></li>
             <li class="active">Активная страница</li>
           </ul>
-          <div class="page-title">Отслеживание почтового отправления</div>
+          <div class="product-overview-head">
+            <div class="page-title">Отслеживание почтового отправления</div><a href="#!" class="btn btn-transparent btn-small">Добавить жалобу</a>
+          </div>
           <div class="owl-carousel owl-complaints">
             <div class="item">
               <div class="complaint">
@@ -177,7 +212,7 @@
               </div>
             </div>
           </div>
-          <form class="tracking-parcel tracking-parcel--small tracking-parcel--blue-bg">
+          <form class="tracking-parcel tracking-parcel--small tracking-parcel--blue-bg tracking-parcel-complaints">
             <div class="tracking-parcel__body">
               <div class="tracking-parcel__input">
                 <input type="text" placeholder="Поиск магазина...">
@@ -207,28 +242,30 @@
                       </div>
                       <div class="article__text">Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца. Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца </div>
                     </div>
-                    <div class="article__footer article__footer--separate">
+                    <div class="article__footer article__footer--separate complaints-footer">
                       <div class="article__section">
                         <div class="user-info-wrap">
                           <div class="user-info">
                             <div class="user-info__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
                             <div class="user-info__title">Александр Бывало</div>
-                            <div class="complaint-rating-footer">
-                              <div class="rating-value">Оценка:</div>
-                              <ul class="rating">
-                                <li style="width: 40%" class="active"><span class="star1"></span></li>
-                                <li><span class="star2"></span></li>
-                                <li><span class="star3"></span></li>
-                                <li><span class="star4"></span></li>
-                                <li><span class="star5"></span></li>
-                              </ul>
-                            </div>
+                          </div>
+                          <div class="complaint-rating-footer">
+                            <div class="rating-value">Оценка:</div>
+                            <ul class="rating">
+                              <li style="width: 40%" class="active"><span class="star1"></span></li>
+                              <li><span class="star2"></span></li>
+                              <li><span class="star3"></span></li>
+                              <li><span class="star4"></span></li>
+                              <li><span class="star5"></span></li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                       <div class="article__section">
-                        <div class="article__view">655</div>
-                        <div class="article__comments">23</div><a href="#!" class="btn btn-medium footer-btn">Далее</a>
+                        <div class="article__stats">
+                          <div class="article__view">655</div>
+                          <div class="article__comments">23</div>
+                        </div><a href="#!" class="btn btn-medium footer-btn">Далее</a>
                       </div>
                     </div>
                   </article>
@@ -251,28 +288,30 @@
                       </div>
                       <div class="article__text">Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца. Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца </div>
                     </div>
-                    <div class="article__footer article__footer--separate">
+                    <div class="article__footer article__footer--separate complaints-footer">
                       <div class="article__section">
                         <div class="user-info-wrap">
                           <div class="user-info">
                             <div class="user-info__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
                             <div class="user-info__title">Александр Бывало</div>
-                            <div class="complaint-rating-footer">
-                              <div class="rating-value">Оценка:</div>
-                              <ul class="rating">
-                                <li style="width: 40%" class="active"><span class="star1"></span></li>
-                                <li><span class="star2"></span></li>
-                                <li><span class="star3"></span></li>
-                                <li><span class="star4"></span></li>
-                                <li><span class="star5"></span></li>
-                              </ul>
-                            </div>
+                          </div>
+                          <div class="complaint-rating-footer">
+                            <div class="rating-value">Оценка:</div>
+                            <ul class="rating">
+                              <li style="width: 40%" class="active"><span class="star1"></span></li>
+                              <li><span class="star2"></span></li>
+                              <li><span class="star3"></span></li>
+                              <li><span class="star4"></span></li>
+                              <li><span class="star5"></span></li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                       <div class="article__section">
-                        <div class="article__view">655</div>
-                        <div class="article__comments">23</div><a href="#!" class="btn btn-medium footer-btn">Далее</a>
+                        <div class="article__stats">
+                          <div class="article__view">655</div>
+                          <div class="article__comments">23</div>
+                        </div><a href="#!" class="btn btn-medium footer-btn">Далее</a>
                       </div>
                     </div>
                   </article>
@@ -295,28 +334,30 @@
                       </div>
                       <div class="article__text">Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца. Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца </div>
                     </div>
-                    <div class="article__footer article__footer--separate">
+                    <div class="article__footer article__footer--separate complaints-footer">
                       <div class="article__section">
                         <div class="user-info-wrap">
                           <div class="user-info">
                             <div class="user-info__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
                             <div class="user-info__title">Александр Бывало</div>
-                            <div class="complaint-rating-footer">
-                              <div class="rating-value">Оценка:</div>
-                              <ul class="rating">
-                                <li style="width: 40%" class="active"><span class="star1"></span></li>
-                                <li><span class="star2"></span></li>
-                                <li><span class="star3"></span></li>
-                                <li><span class="star4"></span></li>
-                                <li><span class="star5"></span></li>
-                              </ul>
-                            </div>
+                          </div>
+                          <div class="complaint-rating-footer">
+                            <div class="rating-value">Оценка:</div>
+                            <ul class="rating">
+                              <li style="width: 40%" class="active"><span class="star1"></span></li>
+                              <li><span class="star2"></span></li>
+                              <li><span class="star3"></span></li>
+                              <li><span class="star4"></span></li>
+                              <li><span class="star5"></span></li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                       <div class="article__section">
-                        <div class="article__view">655</div>
-                        <div class="article__comments">23</div><a href="#!" class="btn btn-medium footer-btn">Далее</a>
+                        <div class="article__stats">
+                          <div class="article__view">655</div>
+                          <div class="article__comments">23</div>
+                        </div><a href="#!" class="btn btn-medium footer-btn">Далее</a>
                       </div>
                     </div>
                   </article>
@@ -390,6 +431,8 @@
     <script src="js/dropzone.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
