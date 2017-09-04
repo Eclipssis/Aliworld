@@ -4,7 +4,8 @@
   "description": "Eclipssis FrontEnd Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "surge": "surge --project ./build --domain aliworld.surge.sh"
   },
   "author": "Eclipssis",
   "license": "ISC",
