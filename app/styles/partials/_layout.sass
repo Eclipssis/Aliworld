@@ -23,6 +23,8 @@ html, body
   min-width: 320px
   height: auto 
   padding-bottom: 158px
+  +desktop-large
+    padding-bottom: 226px
 
 .container
   padding: 0 15px
@@ -1077,6 +1079,10 @@ $header-margin-top: 26px
   border-top: 1px solid #f4f4f4
   @extend .clearfix
   overflow: hidden
+  +desktop-large
+    height: 226px 
+    margin-top: -226px
+
 
   .container
     +mobile
