@@ -1,3 +1,43 @@
+form#login-form.white-popup-block.mfp-hide
+
+  .login-form-section
+    <button type="button" class="mfp-close"></button>
+    .login-form-title Авторизация
+    
+    .form-group
+      label(for="input-1") E-mail:
+      input#input-1(type="text", placeholder="Электронная почта...")
+
+    .form-group
+      label(for="input-1") Пароль:
+      input#input-1(type="password", placeholder="Введите пароль...")
+    
+    .form-group
+      button(type="submit").btn Войти
+      a(href="#!").fogot-password Забыли пароль?
+
+    .form-group
+      .checkbox-input
+        input(type="checkbox" class="checkbox" id="checkbox-1")
+        label(for="checkbox-1") <span></span> 
+          .checkbox-text Получать новости на электронную почту
+
+  .login-form-section
+    span.socials-title Вход через социальную сеть:
+    ul.socials
+      li
+        a(href="#!").fb
+      li
+        a(href="#!").vk
+      li
+        a(href="#!").mail
+      li
+        a(href="#!").ok
+
+  .login-form-section.text-center
+    a(href="#!") Регистрация нового пользователя
+
+
 .fade-bg
 
 .aside-nav
@@ -43,7 +83,7 @@
           span.favorite-icon__counter 2
 
       .user-panel__item
-        a(href="#!").log-in 
+        a(href="#login-form").log-in.popup-with-form
           span.log-in__text Вход
           span.log-in__icon
 
@@ -105,7 +145,7 @@ header.header
           span.favorite-icon__counter 2
 
       .user-panel__item
-        a(href="#!").log-in 
+        a(href="#login-form").log-in.popup-with-form
           span.log-in__text Вход
           span.log-in__icon
 

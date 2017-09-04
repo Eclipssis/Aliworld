@@ -1,5 +1,42 @@
 $(document).ready(function(){
 
+  $( document ).tooltip();
+
+  $('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+      }
+    }
+  });
+
+  $('.popup-with-form').magnificPopup({
+    type: 'inline',
+    preloader: false,
+
+    // When elemened is focused, some mobile browsers in some cases zoom in
+    // It looks not nice, so we disable it:
+    callbacks: {
+      beforeOpen: function() {
+        if($(window).width() < 700) {
+          this.st.focus = false;
+        } else {
+          this.st.focus = '#name';
+        }
+      }
+    }
+  });
+
   $('.owl-banner').owlCarousel({
     loop: false,
     margin: 15,
@@ -58,7 +95,7 @@ $(document).ready(function(){
       1024: {
         items: 4
       },
-      1200: {
+      1281: {
         items: 5
       }
     },
@@ -111,17 +148,32 @@ $(document).ready(function(){
   }
 
   function readAvatar(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
 
-        reader.onload = function (e) {
-          $('.js-pasteSelected').attr('src', e.target.result);
-          $('.js-pasteSelected').addClass('showing')
-        }
-
-        reader.readAsDataURL(input.files[0]);
+      reader.onload = function (e) {
+        $('.js-pasteSelected').attr('src', e.target.result);
+        $('.js-pasteSelected').addClass('showing')
       }
+
+      reader.readAsDataURL(input.files[0]);
     }
+  }
+
+  function readSingleImage(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('.js-pasteSingleImage').attr('src', e.target.result);
+        $('.js-pasteSingleImage').addClass('showing')
+        $('.js-delete-single-image').addClass('active')
+        $('.single-image-upload').addClass('showing')
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
 
 
   $(document).on('change', '.js-uploadAvatar', function () {
@@ -133,10 +185,20 @@ $(document).ready(function(){
     readURL(this);
   });
 
+  $(document).on('change', '.js-uploadSingleImage', function () {
+    readSingleImage(this);
+  });
+
 
 
   $(document).on('click', '.extra-images__close', function () {
     $(this).parent().remove()
+  });
+
+  $(document).on('click', '.js-delete-single-image', function () {
+    $('.js-pasteSingleImage').attr('src', '');
+    $(this).removeClass('active')
+    $('.single-image-upload').removeClass('showing')
   });
 
   $(document).on('click', '.chose_file', function (event) {
@@ -146,13 +208,12 @@ $(document).ready(function(){
   });
 
 
-  // dropzone
 
-  $("#dropzone").dropzone({ 
-    url: "/file/post",
-    resizeWidth: 800,
-    resizeHeight: 270,
-    maxFilesize: 1
-  });
+
+  $('.adding-form .rating span').click(function () {
+    var starValue = $(this).attr('data-number');
+    var setRating = starValue * 20;
+    $('.adding-form .rating li.active').css('width', setRating + '%');
+  })
 
 });//end ready

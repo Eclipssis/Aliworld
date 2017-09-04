@@ -44,15 +44,16 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   .tracking-status
                     .tracking-status__value(style="width:50%")
 
-                    .tracking-status__caption В пути 102 дня  
-                      a(href="#!").question-icon
-                      | /  Отслеживается 99 дней  
-                      a(href="#!").question-icon
+                    .tracking-status__caption 
+                      span В пути 102 дня /  
+                      a(href="#!" title="That&apos;s what this widget is").question-icon
+                      span Отслеживается 99 дней  
+                      a(href="#!" title="Another tooltip").question-icon
 
                 .block__header
                   .section-subtitle.margin-0 Прогнозируемый период поступления посылки: 
                     span.color-grey.medium 24.04.2017 — 02.05.2017
-                    a(href="#!").question-icon
+                    a(href="#!" title="Another tooltip 2").question-icon
 
                 .tracking-steps
                   .tracking-steps__item
@@ -66,7 +67,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                     .tracking-steps__section
                       .tracking-steps__title Прибыло в страну назначения 
-                        a(href="#!").question-icon
+                        a(href="#!" title="Another tooltip 3").question-icon
 
                       .tracking-steps__description Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта
 
@@ -84,7 +85,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                     .tracking-steps__section
                       .tracking-steps__title Отправлено в страну назначения
-                        a(href="#!").question-icon 
+                        a(href="#!" title="Another tooltip 4").question-icon 
 
                       .tracking-steps__description Почтовое отправление в процессе передачи почте страны назначения, для доставки в одно из мест международного обмена, и последующих операция импорта / экспорта. 
 
@@ -100,7 +101,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                     .tracking-steps__section
                       .tracking-steps__title Прибыло в сортировочный центр – Нидерланды
-                        a(href="#!").question-icon
+                        a(href="#!" title="Another tooltip 5").question-icon
 
                       .tracking-steps__description Прибытие почтового отправления в промежуточный узел почтовой связи для сортировки, выбора маршрута и отправкив сторону получателя.
 
@@ -116,7 +117,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                     .tracking-steps__section
                       .tracking-steps__title Подготовaка к отправке
-                        a(href="#!").question-icon
+                        a(href="#!" title="Another tooltip 6").question-icon
 
                       .tracking-steps__description Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта
   
@@ -157,7 +158,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
 
 
-            .middle__aside
+            .middle__aside.parcsel-tracking-aside
             
               .block
                 .page-title Службы доставки
@@ -339,7 +340,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                         img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
                       .delivery-item__title China Post
 
-              .block
+              .block.new-comments
                 .page-title Новые комментарии
               
                 .aside-comments

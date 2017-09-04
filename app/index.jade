@@ -53,7 +53,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                 ul.article-list.article-list--hirozintal
                   li
                     article.article
-                      a(href="#!").article__image.article__image--height-175
+                      a(href="#!").article__image
                         img(src="pictures/article-233x175-1.jpg", alt="article-image")
                         .article__favorite.article__favorite--small
 
@@ -70,7 +70,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                   li
                     article.article
-                      a(href="#!").article__image.article__image--height-175
+                      a(href="#!").article__image
                         img(src="pictures/article-233x175-2.jpg", alt="article-image")
                         .article__favorite.article__favorite--small.active
 
@@ -87,7 +87,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                   li
                     article.article
-                      a(href="#!").article__image.article__image--height-175
+                      a(href="#!").article__image
                         img(src="pictures/article-233x175-3.jpg", alt="article-image")
                         .article__favorite.article__favorite--small
                       .article__title
@@ -104,16 +104,16 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               .inner-row
                 .col-inner
 
-                  .block.block--white
+                  .block.block-product-review.block--white
                     .block__header
                       .section-title Обзоры товаров
                       a(href="#!").btn.btn-small.btn-transparent Добавить обзор
                     
                     
-                    ul.article-list
+                    ul.article-list.index-list
                       li
                         article.article
-                          a(href="#!").article__image.article__image--height-275
+                          a(href="#!").article__image
                             img(src="pictures/article-822x274-1.jpg", alt="article-image")
                             .article__favorite.active
 
@@ -136,7 +136,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                       li
                         article.article
-                          a(href="#!").article__image.article__image--height-275
+                          a(href="#!").article__image
                             img(src="pictures/article-822x274-2.jpg", alt="article-image")
                             .article__favorite
 
@@ -159,7 +159,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                       li
                         article.article
-                          a(href="#!").article__image.article__image--height-275
+                          a(href="#!").article__image
                             img(src="pictures/article-822x274-3.jpg", alt="article-image")
                             .article__favorite
 
@@ -186,9 +186,10 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   
                   .mini-banner.mini-banner--red
                     .mini-banner__icon.icon-sadman
-                    .mini-banner__title Жалобы
-                    .mini-banner__text Магазины без доверия
-                    a(href="#!").btn.btn-max Добавить жалобу
+                    .mini-banner__body
+                      .mini-banner__title Жалобы
+                      .mini-banner__text Магазины без доверия
+                      a(href="#!").btn.btn-max Добавить жалобу
                   
                   .block.block--white
                     .article-list.article-list--small
@@ -348,128 +349,15 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                               .article__comments 33
 
                     a(href="#!").show-more Открыть все жалобы
-                
-
-            .col-2
-              .mini-banner.mini-banner--blue
-                .mini-banner__icon.icon-tracking
-                .mini-banner__title Трекинг посылок
-                .mini-banner__text Введите номер отправления:
-                form.tracking-form
-                  input(type="text").tracking-form__input
-                  button(type="submit").tracking-form__submit
-
-              .block.news-preview
-                .block__header
-                  .section-title Новости
-                  a(href="#!").btn.btn-small.btn-transparent Все новости
-
-                
-                .arcticle-wrap
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-1.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 10.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-2.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 07.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-3.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 06.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-4.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 06.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-5.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 16.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                a(href="#!").btn.btn-max 
-                  span.icon-lamp
-                  | Предложить новость
-
-              .mini-banner.mini-banner--green
-                .mini-banner__icon.icon-tracking
-                .mini-banner__title Рассылка новостей
-                .mini-banner__text Будьте в курсе обновлений!
-                form.tracking-form
-                  input(type="text" placeholder="Ваш e-mail...").tracking-form__input
-                  button(type="submit").tracking-form__submit     
             
             .col-3.hidden-desktop-large
 
               .mini-banner.mini-banner--red
                 .mini-banner__icon.icon-sadman
-                .mini-banner__title Жалобы
-                .mini-banner__text Магазины без доверия
-                a(href="#!").btn.btn-max Добавить жалобу
+                .mini-banner__body
+                  .mini-banner__title Жалобы
+                  .mini-banner__text Магазины без доверия
+                  a(href="#!").btn.btn-max Добавить жалобу
               
               .block.block--white
                 .article-list.article-list--small
@@ -629,7 +517,124 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                           .article__comments 33
 
                 a(href="#!").show-more Открыть все жалобы
-        
+                            
+
+            .col-2
+              .mini-banner.mini-banner--blue
+                .mini-banner__icon.icon-tracking
+                .mini-banner__body
+                  .mini-banner__title Трекинг посылок
+                  .mini-banner__text Введите номер отправления:
+                  form.tracking-form
+                    input(type="text").tracking-form__input
+                    button(type="submit").tracking-form__submit
+
+              .block.news-preview
+                .block__header
+                  .section-title Новости
+                  a(href="#!").btn.btn-small.btn-transparent Все новости
+
+                
+                .arcticle-wrap
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-1.jpg", alt="article-image")
+                      .favorite
+
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой
+
+                    .article__footer
+                      .article__section
+                        .article__publicated 10.07.2017
+
+                      .article__section
+                        .article__view 33
+                        .article__comments 456
+
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-2.jpg", alt="article-image")
+                      .favorite
+
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
+
+                    .article__footer
+                      .article__section
+                        .article__publicated 07.07.2017
+
+                      .article__section
+                        .article__view 33
+                        .article__comments 456
+
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-3.jpg", alt="article-image")
+                      .favorite
+
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                    .article__footer
+                      .article__section
+                        .article__publicated 06.07.2017
+
+                      .article__section
+                        .article__view 33
+                        .article__comments 456
+
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-4.jpg", alt="article-image")
+                      .favorite
+
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
+
+                    .article__footer
+                      .article__section
+                        .article__publicated 06.07.2017
+
+                      .article__section
+                        .article__view 33
+                        .article__comments 456
+
+                  article.article
+                    a(href="#!").article__image
+                      img(src="pictures/article-274x137-5.jpg", alt="article-image")
+                      .favorite
+
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                    .article__footer
+                      .article__section
+                        .article__publicated 16.07.2017
+
+                      .article__section
+                        .article__view 33
+                        .article__comments 456
+
+                a(href="#!").btn.btn-max 
+                  span.icon-lamp
+                  | Предложить новость
+
+              .mini-banner.mini-banner--green
+                .mini-banner__icon.icon-mail
+                .mini-banner__body
+                  .mini-banner__title Рассылка новостей
+                  .mini-banner__text Будьте в курсе обновлений!
+                  form.tracking-form
+                    input(type="text" placeholder="Ваш e-mail...").tracking-form__input
+                    button(type="submit").tracking-form__submit     
+              
+            
       .banner
         .container
           .banner__wrap
@@ -640,8 +645,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               .banner__title Что такое AliWorld?
               p  Каждый человек делает что-то лучше других. Мы, например, лучше других разбираемся в покупках на AliExpress.com. Что купить, как, а главное, у кого – на эти вопросы мы отвечаем каждый день, чтобы вы не волновались и не рисковали, а совершали только выгодные и честные покупки.
               p Суть AliWorld в том, что его создают реальные покупатели. Мы заказываем товары, тестируем их, изучаем продавцов, ищем выгодные сделки и предложения. Наша цель – развивать не просто сайт, где можно хвастаться приобретенными вещами, рассказывать о неудачах, советоваться и задавать вопросы. Мы объединяем всех, кто покупает на AliExpress, в одном месте собираем покупательский опыт, информацию о тех, кому стоит доверять, а кому не стоит. 
-                .banner__footer
-                  a(href="#!").btn.btn-transparent.btn-small Подробнее о сайте
+              .banner__footer
+                a(href="#!").btn.btn-transparent.btn-small Подробнее о сайте
               
             .banner__aside
               .banner__title Будьте на связи!

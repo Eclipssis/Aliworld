@@ -12,8 +12,10 @@ html(xmlns='http://www.w3.org/1999/xhtml')
         .container
           
           //= template/breadcrumb.jade
-
-          .page-title Отслеживание почтового отправления
+          
+          .product-overview-head
+            .page-title Отслеживание почтового отправления
+            a(href="#!").btn.btn-transparent.btn-small Добавить жалобу
 
           .owl-carousel.owl-complaints
             .item
@@ -127,7 +129,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                 .complaint__count 655 жалоб
 
 
-          form.tracking-parcel.tracking-parcel--small.tracking-parcel--blue-bg
+          form.tracking-parcel.tracking-parcel--small.tracking-parcel--blue-bg.tracking-parcel-complaints
             .tracking-parcel__body
             
               
@@ -167,7 +169,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                       .article__text Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца. Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца 
 
-                    .article__footer.article__footer--separate
+                    .article__footer.article__footer--separate.complaints-footer
                       .article__section
                         .user-info-wrap
                           .user-info
@@ -175,24 +177,25 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                               img(src="pictures/article-avatar.png", alt="avatar")
                             .user-info__title Александр Бывало
                             
-                            .complaint-rating-footer
-                              .rating-value Оценка:
+                          .complaint-rating-footer
+                            .rating-value Оценка:
 
-                              ul.rating
-                                li.active(style="width: 40%")
-                                  span.star1
-                                li
-                                  span.star2
-                                li
-                                  span.star3
-                                li
-                                  span.star4
-                                li
-                                  span.star5
+                            ul.rating
+                              li.active(style="width: 40%")
+                                span.star1
+                              li
+                                span.star2
+                              li
+                                span.star3
+                              li
+                                span.star4
+                              li
+                                span.star5
 
                       .article__section
-                        .article__view 655
-                        .article__comments 23
+                        .article__stats
+                          .article__view 655
+                          .article__comments 23
                         a(href="#!").btn.btn-medium.footer-btn Далее
                 
                 li
@@ -220,7 +223,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                       .article__text Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца. Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца 
 
-                    .article__footer.article__footer--separate
+                    .article__footer.article__footer--separate.complaints-footer
                       .article__section
                         .user-info-wrap
                           .user-info
@@ -228,24 +231,25 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                               img(src="pictures/article-avatar.png", alt="avatar")
                             .user-info__title Александр Бывало
                             
-                            .complaint-rating-footer
-                              .rating-value Оценка:
+                          .complaint-rating-footer
+                            .rating-value Оценка:
 
-                              ul.rating
-                                li.active(style="width: 40%")
-                                  span.star1
-                                li
-                                  span.star2
-                                li
-                                  span.star3
-                                li
-                                  span.star4
-                                li
-                                  span.star5
+                            ul.rating
+                              li.active(style="width: 40%")
+                                span.star1
+                              li
+                                span.star2
+                              li
+                                span.star3
+                              li
+                                span.star4
+                              li
+                                span.star5
 
                       .article__section
-                        .article__view 655
-                        .article__comments 23
+                        .article__stats
+                          .article__view 655
+                          .article__comments 23
                         a(href="#!").btn.btn-medium.footer-btn Далее
                 
                 li
@@ -273,7 +277,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 
                       .article__text Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца. Решил приобрести у этого продавца магнитолу в авто. Предварительно затеял переписку, чтобы узнать все функции магнитолы, а именно можно ли подключить к ней цифровой ТВ тюнер. после заверений продавца приобрел тюнер выбросил деньги на ветер, так как у данной магнитолы нет видеовхода в разъеме AUX. А так же не оказалось и пульта ДУ. В общем не рекомендую приобретать данный товар, особенно у этого продавца 
 
-                    .article__footer.article__footer--separate
+                    .article__footer.article__footer--separate.complaints-footer
                       .article__section
                         .user-info-wrap
                           .user-info
@@ -281,24 +285,25 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                               img(src="pictures/article-avatar.png", alt="avatar")
                             .user-info__title Александр Бывало
                             
-                            .complaint-rating-footer
-                              .rating-value Оценка:
+                          .complaint-rating-footer
+                            .rating-value Оценка:
 
-                              ul.rating
-                                li.active(style="width: 40%")
-                                  span.star1
-                                li
-                                  span.star2
-                                li
-                                  span.star3
-                                li
-                                  span.star4
-                                li
-                                  span.star5
+                            ul.rating
+                              li.active(style="width: 40%")
+                                span.star1
+                              li
+                                span.star2
+                              li
+                                span.star3
+                              li
+                                span.star4
+                              li
+                                span.star5
 
                       .article__section
-                        .article__view 655
-                        .article__comments 23
+                        .article__stats
+                          .article__view 655
+                          .article__comments 23
                         a(href="#!").btn.btn-medium.footer-btn Далее
             
               //= template/pagination.jade

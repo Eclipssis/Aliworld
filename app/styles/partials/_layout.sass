@@ -21,6 +21,8 @@ html, body
   position: relative
   min-height: 100%
   min-width: 320px
+  height: auto 
+  padding-bottom: 158px
 
 .container
   padding: 0 15px
@@ -99,6 +101,37 @@ html, body
     div.block__header
       padding-top: 0
 
+.parcsel-tracking-aside
+  @extend .clearfix
+  +desktop
+    margin-right: -20px 
+    margin-left: -20px 
+  +tablet
+    margin: 0
+  +mobile
+    display: flex
+    flex-wrap: wrap
+
+  .block
+    +desktop
+      float: left
+      width: 50%
+      padding: 0 20px 
+    +tablet
+      width: 100%
+      float: none
+      padding: 0
+
+  .aside-comments
+    margin: 0
+  
+  .aside-comment
+    width: 100%
+    padding: 0
+
+  .new-comments
+    +mobile
+      order: -1
 
 
 .index-row
@@ -114,7 +147,7 @@ html, body
     float: left
     padding: 0 15px
     +desktop
-      padding: 10px
+      padding: 0 10px
 
   .col-1
     width: 60%
@@ -643,7 +676,7 @@ $header-margin-top: 26px
     vertical-align: middle
     color: #a0a0a0
     font: 14px/1 'PT Sans', sans-serif
-    &:after
+    &:before
       content: '/ '
       color: #a0a0a0
       margin: 0 5px
@@ -654,6 +687,8 @@ $header-margin-top: 26px
     > a
       color: #a0a0a0
       font: 14px/1 'PT Sans', sans-serif
+
+
 
 .pagination
   @extend .clearfix
@@ -1035,6 +1070,9 @@ $header-margin-top: 26px
 .footer
   width: 100%
   position: relative
+  height: 158px 
+  margin-top: -158px
+  clear: both
   background-color: #ffffff
   border-top: 1px solid #f4f4f4
   @extend .clearfix
@@ -1057,8 +1095,6 @@ $header-margin-top: 26px
     min-height: 150px
     &:last-child
       border-right: 1px solid #f4f4f4
-
-
     +desktop-large
       width: 50%
       padding: 30px 25px

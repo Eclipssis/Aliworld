@@ -16,6 +16,12 @@
   .rating
     float: right
     margin-top: 2px
+    +desktop
+      float: none
+      margin-top: 0
+    +tablet
+      float: right
+      margin-top: 3px
 
 .rating-section
   margin-bottom: 40px
@@ -35,6 +41,13 @@
   float: left
   color: #a0a0a0
   font: 14px/1.2 'PT Sans', sans-serif
+  +desktop
+    float: none
+    display: inline-block
+    vertical-align: middle
+    margin-right: 40px
+  +tablet
+    margin-right: 10px
 
 .complaint-rating
   margin-bottom: 15px
@@ -171,6 +184,10 @@ ul.diamond-rating
 
 .block
   margin-bottom: 30px
+  +tablet
+    margin-bottom: 20px
+    
+
   &--white
     background-color: #ffffff
 
@@ -216,11 +233,17 @@ ul.diamond-rating
   &__footer
     padding: 25px 30px
 
+.block-product-review
+  .block__header
+    padding: 15px
+
+  .section-title, .btn-transparent
+    margin: 5px 15px
+
 .section-title
   font-weight: 700
   font-size: 23px
   color: #000000
-  margin-bottom: 4px
   +tablet
     font-size: 20px
 
@@ -234,14 +257,11 @@ ul.diamond-rating
 
 
 .article
-
   display: flex
   flex-wrap: wrap
 
   &--white
     background-color: #ffffff
-
-  &__item
 
   &__favorite
     position: absolute
@@ -252,9 +272,14 @@ ul.diamond-rating
     background: url('../images/heart(like-light).svg') 0 0 no-repeat
     cursor: pointer
     z-index: 10
+    +mobile
+      top: 15px 
+      right: 15px
+
     &--small
       top: 12px
       right: 12px
+
     &.active
       background: url('../images/heart(like-hover).svg') 0 0 no-repeat
 
@@ -269,17 +294,17 @@ ul.diamond-rating
 
     img 
       font-size: 0
-    img
-      min-width: 100%
-      transition: all 0.35s ease
-      min-width: 100%
-      min-height: 100%
-      width: auto
-      height: auto
-      position: absolute
-      left: 50%
-      top: 50%
-      transform: translate(-50%, -50%)
+      width: 100%
+      // min-width: 100%
+      // transition: all 0.35s ease
+      // min-width: 100%
+      // min-height: 100%
+      // width: auto
+      // height: auto
+      // position: absolute
+      // left: 50%
+      // top: 50%
+      // transform: translate(-50%, -50%)
 
     &--max 
       img 
@@ -287,34 +312,34 @@ ul.diamond-rating
         transform: none
         max-width: 100%
 
-    &--height-115
-      height: 115px
+    // &--height-115
+    //   height: 115px
 
-    &--height-137
-      height: 137px
+    // &--height-137
+    //   height: 137px
 
-    &--height-175
-      height: 175px
+    // &--height-175
+    //   height: 175px
 
-    &--height-240
-      height: 240px
-      +mobile
-        height: 140px
+    // &--height-240
+    //   height: 240px
+    //   +mobile
+    //     height: 140px
 
-    &--height-260
-      height: 260px
-      +mobile
-        height: 140px
+    // &--height-260
+    //   height: 260px
+    //   +mobile
+    //     height: 140px
 
-    &--height-275
-      height: 275px
-      +mobile
-        height: 140px
+    // &--height-275
+    //   height: 275px
+    //   +mobile
+    //     height: 140px
 
-    &--height-350
-      height: 350px
-      +mobile
-        height: 140px
+    // &--height-350
+    //   height: 350px
+    //   +mobile
+    //     height: 140px
 
     
 
@@ -448,7 +473,6 @@ ul.diamond-rating
     margin-right: 12px
     +mobile
       display: block
-      margin-top: 5px
 
   &__owner-avatar
     @extend .inline-middle
@@ -530,8 +554,7 @@ ul.diamond-rating
 
     .rouble
       display: inline-block
-      vertical-align: middle
-      margin-bottom: 9px
+      vertical-align: baseline
       margin-left: 5px
       width: 10px
       height: 11px
@@ -572,14 +595,10 @@ ul.diamond-rating
     +tablet
       text-align: center
 
-
-
 .article-list
   margin-bottom: 0
   list-style-type: none
   @extend .clearfix
-
-
   > li
     border-bottom: 1px solid $border-color
     padding: 30px 30px 20px
@@ -642,7 +661,7 @@ ul.diamond-rating
 
     .article__publicated
       +mobile
-        margin-bottom: 10px
+        margin-bottom: 4px
 
   &--four-col
     margin-right: -15px
@@ -652,13 +671,14 @@ ul.diamond-rating
       width: 25%
       float: left
       padding: 0 15px
-      margin-bottom: 30px
+      
       +desktop
         width: 33.333333%
       +tablet
         width: 50%
       +mobile
         width: 100%
+        margin-bottom: 30px
   
   .article__section
     display: flex
@@ -666,13 +686,13 @@ ul.diamond-rating
     align-items: center
   
   .article__footer
-    +mobile
+    +mobile-s
       flex-direction: column
       align-items: flex-start  
 
 
   .article__footer--separate
-    +mobile
+    +mobile-s
       flex-direction: column
       align-items: flex-start    
 
@@ -682,6 +702,15 @@ ul.diamond-rating
         margin-left: 0
         margin-top: 10px
 
+.index-list
+  .article__footer
+    +media(479)
+      flex-direction: column
+      align-items: center
+
+  .article__section
+    +media(479)
+      justify-content: center
 
 .other-articles
 
@@ -752,6 +781,8 @@ ul.diamond-rating
       width: 60px 
       right: 0
       border-left: 1px solid #f4f4f4
+      +mobile
+        width: 30px
       &:before
         position: absolute
         top: 50%
@@ -790,6 +821,52 @@ ul.diamond-rating
     font: 14px/1.5 'PT Sans', sans-serif
     margin-bottom: 5px
 
+.complaints-footer
+  +mobile-s
+    flex-direction: column
+    
+
+  .rating-value
+    float: none
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+
+  .article__section
+    +tablet
+      flex: 1 1 50%
+      flex-direction: column
+    +mobile-s
+      align-items: center
+      width: 100%
+  
+  .user-info__title
+    +mobile-s
+      flex: 0 0 auto
+
+  .footer-btn
+    +tablet
+      min-width: 150px
+    +mobile-s
+      margin-left: 0
+
+  
+  .user-info-wrap
+    +mobile-s
+      align-items: center
+      width: 100%
+
+  .user-info
+    +tablet
+      margin-bottom: 10px
+    +mobile-s
+      justify-content: center
+  
+  .article__stats
+    +tablet
+      margin-bottom: 10px
+      margin-top: 10px
+
 .main-banner
   
   .owl-carousel
@@ -805,6 +882,9 @@ ul.diamond-rating
           max-height: 300px
           max-width: initial
           width: initial
+        +mobile
+          max-height: 200px
+          margin-left: -300px
 
 .owl-carousel
 
@@ -825,8 +905,8 @@ ul.diamond-rating
     bottom: 35px
     right: 60px
     +tablet
-      bottom: 20px
-      right: 25px
+      bottom: 10px
+      right: 15px
 
     .owl-dot + .owl-dot
       margin-left: 20px
@@ -857,7 +937,7 @@ ul.diamond-rating
   +tablet
     padding: 30px
   +mobile
-    padding: 20px
+    padding: 15px
 
 .carousel-title
   font-size: 30px
@@ -868,7 +948,7 @@ ul.diamond-rating
   +tablet
     font-size: 23px
   +mobile
-    font-size: 20px
+    font-size: 17px
 
 .carousel-text
   font: 16px/1.5 'PT Sans', sans-serif
@@ -877,6 +957,8 @@ ul.diamond-rating
   +tablet
     font-size: 15px
     margin-bottom: 10px
+  +mobile
+    display: none
 
 
 
@@ -884,6 +966,7 @@ ul.diamond-rating
   color: #ffffff
   text-align: center
   padding: 30px 32px
+
   &--red
     background-color: #e62e04
   &--blue
@@ -892,13 +975,33 @@ ul.diamond-rating
     background-color: #8cc000
 
   &__icon
-    min-height: 108px
-    line-height: 108px
-    margin-bottom: 17px
+    min-height: 111px
+    line-height: 111px
+    margin: 0 auto 17px
+    +desktop
+      float: left
+    +media(460)
+      float: none
+      
+
     &.icon-sadman
+      width: 105px 
       background: url('../images/sadman.svg') 50% 50% no-repeat
     &.icon-tracking
+      width: 86px
       background: url('../images/tracking.svg') 50% 50% no-repeat
+    &.icon-mail
+      width: 110px
+      background: url('../images/mail-banner.svg') 0 0 no-repeat
+
+
+  &__body 
+    +desktop
+      text-align: left
+      margin-left: 130px
+    +media(460)
+      margin-left: 0
+      text-align: center
 
   &__title
     font-size: 22px
@@ -908,6 +1011,9 @@ ul.diamond-rating
   &__text
     font: 16px/1.5 'PT Sans', sans-serif
     margin-bottom: 15px
+
+  .btn 
+    padding: 12.5px 10px
 
 .news-preview
   margin-bottom: 40px
@@ -931,15 +1037,9 @@ ul.diamond-rating
     +desktop
       margin-right: -10px
       margin-left: -10px
-
-    .article
-      display: none
-
-    .article:nth-child(1), .article:nth-child(2), .article:nth-child(3)
-      display: block
-
-    +tablet
-      .article:nth-child(3)
+    
+    .article:nth-child(3)
+      +tablet
         display: none
 
 
@@ -948,15 +1048,28 @@ ul.diamond-rating
   background-color: #ffffff
   padding: 45px 0 55px
 
+
   &__wrap
     display: flex
+    margin-right: -15px 
+    margin-left: -15px
+      
     +tablet
       flex-wrap: wrap
   
   &__content
-    padding-right: 25px
+    padding: 0 15px 
+    +desktop
+      width: 50%
+    +tablet
+      width: 100%
 
   &__aside
+    padding: 0 15px
+    +desktop
+      width: 50%
+    +tablet
+      width: 100%
     
  
 
@@ -972,7 +1085,8 @@ ul.diamond-rating
     color: #5f5f5f
 
   &__footer
-    margin-top: 30px
+    margin-top: 25px
+    margin-bottom: 25px
 
   .col-sm-4
     +desktop-large
@@ -1002,11 +1116,32 @@ ul.diamond-rating
   .btn
     margin-bottom: 10px
     margin-right: 10px
+    color: #a0a0a0
+    padding: 9px 17px
+    font: 14px/14px 'PT Sans', sans-serif
+
+.aside-comments
+  overflow: hidden
+  +desktop
+    margin-right: -15px
+    margin-left: -15px
+  +mobile
+    margin-left: 0
+    margin-right: 0
 
 .aside-comment
   color: #5f5f5f
   font: 16px/1.5 'PT Sans', sans-serif
   margin-bottom: 20px
+  +desktop
+    display: inline-block
+    width: 49%
+    padding: 0 15px
+
+  +mobile
+    width: 100%
+
+
   a
     border-bottom: 1px solid #cfcfcf
     &:hover, &:focus
@@ -1015,6 +1150,11 @@ ul.diamond-rating
 
 .coments-block
   background-color: #ffffff
+  +desktop
+    margin-bottom: 40px 
+  +tablet
+    margin-bottom: 20px
+
   &__section
     padding: 25px 30px
     +mobile
@@ -1115,6 +1255,12 @@ ul.comments-list
       font-size: 14px
       line-height: 1.35
 
+  .btn-transparent
+    min-width: 100px 
+    color: #a0a0a0
+    padding: 9px 17px
+    font: 14px/14px 'PT Sans', sans-serif
+
 .user-info-wrap
   display: flex
   flex-wrap: wrap
@@ -1152,6 +1298,7 @@ ul.comments-list
     width: 100%
   +mobile
     flex-wrap: wrap
+    margin-bottom: 30px
 
   &__avatar
     flex: 0 0 40px
@@ -1163,6 +1310,7 @@ ul.comments-list
     margin-left: 10px
     margin-right: 10px
     font-size: 14px
+    line-height: 16px
     color: #000000
     font-weight: 500
     min-width: 125px
@@ -1258,23 +1406,35 @@ ul.comments-list
   position: relative
   min-height: 400px
   background-image: url('../images/Couple.png'), url("../images/pattern-2.jpg")
-  background-position: 90% 100%, 0 0
+  background-position: 660px 100%, 0 0
   background-repeat: no-repeat, repeat
-  background-size: 50%, auto
+  background-size: auto
   color: #ffffff
+  +desktop-large
+    background-position: 490px 100%, 0 0
+  +desktop
+    background-position: 350px 100%, 0 0
+    background-size: 60%, auto
+    min-height: 260px
+  +tablet
+    min-height: 430px
+    background-size: 70%, auto
+    background-position: 50% 100%, 0 0
   +mobile
     background-size: 100%, auto
-    min-height: 440px
+    min-height: 450px
 
   &__body
-    position: absolute
     width: 100%
     max-width: 640px
-    left: 0
-    top: 0
     padding: 60px
+    +desktop-large
+      max-width: 500px
+    +desktop
+      padding: 30px 40px
+      max-width: 400px
     +tablet
-      padding: 40px 
+      max-width: 100%
     +mobile
       padding: 20px
 
@@ -1283,14 +1443,16 @@ ul.comments-list
     line-height: 1.2
     font-weight: 700
     margin-bottom: 20px
-    +tablet
-      font-size: 40px 
+    +desktop-large
+      font-size: 40px
+    +desktop
+      font-size: 30px 
     +mobile
       font-size: 28px
 
   &__text 
     font: 17px/1.7 'PT Sans', sans-serif
-    +mobile
+    +desktop
       font-size: 14px
 
 
@@ -1320,6 +1482,11 @@ ul.comments-list
       width: 85%
       line-height: 14px
       font-size: 13px
+      text-align: center
+      
+
+    span 
+      display: inline-block
 
 .question-icon
   display: inline-block
@@ -1430,6 +1597,9 @@ ul.comments-list
   background: url('../images/alert-icon.png') 30px 23px no-repeat
   margin-bottom: 30px
   background-color: #ffffff
+  +tablet
+    margin-bottom: 20px
+
   +mobile
     padding: 25px 15px 25px 45px 
     background-position: 11px 23px
@@ -1447,6 +1617,8 @@ ul.comments-list
   background-color: #ffffff
   padding: 25px 30px 
   margin-bottom: 30px
+  +tablet
+    margin-bottom: 20px
   +mobile
     padding: 20px
 
@@ -1524,6 +1696,7 @@ ul.comments-list
     float: left
     margin-right: 30px
     +tablet
+      margin-right: 0
       float: none
       max-width: 100%
 
@@ -1539,6 +1712,8 @@ ul.comments-list
     p 
       color: #5e5e5e
       font: 17px/1.5 'PT Sans', sans-serif
+      +tablet
+        font-size: 14px
 
   &__description
     color: #a0a0a0
@@ -1576,15 +1751,24 @@ ul.comments-list
 
 .cabinet-nav
   @extend .clearfix
+
   > li + li a 
     border-top: 1px solid #4cb1ff
+    +tablet
+      border: none
+    +mobile
+      border-top: 1px solid #4cb1ff
+
   > li 
     +tablet
       float: left
       width: 33.333333%
       text-align: center
+      border-left: 1px solid #ffffff
+
     +media(540)
       width: 100%
+      border: none
 
     > a 
       color: #000000
@@ -1682,13 +1866,17 @@ ul.comments-list
     font-weight: 700
     margin-bottom: 15px
     +desktop
-      font-size: 27px 
+      font-size: 27px
+    +tablet
+       font-size: 22px 
     +mobile
-      font-size: 24px
+      font-size: 18px
 
   &__text
     color: #ffffff
     font: 16px/1.5 'PT Sans', sans-serif
+    +mobile
+      font-size: 14px
 
   .panel-icon-1
     display: block
@@ -1703,9 +1891,11 @@ ul.comments-list
     background: url('../images/panel-icon-2.svg') 0 0 no-repeat
 
 .adding-form-wrap
-  padding: 60px 15px
+  padding: 60px 70px
   background-color: #ffffff
   margin-bottom: 40px
+  +tablet
+    padding: 35px 20px
 
 .complaint-detailed
   .article__date
@@ -1728,11 +1918,17 @@ ul.comments-list
 
 .complaint-rating-footer
   min-width: 140px
+  display: inline-block
+  vertical-align: middle
+  font-size: 0
 
 .middle-empty-page
   background: url('../images/pattern-1.jpg') 0 0 repeat
   padding-top: 50px
   min-height: calc(100vh - 70px)
+  .container
+    +mobile
+      padding: 0
 
 .empty-page
   text-align: center
@@ -1756,7 +1952,7 @@ ul.comments-list
   max-width: 700px
   height: 500px
   width: 100%
-  background: url('../images/404-icon.svg') 0 0 no-repeat
+  background: url('../images/404-icon.svg') 50% 0 no-repeat
   font-size: 250px
   line-height: 1
   font-weight: 900
@@ -1767,9 +1963,12 @@ ul.comments-list
   +tablet
     font-size: 200px
   +mobile
-    height: 320px
+    height: 350px
     padding: 0 30px
     font-size: 150px
+    background-size: 120%
+  +mobile-s
+    height: 320px
 
 .empty-page-message
   font-size: 27px 
@@ -1783,3 +1982,91 @@ ul.comments-list
     font-size: 18px
   +tablet
     font-size: 16px
+
+.product-overview-head
+  @extend .clearfix
+  margin-bottom: 5px
+
+  .page-title
+    padding-top: 5px
+    float: left
+    +tablet
+      float: none
+
+  .btn
+    float: right
+    +tablet
+      float: none
+      margin-bottom: 10px
+
+
+.single-image-upload
+  border: 1px solid #0090ff
+  height: 270px 
+  margin-bottom: 30px
+  cursor: pointer
+  overflow: hidden
+  position: relative
+  &.showing
+    border-color: transparent
+
+  img
+    max-width: 100%
+    // width: 100%
+    // height: 270px
+    &.showing
+      position: relative
+      top: -1px
+      z-index: 2
+
+  .js-delete-single-image
+    z-index: 10
+    cursor: pointer
+    position: absolute
+    top: 18px 
+    right: 18px 
+    width: 32px
+    height: 32px
+    background: url('../images/close-icon-red.svg') 0 0 no-repeat
+    border-radius: 50%
+    display: none
+    &.active
+      display: block
+  
+  .chose_file
+    position: absolute
+    z-index: 2
+    padding-top: 50px
+    width: 100%
+    top: 0
+    left: 0
+    height: 270px
+    background: none
+    &:hover, &:focus
+      background: none
+
+  &__body
+    position: absolute
+    top: 0
+    width: 100%
+    text-align: center
+    padding-top: 50px
+    
+    
+
+  &__title
+    color: #000000
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 15px
+
+  &__text
+    color: #a0a0a0
+    font: 16px/1.5 'PT Sans', sans-serif
+
+  &__icon
+    display: inline-block
+    margin-bottom: 15px
+    width: 116px 
+    height: 91px
+    background: url('../images/add-picture.svg') 0 0 no-repeat
