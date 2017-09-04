@@ -4,173 +4,174 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
-    #wrapper
+    .page
+      #wrapper
 
-      //= template/header.jade
+        //= template/header.jade
 
-      section.middle
-        .container
-          
-          //= template/breadcrumb.jade
+        section.middle
+          .container
+            
+            //= template/breadcrumb.jade
 
-          .info-panel.info-panel--blue
+            .info-panel.info-panel--blue
 
-            .info-panel__left
-              .info-panel__title Добавление обзора товара
-              .info-panel__text Поделитесь своими впечатлениями о куплённом товаре с миром! 
-              .info-panel__text Заполните поля ниже и после короткой модерации ваш обзор будет опубликован.
+              .info-panel__left
+                .info-panel__title Добавление обзора товара
+                .info-panel__text Поделитесь своими впечатлениями о куплённом товаре с миром! 
+                .info-panel__text Заполните поля ниже и после короткой модерации ваш обзор будет опубликован.
 
-            .info-panel__right
-              span.panel-icon-1
+              .info-panel__right
+                span.panel-icon-1
 
 
-          .adding-form-wrap
-            form.adding-form(id="my-awesome-dropzone")
+            .adding-form-wrap
+              form.adding-form(id="my-awesome-dropzone")
 
-              .form-group
-                label.label(for="input-1") Заголовок обзора: 
-                  span.red-color  *
-                input#input-1.adding-form__input(type="text", placeholder="Введите название вашего обзора...")
-              
-              .form-row
-                .form-col-4
-                  .form-group
-                    label.label(for="input-2") Ссылка на товар:
-                      span.red-color  *
-                    input#input-2.adding-form__input(type="text", placeholder="Введите ссылку на страницу товара с AliExpress...")
-
-                .form-col-1
-                  .form-group
-                    label.label(for="input-3") Цена товара:
-                      span.red-color  *
-                    input#input-3.adding-form__input(type="text", placeholder="Введите стоимость товара...")
+                .form-group
+                  label.label(for="input-1") Заголовок обзора: 
+                    span.red-color  *
+                  input#input-1.adding-form__input(type="text", placeholder="Введите название вашего обзора...")
                 
-              .form-group
-                label.label(for="input-4") Основной текст:
-                  span.red-color  *
-                textarea#input-4.adding-form__input(type="text", placeholder="Введите текст вашего обзора...")
+                .form-row
+                  .form-col-4
+                    .form-group
+                      label.label(for="input-2") Ссылка на товар:
+                        span.red-color  *
+                      input#input-2.adding-form__input(type="text", placeholder="Введите ссылку на страницу товара с AliExpress...")
 
-              .form-group
-                label.label(for="input-5") Метки:
-                  span.red-color  *
-                input#input-5.adding-form__input(type="text", placeholder="Перечислите метки обзора. Например: телефоны, электроника...")
-              
-              .single-image-upload
-                span.js-delete-single-image
-                img().js-pasteSingleImage
-
-                .chose_file
-                input.chose_file_input.js-uploadSingleImage(type='file', name='file', id='')
-                .single-image-upload__body
-                  .single-image-upload__icon
-                  .single-image-upload__title Добавьте основное изображение 
-                    span.color-red *
-                  .single-image-upload__text Размер изображения 1050 на 350 пикселей и более. Желательно с соотношением сторон 3:1
-
-
-              .label Добавить изображения:
-              .extra-images
-                .item
-                  .extra-images__close
-                  .extra-images__image
-                    img().js-pasteSelected
-                  span.chose_file
-                  input.chose_file_input.js-uploadImage(type='file')
-
-
-                //- .item
-                //-   .extra-images__close
-                //-   .extra-images__image
-                //-     img().js-pasteSelected
-                //-   a.chose_file(href='#')
-                //-   input.chose_file_input.js-uploadImage(type='file', name='file', id='')
-              
-              .text-center.form-group
-                button(type="submit").btn Опубликовать обзор
-
-              .form-caption Вы авторизованы под ником 
-                span.bold.color-black Nikolay1975.
-              .form-caption После модерации ваш обзор будет опубликован. Поля, отмеченные звёздочкой, обязательны для заполнения.
-
-          .other-articles
-            .page-title Другие статьи
-
-            ul.article-list.article-list--four-col
-              li 
-                article.article
-
-                  .article__image.article__image--height-115
-                    img(src="pictures/article-350x117-2.jpg", alt=".article__image")
+                  .form-col-1
+                    .form-group
+                      label.label(for="input-3") Цена товара:
+                        span.red-color  *
+                      input#input-3.adding-form__input(type="text", placeholder="Введите стоимость товара...")
                   
-                  .article__title.article__title--small
-                    a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+                .form-group
+                  label.label(for="input-4") Основной текст:
+                    span.red-color  *
+                  textarea#input-4.adding-form__input(type="text", placeholder="Введите текст вашего обзора...")
 
-                  .article__footer.article__footer--margin-top-10
+                .form-group
+                  label.label(for="input-5") Метки:
+                    span.red-color  *
+                  input#input-5.adding-form__input(type="text", placeholder="Перечислите метки обзора. Например: телефоны, электроника...")
+                
+                .single-image-upload
+                  span.js-delete-single-image
+                  img().js-pasteSingleImage
 
-                    .article__section
-                      .article__publicated 10.07.2017
-
-                    .article__section
-                      .article__view 450
-                      .article__comments 33
-              li 
-                article.article
-
-                  .article__image.article__image--height-115
-                    img(src="pictures/article-350x117-2.jpg", alt=".article__image")
-                  
-                  .article__title.article__title--small
-                    a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
-
-                  .article__footer.article__footer--margin-top-10
-
-                    .article__section
-                      .article__publicated 10.07.2017
-
-                    .article__section
-                      .article__view 450
-                      .article__comments 33
-              li 
-                article.article
-
-                  .article__image.article__image--height-115
-                    img(src="pictures/article-350x117-2.jpg", alt=".article__image")
-                  
-                  .article__title.article__title--small
-                    a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
-
-                  .article__footer.article__footer--margin-top-10
-
-                    .article__section
-                      .article__publicated 10.07.2017
-
-                    .article__section
-                      .article__view 450
-                      .article__comments 33
-              li 
-                article.article
-
-                  .article__image.article__image--height-115
-                    img(src="pictures/article-350x117-2.jpg", alt=".article__image")
-                  
-                  .article__title.article__title--small
-                    a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
-
-                  .article__footer.article__footer--margin-top-10
-
-                    .article__section
-                      .article__publicated 10.07.2017
-
-                    .article__section
-                      .article__view 450
-                      .article__comments 33
-                 
+                  .chose_file
+                  input.chose_file_input.js-uploadSingleImage(type='file', name='file', id='')
+                  .single-image-upload__body
+                    .single-image-upload__icon
+                    .single-image-upload__title Добавьте основное изображение 
+                      span.color-red *
+                    .single-image-upload__text Размер изображения 1050 на 350 пикселей и более. Желательно с соотношением сторон 3:1
 
 
-              
+                .label Добавить изображения:
+                .extra-images
+                  .item
+                    .extra-images__close
+                    .extra-images__image
+                      img().js-pasteSelected
+                    span.chose_file
+                    input.chose_file_input.js-uploadImage(type='file')
 
-              
 
-    //= template/footer.jade
+                  //- .item
+                  //-   .extra-images__close
+                  //-   .extra-images__image
+                  //-     img().js-pasteSelected
+                  //-   a.chose_file(href='#')
+                  //-   input.chose_file_input.js-uploadImage(type='file', name='file', id='')
+                
+                .text-center.form-group
+                  button(type="submit").btn Опубликовать обзор
+
+                .form-caption Вы авторизованы под ником 
+                  span.bold.color-black Nikolay1975.
+                .form-caption После модерации ваш обзор будет опубликован. Поля, отмеченные звёздочкой, обязательны для заполнения.
+
+            .other-articles
+              .page-title Другие статьи
+
+              ul.article-list.article-list--four-col
+                li 
+                  article.article
+
+                    .article__image.article__image--height-115
+                      img(src="pictures/article-350x117-2.jpg", alt=".article__image")
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                    .article__footer.article__footer--margin-top-10
+
+                      .article__section
+                        .article__publicated 10.07.2017
+
+                      .article__section
+                        .article__view 450
+                        .article__comments 33
+                li 
+                  article.article
+
+                    .article__image.article__image--height-115
+                      img(src="pictures/article-350x117-2.jpg", alt=".article__image")
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                    .article__footer.article__footer--margin-top-10
+
+                      .article__section
+                        .article__publicated 10.07.2017
+
+                      .article__section
+                        .article__view 450
+                        .article__comments 33
+                li 
+                  article.article
+
+                    .article__image.article__image--height-115
+                      img(src="pictures/article-350x117-2.jpg", alt=".article__image")
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                    .article__footer.article__footer--margin-top-10
+
+                      .article__section
+                        .article__publicated 10.07.2017
+
+                      .article__section
+                        .article__view 450
+                        .article__comments 33
+                li 
+                  article.article
+
+                    .article__image.article__image--height-115
+                      img(src="pictures/article-350x117-2.jpg", alt=".article__image")
+                    
+                    .article__title.article__title--small
+                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                    .article__footer.article__footer--margin-top-10
+
+                      .article__section
+                        .article__publicated 10.07.2017
+
+                      .article__section
+                        .article__view 450
+                        .article__comments 33
+                   
+
+
+                
+
+                
+
+      //= template/footer.jade
 
     //= template/scripts.jade

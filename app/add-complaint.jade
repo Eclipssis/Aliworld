@@ -4,86 +4,87 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
-    #wrapper
+    .page
+      #wrapper
 
-      //= template/header.jade
+        //= template/header.jade
 
-      section.middle
-        .container
-          
-          //= template/breadcrumb.jade
+        section.middle
+          .container
+            
+            //= template/breadcrumb.jade
 
-          .info-panel.info-panel--red
+            .info-panel.info-panel--red
 
-            .info-panel__left
-              .info-panel__title Добавление жалобы на магазин
-              .info-panel__text Поделитесь своими впечатлениями о продавце с миром!
-              .info-panel__text Заполните поля ниже и после короткой модерации ваш обзор будет опубликован.
+              .info-panel__left
+                .info-panel__title Добавление жалобы на магазин
+                .info-panel__text Поделитесь своими впечатлениями о продавце с миром!
+                .info-panel__text Заполните поля ниже и после короткой модерации ваш обзор будет опубликован.
 
-            .info-panel__right
-              span.panel-icon-2
+              .info-panel__right
+                span.panel-icon-2
 
 
-          .adding-form-wrap
-            form.adding-form(id="my-awesome-dropzone")
+            .adding-form-wrap
+              form.adding-form(id="my-awesome-dropzone")
 
-              .form-group
-                label.label(for="input-1") Ссылка на продавца:
-                  span.red-color  *
-                input#input-1.adding-form__input(type="text", placeholder="Введите ссылку на магазин...")
-              
+                .form-group
+                  label.label(for="input-1") Ссылка на продавца:
+                    span.red-color  *
+                  input#input-1.adding-form__input(type="text", placeholder="Введите ссылку на магазин...")
                 
-              .form-group
-                label.label(for="input-4") Основной текст:
-                  span.red-color  *
-                textarea#input-4.adding-form__input(type="text", placeholder="Введите текст вашей жалобы...")
+                  
+                .form-group
+                  label.label(for="input-4") Основной текст:
+                    span.red-color  *
+                  textarea#input-4.adding-form__input(type="text", placeholder="Введите текст вашей жалобы...")
 
-              .form-group
-                label.label(for="input-5") Метки:
-                  span.red-color  *
-                input#input-5.adding-form__input(type="text", placeholder="Перечислите метки обзора. Например: телефоны, электроника...")
-              
-              .label Добавить изображения:
-              .extra-images
-                .item
-                  .extra-images__close
-                  .extra-images__image
-                    img().js-pasteSelected
-                  span.chose_file
-                  input.chose_file_input.js-uploadImage(type='file')
+                .form-group
+                  label.label(for="input-5") Метки:
+                    span.red-color  *
+                  input#input-5.adding-form__input(type="text", placeholder="Перечислите метки обзора. Например: телефоны, электроника...")
+                
+                .label Добавить изображения:
+                .extra-images
+                  .item
+                    .extra-images__close
+                    .extra-images__image
+                      img().js-pasteSelected
+                    span.chose_file
+                    input.chose_file_input.js-uploadImage(type='file')
 
-              .rating-section
-                .label.rating-section-title Ваша оценка магазина:
-                  span.red-color  *
+                .rating-section
+                  .label.rating-section-title Ваша оценка магазина:
+                    span.red-color  *
 
-                ul.rating.rating--big
-                  li.active(style="width: 0%")
-                    span(data-number="1").star1
-                  li
-                    span(data-number="2").star2
-                  li
-                    span(data-number="3").star3
-                  li
-                    span(data-number="4").star4
-                  li
-                    span(data-number="5").star5
+                  ul.rating.rating--big
+                    li.active(style="width: 0%")
+                      span(data-number="1").star1
+                    li
+                      span(data-number="2").star2
+                    li
+                      span(data-number="3").star3
+                    li
+                      span(data-number="4").star4
+                    li
+                      span(data-number="5").star5
 
-              .divider-grey
-              
-              .text-center.form-group
-                button(type="submit").btn Опубликовать жалобу
+                .divider-grey
+                
+                .text-center.form-group
+                  button(type="submit").btn Опубликовать жалобу
 
-              .form-caption Вы авторизованы под ником 
-                span.bold.color-black Nikolay1975.
-              .form-caption После модерации ваша жалоба будет опубликована. Поля, отмеченные звёздочкой, обязательны для заполнения.
+                .form-caption Вы авторизованы под ником 
+                  span.bold.color-black Nikolay1975.
+                .form-caption После модерации ваша жалоба будет опубликована. Поля, отмеченные звёздочкой, обязательны для заполнения.
 
-        
+          
 
 
-              
+                
 
-              
+                
 
-    //= template/footer.jade
+      //= template/footer.jade
 
     //= template/scripts.jade

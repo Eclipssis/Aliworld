@@ -4,197 +4,198 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
-    #wrapper
+    .page
+      #wrapper
 
-      //= template/header.jade
+        //= template/header.jade
 
-      section.middle
-        .container
-          
-          //= template/breadcrumb.jade
-
-          .servise-detailed
-            .servise-detailed__aside
-              .servise-detailed__image
-                img(src="pictures/russian-post.jpg", alt="russian-post")
-
-              .servise-info
-                .servise-info__item
-                  .servise-info__title Горячая линия:
-                  a(href="tel:8-800-2005-888").servise-info__value 8-800-2005-888
-
-                .servise-info__item
-                  .servise-info__title Официальный сайт:
-                  a(href="#!").servise-info__value www.pochta.ru
-
-                .servise-info__item
-                  .servise-info__title Отследить посылку:
-                  a(href="#!").servise-info__value www.pochta.ru/tracking
-
-            .servise-detailed__body
-              h1 Почта России
-              .servise-detailed__description Pochta Ru Russian Post
-              p ФГУП «Почта России» — национальный почтовый оператор, предоставляющий универсальные услуги почтовой связи, а также ряд финансовых и коммерческих сервисов на территории Российской Федерации. Почта Ру включает в себя 42 000 отделений по всей стране и объединяет один из самых больших трудовых коллективов — около 350 000 почтовых работников. В 2013 году приняла, обработала и доставила более 1,6 млрд писем, 54 млн. посылок и 75,4 млн. единиц денежных переводов.
-              p Услуга «Почта России отслеживание» — это возможность подписаться на изменение статусов вашего отправления и получать информацию об смене местоположения посылки на ваш E-Mail. Вы можете отследить любую посылку отправленную Почтой России или из Китая, Гонконга, Сингапура, США и других стран. Доступно отслеживание посылок с алиэкспресс.
-              p По вопросам связанным с поиском посылок, уточнением тарифов и прочим вопросам о работе почты, обращайтесь на горячую линию Почты России по бесплатному телефону 
-                b.bold 8 (800) 2005-888.
-
-
-          form.tracking-parcel.tracking-parcel--blue-bg
-            .tracking-parcel__body
-              .page-title Почта России отслеживание почтовых отправлений
+        section.middle
+          .container
             
+            //= template/breadcrumb.jade
+
+            .servise-detailed
+              .servise-detailed__aside
+                .servise-detailed__image
+                  img(src="pictures/russian-post.jpg", alt="russian-post")
+
+                .servise-info
+                  .servise-info__item
+                    .servise-info__title Горячая линия:
+                    a(href="tel:8-800-2005-888").servise-info__value 8-800-2005-888
+
+                  .servise-info__item
+                    .servise-info__title Официальный сайт:
+                    a(href="#!").servise-info__value www.pochta.ru
+
+                  .servise-info__item
+                    .servise-info__title Отследить посылку:
+                    a(href="#!").servise-info__value www.pochta.ru/tracking
+
+              .servise-detailed__body
+                h1 Почта России
+                .servise-detailed__description Pochta Ru Russian Post
+                p ФГУП «Почта России» — национальный почтовый оператор, предоставляющий универсальные услуги почтовой связи, а также ряд финансовых и коммерческих сервисов на территории Российской Федерации. Почта Ру включает в себя 42 000 отделений по всей стране и объединяет один из самых больших трудовых коллективов — около 350 000 почтовых работников. В 2013 году приняла, обработала и доставила более 1,6 млрд писем, 54 млн. посылок и 75,4 млн. единиц денежных переводов.
+                p Услуга «Почта России отслеживание» — это возможность подписаться на изменение статусов вашего отправления и получать информацию об смене местоположения посылки на ваш E-Mail. Вы можете отследить любую посылку отправленную Почтой России или из Китая, Гонконга, Сингапура, США и других стран. Доступно отслеживание посылок с алиэкспресс.
+                p По вопросам связанным с поиском посылок, уточнением тарифов и прочим вопросам о работе почты, обращайтесь на горячую линию Почты России по бесплатному телефону 
+                  b.bold 8 (800) 2005-888.
+
+
+            form.tracking-parcel.tracking-parcel--blue-bg
+              .tracking-parcel__body
+                .page-title Почта России отслеживание почтовых отправлений
               
-              .tracking-parcel__input
-                input(type="text" placeholder="Номер отслеживания...")
-              button(type="submit").btn.tracking-parcel__submit Отследить посылку
-            
-
-          .middle__row
-            .middle__content
-
-              //= template/coments-block.jade
-
-
-
-
-            .middle__aside
-            
-              .block.news-preview
-                .block__header
-                  .section-title Новости
-                  a(href="#!").btn.btn-small.btn-transparent Все новости
-
                 
-                .arcticle-wrap
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-1.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 10.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-2.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 07.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-3.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 06.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-4.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 06.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-                  article.article
-                    a(href="#!").article__image.article__image--height-137
-                      img(src="pictures/article-274x137-5.jpg", alt="article-image")
-                      .favorite
-
-                    
-                    .article__title.article__title--small
-                      a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
-
-                    .article__footer
-                      .article__section
-                        .article__publicated 16.07.2017
-
-                      .article__section
-                        .article__view 33
-                        .article__comments 456
-
-              .block
-                .page-title Новые комментарии
+                .tracking-parcel__input
+                  input(type="text" placeholder="Номер отслеживания...")
+                button(type="submit").btn.tracking-parcel__submit Отследить посылку
               
-                .aside-comments
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-              
-          
 
-    //= template/footer.jade
+            .middle__row
+              .middle__content
+
+                //= template/coments-block.jade
+
+
+
+
+              .middle__aside
+              
+                .block.news-preview
+                  .block__header
+                    .section-title Новости
+                    a(href="#!").btn.btn-small.btn-transparent Все новости
+
+                  
+                  .arcticle-wrap
+                    article.article
+                      a(href="#!").article__image.article__image--height-137
+                        img(src="pictures/article-274x137-1.jpg", alt="article-image")
+                        .favorite
+
+                      
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small Leagoo M5 Edge: стильный бюджетный смартфон с хорошими камерами и достойной начинкой
+
+                      .article__footer
+                        .article__section
+                          .article__publicated 10.07.2017
+
+                        .article__section
+                          .article__view 33
+                          .article__comments 456
+
+                    article.article
+                      a(href="#!").article__image.article__image--height-137
+                        img(src="pictures/article-274x137-2.jpg", alt="article-image")
+                        .favorite
+
+                      
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
+
+                      .article__footer
+                        .article__section
+                          .article__publicated 07.07.2017
+
+                        .article__section
+                          .article__view 33
+                          .article__comments 456
+
+                    article.article
+                      a(href="#!").article__image.article__image--height-137
+                        img(src="pictures/article-274x137-3.jpg", alt="article-image")
+                        .favorite
+
+                      
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                      .article__footer
+                        .article__section
+                          .article__publicated 06.07.2017
+
+                        .article__section
+                          .article__view 33
+                          .article__comments 456
+
+                    article.article
+                      a(href="#!").article__image.article__image--height-137
+                        img(src="pictures/article-274x137-4.jpg", alt="article-image")
+                        .favorite
+
+                      
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small AliExpress Live: онлайн-трансляции с возможностью заказа товаров в прямом эфире
+
+                      .article__footer
+                        .article__section
+                          .article__publicated 06.07.2017
+
+                        .article__section
+                          .article__view 33
+                          .article__comments 456
+
+                    article.article
+                      a(href="#!").article__image.article__image--height-137
+                        img(src="pictures/article-274x137-5.jpg", alt="article-image")
+                        .favorite
+
+                      
+                      .article__title.article__title--small
+                        a(href="#!").article__link.article__link--small Электросамокат Xiaomi Mi Mijia Electric Scooter: забьем на пробки, доедем в офис с ветерком
+
+                      .article__footer
+                        .article__section
+                          .article__publicated 16.07.2017
+
+                        .article__section
+                          .article__view 33
+                          .article__comments 456
+
+                .block
+                  .page-title Новые комментарии
+                
+                  .aside-comments
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                
+            
+
+      //= template/footer.jade
 
     //= template/scripts.jade

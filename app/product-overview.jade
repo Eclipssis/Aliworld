@@ -4,171 +4,172 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
-    #wrapper
+    .page
+      #wrapper
 
-      //= template/header.jade
+        //= template/header.jade
 
-      section.middle
-        .container
-          
-          //= template/breadcrumb.jade
-
-
-
-          .middle__row
-            .middle__content
-              
-              .product-overview-head
-                .page-title Обзоры товаров
-                a(href="#!").btn.btn-transparent.btn-small Добавить обзор
-
-              ul.article-list.article-list--max
-                li
-                  .article.article--white
-                    .article__body
-                      .article__image.article__image--height-350
-                        img(src="pictures/article-1050x350-1.jpg.jpg", alt="articel-image")
-                        .article__favorite.active
-                      .article__title
-                        a(href="#!").article__link.article__link--medium Самый популярный запрос на АлиЭкспресс – спиннеры
-                      .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей. Для этого решили исследовать запросы покупателей за последние два месяца. 
-                    .article__footer.article__footer--separate
-                      .article__section
-                        .article__owner-avatar
-                          img(src="pictures/article-avatar.png", alt="article-avatar")
-                        .article__owner-name Евгения Большова 
-                        .article__publicated 8.07.2017
-
-                      .article__section
-                        .article__view 655
-                        .article__comments 23
-                        a(href="#!").btn.btn-medium.footer-btn Читать далее
-
-                li
-                  .article.article--white
-                    .article__body
-                      .article__image.article__image--height-350
-                        img(src="pictures/article-1050x350-1.jpg.jpg", alt="articel-image")
-                        .article__favorite
-                        .product-label
-                          .product-label__price 9000
-                            span.rouble
-                          a(href="#!").product-label__text Перейти в магазин
+        section.middle
+          .container
+            
+            //= template/breadcrumb.jade
 
 
-                      .article__title
-                        a(href="#!").article__link.article__link--medium Самый популярный запрос на АлиЭкспресс – спиннеры
-                      .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей. Для этого решили исследовать запросы покупателей за последние два месяца. 
-                    .article__footer.article__footer--separate
-                      .article__section
-                        .article__owner-avatar
-                          img(src="pictures/article-avatar.png", alt="article-avatar")
-                        .article__owner-name Евгения Большова 
-                        .article__publicated 8.07.2017
 
-                      .article__section
-                        .article__view 655
-                        .article__comments 23
-                        a(href="#!").btn.btn-medium.footer-btn Читать далее
-
-                li
-                  .article.article--white
-                    .article__body
-                      .article__image.article__image--height-350
-                        img(src="pictures/article-1050x350-1.jpg.jpg", alt="articel-image")
-                        .article__favorite
-                        .product-label
-                          .product-label__price 9000
-                            span.rouble
-                          a(href="#!").product-label__text Перейти в магазин
-                          
-                      .article__title
-                        a(href="#!").article__link.article__link--medium Самый популярный запрос на АлиЭкспресс – спиннеры
-                      .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей. Для этого решили исследовать запросы покупателей за последние два месяца. 
-                    .article__footer.article__footer--separate
-                      .article__section
-                        .article__owner-avatar
-                          img(src="pictures/article-avatar.png", alt="article-avatar")
-                        .article__owner-name Евгения Большова 
-                        .article__publicated 8.07.2017
-
-                      .article__section
-                        .article__view 655
-                        .article__comments 23
-                        a(href="#!").btn.btn-medium.footer-btn Читать далее
-
-                li
-                  .article.article--white
-                    .article__body
-                      .article__image.article__image--height-350
-                        img(src="pictures/article-1050x350-1.jpg.jpg", alt="articel-image")
-                        .article__favorite
-                      .article__title
-                        a(href="#!").article__link.article__link--medium Самый популярный запрос на АлиЭкспресс – спиннеры
-                      .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей. Для этого решили исследовать запросы покупателей за последние два месяца. 
-                    .article__footer.article__footer--separate
-                      .article__section
-                        .article__owner-avatar
-                          img(src="pictures/article-avatar.png", alt="article-avatar")
-                        .article__owner-name Евгения Большова 
-                        .article__publicated 8.07.2017
-
-                      .article__section
-                        .article__view 655
-                        .article__comments 23
-                        a(href="#!").btn.btn-medium.footer-btn Читать далее
-              
-              //= template/pagination.jade
-
-            .middle__aside
-              .block
-                .page-title Популярные метки
+            .middle__row
+              .middle__content
                 
-                //= template/tags-block.jade
+                .product-overview-head
+                  .page-title Обзоры товаров
+                  a(href="#!").btn.btn-transparent.btn-small Добавить обзор
 
-              .block
-                .page-title Новые комментарии
-          
-                .aside-comments
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
+                ul.article-list.article-list--max
+                  li
+                    .article.article--white
+                      .article__body
+                        .article__image.article__image--height-350
+                          img(src="pictures/article-1050x350-1.jpg.jpg", alt="articel-image")
+                          .article__favorite.active
+                        .article__title
+                          a(href="#!").article__link.article__link--medium Самый популярный запрос на АлиЭкспресс – спиннеры
+                        .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей. Для этого решили исследовать запросы покупателей за последние два месяца. 
+                      .article__footer.article__footer--separate
+                        .article__section
+                          .article__owner-avatar
+                            img(src="pictures/article-avatar.png", alt="article-avatar")
+                          .article__owner-name Евгения Большова 
+                          .article__publicated 8.07.2017
 
-      
+                        .article__section
+                          .article__view 655
+                          .article__comments 23
+                          a(href="#!").btn.btn-medium.footer-btn Читать далее
 
-    //= template/footer.jade
+                  li
+                    .article.article--white
+                      .article__body
+                        .article__image.article__image--height-350
+                          img(src="pictures/article-1050x350-1.jpg.jpg", alt="articel-image")
+                          .article__favorite
+                          .product-label
+                            .product-label__price 9000
+                              span.rouble
+                            a(href="#!").product-label__text Перейти в магазин
+
+
+                        .article__title
+                          a(href="#!").article__link.article__link--medium Самый популярный запрос на АлиЭкспресс – спиннеры
+                        .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей. Для этого решили исследовать запросы покупателей за последние два месяца. 
+                      .article__footer.article__footer--separate
+                        .article__section
+                          .article__owner-avatar
+                            img(src="pictures/article-avatar.png", alt="article-avatar")
+                          .article__owner-name Евгения Большова 
+                          .article__publicated 8.07.2017
+
+                        .article__section
+                          .article__view 655
+                          .article__comments 23
+                          a(href="#!").btn.btn-medium.footer-btn Читать далее
+
+                  li
+                    .article.article--white
+                      .article__body
+                        .article__image.article__image--height-350
+                          img(src="pictures/article-1050x350-1.jpg.jpg", alt="articel-image")
+                          .article__favorite
+                          .product-label
+                            .product-label__price 9000
+                              span.rouble
+                            a(href="#!").product-label__text Перейти в магазин
+                            
+                        .article__title
+                          a(href="#!").article__link.article__link--medium Самый популярный запрос на АлиЭкспресс – спиннеры
+                        .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей. Для этого решили исследовать запросы покупателей за последние два месяца. 
+                      .article__footer.article__footer--separate
+                        .article__section
+                          .article__owner-avatar
+                            img(src="pictures/article-avatar.png", alt="article-avatar")
+                          .article__owner-name Евгения Большова 
+                          .article__publicated 8.07.2017
+
+                        .article__section
+                          .article__view 655
+                          .article__comments 23
+                          a(href="#!").btn.btn-medium.footer-btn Читать далее
+
+                  li
+                    .article.article--white
+                      .article__body
+                        .article__image.article__image--height-350
+                          img(src="pictures/article-1050x350-1.jpg.jpg", alt="articel-image")
+                          .article__favorite
+                        .article__title
+                          a(href="#!").article__link.article__link--medium Самый популярный запрос на АлиЭкспресс – спиннеры
+                        .article__text К окончанию первого полугодия на АлиЭкспресс решили подсчитать, какие товары пользовались наибольшей популярностью среди своих пользователей. Для этого решили исследовать запросы покупателей за последние два месяца. 
+                      .article__footer.article__footer--separate
+                        .article__section
+                          .article__owner-avatar
+                            img(src="pictures/article-avatar.png", alt="article-avatar")
+                          .article__owner-name Евгения Большова 
+                          .article__publicated 8.07.2017
+
+                        .article__section
+                          .article__view 655
+                          .article__comments 23
+                          a(href="#!").btn.btn-medium.footer-btn Читать далее
+                
+                //= template/pagination.jade
+
+              .middle__aside
+                .block
+                  .page-title Популярные метки
+                  
+                  //= template/tags-block.jade
+
+                .block
+                  .page-title Новые комментарии
+            
+                  .aside-comments
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+
+        
+
+      //= template/footer.jade
 
     //= template/scripts.jade

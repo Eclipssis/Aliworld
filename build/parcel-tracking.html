@@ -10,353 +10,323 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
   </head>
   <body>
-    <div id="wrapper">
-      <form id="login-form" class="white-popup-block mfp-hide">
-        <div class="login-form-section"><button type="button" class="mfp-close"></button>
-          <div class="login-form-title">Авторизация</div>
-          <div class="form-group">
-            <label for="input-1">E-mail:</label>
-            <input id="input-1" type="text" placeholder="Электронная почта...">
+    <div class="page">
+      <div id="wrapper">
+        <form id="login-form" class="white-popup-block mfp-hide">
+          <div class="login-form-section"><button type="button" class="mfp-close"></button>
+            <div class="login-form-title">Авторизация</div>
+            <div class="form-group">
+              <label for="input-1">E-mail:</label>
+              <input id="input-1" type="text" placeholder="Электронная почта...">
+            </div>
+            <div class="form-group">
+              <label for="input-1">Пароль:</label>
+              <input id="input-1" type="password" placeholder="Введите пароль...">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn">Войти</button><a href="#!" class="fogot-password">Забыли пароль?</a>
+            </div>
+            <div class="form-group">
+              <div class="checkbox-input">
+                <input type="checkbox" id="checkbox-1" class="checkbox">
+                <label for="checkbox-1"><span></span> 
+                  <div class="checkbox-text">Получать новости на электронную почту</div>
+                </label>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="input-1">Пароль:</label>
-            <input id="input-1" type="password" placeholder="Введите пароль...">
+          <div class="login-form-section"><span class="socials-title">Вход через социальную сеть:</span>
+            <ul class="socials">
+              <li><a href="#!" class="fb"></a></li>
+              <li><a href="#!" class="vk"></a></li>
+              <li><a href="#!" class="mail"></a></li>
+              <li><a href="#!" class="ok"></a></li>
+            </ul>
           </div>
-          <div class="form-group">
-            <button type="submit" class="btn">Войти</button><a href="#!" class="fogot-password">Забыли пароль?</a>
-          </div>
-          <div class="form-group">
-            <div class="checkbox-input">
-              <input type="checkbox" id="checkbox-1" class="checkbox">
-              <label for="checkbox-1"><span></span> 
-                <div class="checkbox-text">Получать новости на электронную почту</div>
-              </label>
+          <div class="login-form-section text-center"><a href="#!">Регистрация нового пользователя</a></div>
+        </form>
+        <div class="fade-bg"></div>
+        <div class="aside-nav">
+          <div class="aside-nav__header"><span class="close-btn js-toggle-menu"></span></div>
+          <div class="aside-nav__body">
+            <ul class="tablet-menu">
+              <li><a href="#!">Главная страница</a></li>
+              <li><a href="#!">О сайте</a></li>
+              <li><a href="#!">Статьи</a></li>
+              <li><a href="#!">Обзоры товаров</a></li>
+              <li><a href="#!">Жалобы на магазины</a></li>
+              <li><a href="#!">Трекинг покупок</a></li>
+              <li><a href="#!">Новости</a></li>
+            </ul>
+            <div class="user-panel visible-mobile">
+              <div class="user-panel__item">
+                <div class="header-search"><a href="#!"> <span class="header-search__text">Поиск</span><i class="search-icon"></i></a></div>
+              </div>
+              <div class="user-panel__item"><a href="#!" class="favorite-icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 23.25 16.88">
+                    <defs>
+                      <style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+                    </defs>
+                    <title>Artboard 2</title>
+                    <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
+                  </svg><span class="favorite-icon__counter">2</span></a></div>
+              <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+                <div class="user-panel__link"><a href="#!">Регистрация</a></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="login-form-section"><span class="socials-title">Вход через социальную сеть:</span>
-          <ul class="socials">
-            <li><a href="#!" class="fb"></a></li>
-            <li><a href="#!" class="vk"></a></li>
-            <li><a href="#!" class="mail"></a></li>
-            <li><a href="#!" class="ok"></a></li>
-          </ul>
-        </div>
-        <div class="login-form-section text-center"><a href="#!">Регистрация нового пользователя</a></div>
-      </form>
-      <div class="fade-bg"></div>
-      <div class="aside-nav">
-        <div class="aside-nav__header"><span class="close-btn js-toggle-menu"></span></div>
-        <div class="aside-nav__body">
-          <ul class="tablet-menu">
-            <li><a href="#!">Главная страница</a></li>
-            <li><a href="#!">О сайте</a></li>
-            <li><a href="#!">Статьи</a></li>
-            <li><a href="#!">Обзоры товаров</a></li>
-            <li><a href="#!">Жалобы на магазины</a></li>
-            <li><a href="#!">Трекинг покупок</a></li>
-            <li><a href="#!">Новости</a></li>
-          </ul>
-          <div class="user-panel visible-mobile">
-            <div class="user-panel__item">
-              <div class="header-search"><a href="#!"> <span class="header-search__text">Поиск</span><i class="search-icon"></i></a></div>
-            </div>
-            <div class="user-panel__item"><a href="#!" class="favorite-icon">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 23.25 16.88">
+        <header class="header">
+          <div class="container clearfix">
+            <div class="menu-toggle js-toggle-menu"><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span></div>
+            <div class="logo"><a href="#!">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 317 91">
                   <defs>
-                    <style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+                    <style>.cls-1{fill:#e62e04;}.cls-2{fill:#d30000;}.cls-3{fill:url(#linear-gradient);}.cls-4{fill:#fff;}</style>
+                    <lineargradient id="linear-gradient" x1="34.9" y1="65.81" x2="34.9" y2="19.07" gradientunits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#f90"></stop>
+                      <stop offset="1" stop-color="#ffba00"></stop>
+                    </lineargradient>
                   </defs>
-                  <title>Artboard 2</title>
-                  <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
-                </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
-              <div class="user-panel__link"><a href="#!">Регистрация</a></div>
+                  <title>Artboard 1</title>
+                  <path d="M88.1,76.22l-6-30.55a3.69,3.69,0,0,0-3.62-3H45.93a3.69,3.69,0,0,0-3.62,3l-6,30.55a3.69,3.69,0,0,0,3.62,4.4H62.64L75.1,90.2a1.55,1.55,0,0,0,2.47-1.53L76,80.62h8.49A3.69,3.69,0,0,0,88.1,76.22Z" class="cls-1"></path>
+                  <path d="M88.1,76.22l-6-30.55a3.69,3.69,0,0,0-3.62-3H70s-8.86,21.23-9.2,23L36.74,74l-.44,2.25a3.69,3.69,0,0,0,3.62,4.4H62.64L75.1,90.2a1.55,1.55,0,0,0,2.47-1.53L76,80.62h8.49A3.69,3.69,0,0,0,88.1,76.22Z" class="cls-1"></path>
+                  <path d="M42.31,45.66,36.74,74h34c3.11,0,4.84-2.84,4.24-5.89L70,42.68H45.93A3.69,3.69,0,0,0,42.31,45.66Z" class="cls-2"></path>
+                  <path d="M69.56,62.42,61.5,21.55a4.94,4.94,0,0,0-4.84-4H13.15a4.94,4.94,0,0,0-4.84,4L.25,62.42a4.94,4.94,0,0,0,4.84,5.89H16.45L14.33,79.09a2.08,2.08,0,0,0,3.3,2L34.31,68.31h30.4A4.94,4.94,0,0,0,69.56,62.42Z" class="cls-3"></path>
+                  <path d="M46.69,27.81a4,4,0,0,1-4-4V16.26a7.79,7.79,0,1,0-15.57,0v7.55a4,4,0,0,1-8,0V16.26a15.79,15.79,0,1,1,31.57,0v7.55A4,4,0,0,1,46.69,27.81Z" class="cls-1"></path>
+                  <path d="M20.28,39.82A4.72,4.72,0,1,0,25,44.54,4.72,4.72,0,0,0,20.28,39.82Zm14.62,0a4.72,4.72,0,1,0,4.72,4.72A4.72,4.72,0,0,0,34.9,39.82Zm14.62,0a4.72,4.72,0,1,0,4.72,4.72A4.72,4.72,0,0,0,49.52,39.82Z" class="cls-4"></path>
+                  <path d="M100.35,61.44,114,22.58h7.44l13.63,38.86h-7.23l-3.34-10H110.86l-3.28,10Zm12.26-15.71h10.13l-3.45-10.4-1.53-6h-.11q-.88,3.83-1.53,6Z"></path>
+                  <path d="M138.89,52.74V22.58h6.9V51.7a4.86,4.86,0,0,0,.68,3,2.66,2.66,0,0,0,2.16.82,7.8,7.8,0,0,0,1-.05v6.08q-1.48.16-2.19.16a13.58,13.58,0,0,1-3-.3,8.84,8.84,0,0,1-2.68-1.15,5.51,5.51,0,0,1-2.13-2.76A12.88,12.88,0,0,1,138.89,52.74Z"></path>
+                  <path d="M154.7,28.76V22.58h7v6.18Zm0,32.68V33.53h7V61.44Z"></path>
+                  <path d="M176.32,61.44l-9.69-38.86H174l6,26.87.66,4.11h.11a29.09,29.09,0,0,1,.82-4.11l7-26.87h5.91l6.9,26.87.82,4.11h.11a25.34,25.34,0,0,1,.6-4.11l6.46-26.87h7.28L206.59,61.44h-7.94l-6.08-23-1-5.09h-.16a48.58,48.58,0,0,1-1,5.09l-6,23Z"></path>
+                  <path d="M221.28,58a13.7,13.7,0,0,1-4.43-10.48A13.71,13.71,0,0,1,221.28,37a15.31,15.31,0,0,1,10.84-4.13A15.48,15.48,0,0,1,243,37a13.67,13.67,0,0,1,4.46,10.48A13.7,13.7,0,0,1,243.06,58a16.42,16.42,0,0,1-21.78,0Zm2.63-10.48a8.59,8.59,0,0,0,2.38,6.27,7.9,7.9,0,0,0,5.88,2.44,8,8,0,0,0,5.91-2.44,8.54,8.54,0,0,0,2.41-6.27,8.51,8.51,0,0,0-2.44-6.24,8,8,0,0,0-5.88-2.46,7.88,7.88,0,0,0-5.86,2.46A8.56,8.56,0,0,0,223.91,47.48Z"></path>
+                  <path d="M253.24,61.44V33.53h6.68v4.93l-.11,1.92h.11a11.2,11.2,0,0,1,3.39-5.14,8.14,8.14,0,0,1,5.47-2.08,11.78,11.78,0,0,1,1.31.11v6.84a9.56,9.56,0,0,0-1.7-.11,7,7,0,0,0-6.13,3,12.23,12.23,0,0,0-2.08,7.22V61.44Z"></path>
+                  <path d="M274.92,52.74V22.58h6.9V51.7a4.85,4.85,0,0,0,.68,3,2.66,2.66,0,0,0,2.16.82,7.8,7.8,0,0,0,1-.05v6.08q-1.48.16-2.19.16a13.58,13.58,0,0,1-3-.3,8.83,8.83,0,0,1-2.68-1.15,5.51,5.51,0,0,1-2.13-2.76A12.87,12.87,0,0,1,274.92,52.74Z"></path>
+                  <path d="M289.15,47.48q0-6.57,3.53-10.59a11.57,11.57,0,0,1,9.11-4q5.53,0,8.16,3.67h.11a10.87,10.87,0,0,1-.11-1.64V22.58h6.9V61.44h-6.51V59l.11-1.75h-.11a9.32,9.32,0,0,1-3.59,3.5,10.44,10.44,0,0,1-5.23,1.31,11.13,11.13,0,0,1-9-4.05Q289.15,54,289.15,47.48Zm7,0a9.89,9.89,0,0,0,1.92,6.35,6.12,6.12,0,0,0,5,2.41,6.48,6.48,0,0,0,5-2.22q2-2.22,2-6.59a10.18,10.18,0,0,0-1.81-6,5.93,5.93,0,0,0-5.15-2.54,6.35,6.35,0,0,0-5,2.33A9.3,9.3,0,0,0,296.16,47.48Z"></path>
+                </svg></a></div>
+            <div class="user-panel">
+              <div class="user-panel__item">
+                <div class="header-search"><a href="#!"> <span class="header-search__text">Поиск</span><i class="search-icon"></i></a></div>
+              </div>
+              <div class="user-panel__item"><a href="#!" class="favorite-icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 23.25 16.88">
+                    <defs>
+                      <style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+                    </defs>
+                    <title>Artboard 2</title>
+                    <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
+                  </svg><span class="favorite-icon__counter">2</span></a></div>
+              <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
+                <div class="user-panel__link"><a href="#!">Регистрация</a></div>
+              </div>
             </div>
+            <ul class="header-nav hidden-desktop">
+              <li><a href="#!">Статьи</a></li>
+              <li><a href="#!">Обзоры</a></li>
+              <li><a href="#!">Жалобы</a></li>
+              <li><a href="#!">Трекинг</a></li>
+              <li><a href="#!">Новости</a></li>
+            </ul>
           </div>
-        </div>
-      </div>
-      <header class="header">
-        <div class="container clearfix">
-          <div class="menu-toggle js-toggle-menu"><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span></div>
-          <div class="logo"><a href="#!">
-              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 317 91">
-                <defs>
-                  <style>.cls-1{fill:#e62e04;}.cls-2{fill:#d30000;}.cls-3{fill:url(#linear-gradient);}.cls-4{fill:#fff;}</style>
-                  <lineargradient id="linear-gradient" x1="34.9" y1="65.81" x2="34.9" y2="19.07" gradientunits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#f90"></stop>
-                    <stop offset="1" stop-color="#ffba00"></stop>
-                  </lineargradient>
-                </defs>
-                <title>Artboard 1</title>
-                <path d="M88.1,76.22l-6-30.55a3.69,3.69,0,0,0-3.62-3H45.93a3.69,3.69,0,0,0-3.62,3l-6,30.55a3.69,3.69,0,0,0,3.62,4.4H62.64L75.1,90.2a1.55,1.55,0,0,0,2.47-1.53L76,80.62h8.49A3.69,3.69,0,0,0,88.1,76.22Z" class="cls-1"></path>
-                <path d="M88.1,76.22l-6-30.55a3.69,3.69,0,0,0-3.62-3H70s-8.86,21.23-9.2,23L36.74,74l-.44,2.25a3.69,3.69,0,0,0,3.62,4.4H62.64L75.1,90.2a1.55,1.55,0,0,0,2.47-1.53L76,80.62h8.49A3.69,3.69,0,0,0,88.1,76.22Z" class="cls-1"></path>
-                <path d="M42.31,45.66,36.74,74h34c3.11,0,4.84-2.84,4.24-5.89L70,42.68H45.93A3.69,3.69,0,0,0,42.31,45.66Z" class="cls-2"></path>
-                <path d="M69.56,62.42,61.5,21.55a4.94,4.94,0,0,0-4.84-4H13.15a4.94,4.94,0,0,0-4.84,4L.25,62.42a4.94,4.94,0,0,0,4.84,5.89H16.45L14.33,79.09a2.08,2.08,0,0,0,3.3,2L34.31,68.31h30.4A4.94,4.94,0,0,0,69.56,62.42Z" class="cls-3"></path>
-                <path d="M46.69,27.81a4,4,0,0,1-4-4V16.26a7.79,7.79,0,1,0-15.57,0v7.55a4,4,0,0,1-8,0V16.26a15.79,15.79,0,1,1,31.57,0v7.55A4,4,0,0,1,46.69,27.81Z" class="cls-1"></path>
-                <path d="M20.28,39.82A4.72,4.72,0,1,0,25,44.54,4.72,4.72,0,0,0,20.28,39.82Zm14.62,0a4.72,4.72,0,1,0,4.72,4.72A4.72,4.72,0,0,0,34.9,39.82Zm14.62,0a4.72,4.72,0,1,0,4.72,4.72A4.72,4.72,0,0,0,49.52,39.82Z" class="cls-4"></path>
-                <path d="M100.35,61.44,114,22.58h7.44l13.63,38.86h-7.23l-3.34-10H110.86l-3.28,10Zm12.26-15.71h10.13l-3.45-10.4-1.53-6h-.11q-.88,3.83-1.53,6Z"></path>
-                <path d="M138.89,52.74V22.58h6.9V51.7a4.86,4.86,0,0,0,.68,3,2.66,2.66,0,0,0,2.16.82,7.8,7.8,0,0,0,1-.05v6.08q-1.48.16-2.19.16a13.58,13.58,0,0,1-3-.3,8.84,8.84,0,0,1-2.68-1.15,5.51,5.51,0,0,1-2.13-2.76A12.88,12.88,0,0,1,138.89,52.74Z"></path>
-                <path d="M154.7,28.76V22.58h7v6.18Zm0,32.68V33.53h7V61.44Z"></path>
-                <path d="M176.32,61.44l-9.69-38.86H174l6,26.87.66,4.11h.11a29.09,29.09,0,0,1,.82-4.11l7-26.87h5.91l6.9,26.87.82,4.11h.11a25.34,25.34,0,0,1,.6-4.11l6.46-26.87h7.28L206.59,61.44h-7.94l-6.08-23-1-5.09h-.16a48.58,48.58,0,0,1-1,5.09l-6,23Z"></path>
-                <path d="M221.28,58a13.7,13.7,0,0,1-4.43-10.48A13.71,13.71,0,0,1,221.28,37a15.31,15.31,0,0,1,10.84-4.13A15.48,15.48,0,0,1,243,37a13.67,13.67,0,0,1,4.46,10.48A13.7,13.7,0,0,1,243.06,58a16.42,16.42,0,0,1-21.78,0Zm2.63-10.48a8.59,8.59,0,0,0,2.38,6.27,7.9,7.9,0,0,0,5.88,2.44,8,8,0,0,0,5.91-2.44,8.54,8.54,0,0,0,2.41-6.27,8.51,8.51,0,0,0-2.44-6.24,8,8,0,0,0-5.88-2.46,7.88,7.88,0,0,0-5.86,2.46A8.56,8.56,0,0,0,223.91,47.48Z"></path>
-                <path d="M253.24,61.44V33.53h6.68v4.93l-.11,1.92h.11a11.2,11.2,0,0,1,3.39-5.14,8.14,8.14,0,0,1,5.47-2.08,11.78,11.78,0,0,1,1.31.11v6.84a9.56,9.56,0,0,0-1.7-.11,7,7,0,0,0-6.13,3,12.23,12.23,0,0,0-2.08,7.22V61.44Z"></path>
-                <path d="M274.92,52.74V22.58h6.9V51.7a4.85,4.85,0,0,0,.68,3,2.66,2.66,0,0,0,2.16.82,7.8,7.8,0,0,0,1-.05v6.08q-1.48.16-2.19.16a13.58,13.58,0,0,1-3-.3,8.83,8.83,0,0,1-2.68-1.15,5.51,5.51,0,0,1-2.13-2.76A12.87,12.87,0,0,1,274.92,52.74Z"></path>
-                <path d="M289.15,47.48q0-6.57,3.53-10.59a11.57,11.57,0,0,1,9.11-4q5.53,0,8.16,3.67h.11a10.87,10.87,0,0,1-.11-1.64V22.58h6.9V61.44h-6.51V59l.11-1.75h-.11a9.32,9.32,0,0,1-3.59,3.5,10.44,10.44,0,0,1-5.23,1.31,11.13,11.13,0,0,1-9-4.05Q289.15,54,289.15,47.48Zm7,0a9.89,9.89,0,0,0,1.92,6.35,6.12,6.12,0,0,0,5,2.41,6.48,6.48,0,0,0,5-2.22q2-2.22,2-6.59a10.18,10.18,0,0,0-1.81-6,5.93,5.93,0,0,0-5.15-2.54,6.35,6.35,0,0,0-5,2.33A9.3,9.3,0,0,0,296.16,47.48Z"></path>
-              </svg></a></div>
-          <div class="user-panel">
-            <div class="user-panel__item">
-              <div class="header-search"><a href="#!"> <span class="header-search__text">Поиск</span><i class="search-icon"></i></a></div>
-            </div>
-            <div class="user-panel__item"><a href="#!" class="favorite-icon">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 23.25 16.88">
-                  <defs>
-                    <style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
-                  </defs>
-                  <title>Artboard 2</title>
-                  <path d="M11.63,15.35c2.13-3.19,3.19-2.13,7.44-4.25s3.19-9.57-2.13-9.57-5.32,3.19-5.32,3.19,0-3.19-5.32-3.19S-.07,9,4.18,11.1,9.5,12.16,11.63,15.35Z" class="cls-1"></path>
-                </svg><span class="favorite-icon__counter">2</span></a></div>
-            <div class="user-panel__item"><a href="#login-form" class="log-in popup-with-form"><span class="log-in__text">Вход</span><span class="log-in__icon"></span></a><span class="user-panel__divider">|</span>
-              <div class="user-panel__link"><a href="#!">Регистрация</a></div>
-            </div>
-          </div>
-          <ul class="header-nav hidden-desktop">
-            <li><a href="#!">Статьи</a></li>
-            <li><a href="#!">Обзоры</a></li>
-            <li><a href="#!">Жалобы</a></li>
-            <li><a href="#!">Трекинг</a></li>
-            <li><a href="#!">Новости</a></li>
-          </ul>
-        </div>
-        <!-- container end-->
-      </header>
-      <!-- header-->
-      <section class="middle">
-        <div class="container">
-          <ul class="breadcrumb">
-            <li><a href="#!">Главная страница</a></li>
-            <li><a href="#!">Внутренняя страница</a></li>
-            <li class="active">Активная страница</li>
-          </ul>
-          <div class="page-title">Отслеживание почтового отправления</div>
-          <form class="tracking-parcel tracking-parcel--purple-bg">
-            <div class="tracking-parcel__body">
-              <div class="tracking-parcel__input">
-                <input type="text" placeholder="Необходимо ввести трек-код...">
+          <!-- container end-->
+        </header>
+        <!-- header-->
+        <section class="middle">
+          <div class="container">
+            <ul class="breadcrumb">
+              <li><a href="#!">Главная страница</a></li>
+              <li><a href="#!">Внутренняя страница</a></li>
+              <li class="active">Активная страница</li>
+            </ul>
+            <div class="page-title">Отслеживание почтового отправления</div>
+            <form class="tracking-parcel tracking-parcel--purple-bg">
+              <div class="tracking-parcel__body">
+                <div class="tracking-parcel__input">
+                  <input type="text" placeholder="Необходимо ввести трек-код...">
+                </div>
+                <button type="submit" class="btn tracking-parcel__submit">Отследить <span class="hidden-mobile">посылку</span></button>
               </div>
-              <button type="submit" class="btn tracking-parcel__submit">Отследить <span class="hidden-mobile">посылку</span></button>
-            </div>
-            <div class="tracking-parcel__footer">
-              <div class="tracking-parcel__description">Пример : <a href="#!">RA219828196FI</a>, <a href="#!">RS806954342NL</a></div>
-              <div class="tracking-parcel__description">Для того, что бы отследить посылку, укажите трек-код полученный у продавца, кликните по кнопке «Отследить посылку»</div>
-            </div>
-          </form>
-          <div class="middle__row">
-            <div class="middle__content">
-              <div class="block block--white">
-                <div class="block__header">
-                  <div class="section-subtitle">Отслеживание почтового отправления: RS806954342NL</div>
-                  <div class="tracking-status">
-                    <div style="width:50%" class="tracking-status__value"></div>
-                    <div class="tracking-status__caption"> <span>В пути 102 дня /  </span><a href="#!" title="That&amp;apos;s what this widget is" class="question-icon"></a><span>Отслеживается 99 дней  </span><a href="#!" title="Another tooltip" class="question-icon"></a></div>
-                  </div>
-                </div>
-                <div class="block__header">
-                  <div class="section-subtitle margin-0">Прогнозируемый период поступления посылки: <span class="color-grey medium">24.04.2017 — 02.05.2017</span><a href="#!" title="Another tooltip 2" class="question-icon"></a></div>
-                </div>
-                <div class="tracking-steps">
-                  <div class="tracking-steps__item">
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__date">12.04.2017</div>
-                      <div class="tracking-steps__time">09:16</div>
-                      <div class="tracking-steps__duration">7 день</div>
-                    </div>
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__icon icon-1"></div>
-                    </div>
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__title">Прибыло в страну назначения <a href="#!" title="Another tooltip 3" class="question-icon"></a></div>
-                      <div class="tracking-steps__description">Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта</div>
-                    </div>
-                  </div>
-                  <div class="tracking-steps__item">
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__date">10.04.2017</div>
-                      <div class="tracking-steps__time">09:16</div>
-                      <div class="tracking-steps__duration">5 день</div>
-                    </div>
-                    <div class="tracking-steps__section"><span class="blue-divider"></span>
-                      <div class="tracking-steps__icon icon-2"></div>
-                    </div>
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__title">Отправлено в страну назначения<a href="#!" title="Another tooltip 4" class="question-icon"> </a></div>
-                      <div class="tracking-steps__description">Почтовое отправление в процессе передачи почте страны назначения, для доставки в одно из мест международного обмена, и последующих операция импорта / экспорта. </div>
-                    </div>
-                  </div>
-                  <div class="tracking-steps__item">
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__date">11.04.2017</div>
-                      <div class="tracking-steps__time">09:16</div>
-                      <div class="tracking-steps__duration">6 день</div>
-                    </div>
-                    <div class="tracking-steps__section"><span class="blue-divider"></span>
-                      <div class="tracking-steps__icon icon-3"></div>
-                    </div>
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__title">Прибыло в сортировочный центр – Нидерланды<a href="#!" title="Another tooltip 5" class="question-icon"></a></div>
-                      <div class="tracking-steps__description">Прибытие почтового отправления в промежуточный узел почтовой связи для сортировки, выбора маршрута и отправкив сторону получателя.</div>
-                    </div>
-                  </div>
-                  <div class="tracking-steps__item">
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__date">5.04.2017</div>
-                      <div class="tracking-steps__time">09:16</div>
-                      <div class="tracking-steps__duration">1 день</div>
-                    </div>
-                    <div class="tracking-steps__section"><span class="blue-divider"></span>
-                      <div class="tracking-steps__icon icon-4"></div>
-                    </div>
-                    <div class="tracking-steps__section">
-                      <div class="tracking-steps__title">Подготовaка к отправке<a href="#!" title="Another tooltip 6" class="question-icon"></a></div>
-                      <div class="tracking-steps__description">Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта</div>
-                    </div>
-                  </div>
-                </div>
+              <div class="tracking-parcel__footer">
+                <div class="tracking-parcel__description">Пример : <a href="#!">RA219828196FI</a>, <a href="#!">RS806954342NL</a></div>
+                <div class="tracking-parcel__description">Для того, что бы отследить посылку, укажите трек-код полученный у продавца, кликните по кнопке «Отследить посылку»</div>
               </div>
-              <div class="alert-block">
-                <div class="alert-block__title">Обратите внимание</div>
-                <div class="alert-block__text">Трек-код <b class="bold">RS806954342NL</b>, отслеживают <b class="bold">115 пользователей</b> AliWorld.ru </div>
-                <div class="alert-block__text">Вероятно продавец мошенник, и выдает один трек-код разным покупателям либо очень сильно экономит на оплате трек-кодов. Будьте внимательны со сроком защиты заказа!</div>
-              </div>
-              <div class="tracking-info">
-                <div class="section-subtitle">Информация о трек-коде: RS806954342NL</div>
-                <div class="tracking-info__item">
-                  <div class="tracking-info__title">Добавлен в базу:</div>
-                  <div class="tracking-info__value">08.04.2017 20:44:03</div>
-                </div>
-                <div class="tracking-info__item">
-                  <div class="tracking-info__title">Последнее обновление:</div>
-                  <div class="tracking-info__value">16.07.2017 21:34:45</div>
-                </div>
-                <div class="tracking-info__item">
-                  <div class="tracking-info__title">Прогнозируемая дата доставки:</div>
-                  <div class="tracking-info__value">24.04.2017 — 02.05.2017</div>
-                </div>
-                <div class="tracking-info__item">
-                  <div class="tracking-info__title">Маршрут:</div>
-                  <div class="tracking-info__value">China — Ukraine</div>
-                </div>
-                <div class="tracking-info__item">
-                  <div class="tracking-info__title">Тип отправления:</div>
-                  <div class="tracking-info__value">Регистрируемое почтовое отправление</div>
-                </div>
-                <div class="tracking-info__item">
-                  <div class="tracking-info__title">Ожидайте статус:</div>
-                  <div class="tracking-info__value">Импорт</div>
-                </div>
-              </div>
-              <div class="coments-block">
-                <div class="coments-block__section">
-                  <div class="page-title page-title--20px">Комментарии<span class="coments-counter">13</span></div>
-                  <form class="commets-form">
-                    <div class="form-group">
-                      <textarea placeholder="Текст комментария..."></textarea>
+            </form>
+            <div class="middle__row">
+              <div class="middle__content">
+                <div class="block block--white">
+                  <div class="block__header">
+                    <div class="section-subtitle">Отслеживание почтового отправления: RS806954342NL</div>
+                    <div class="tracking-status">
+                      <div style="width:50%" class="tracking-status__value"></div>
+                      <div class="tracking-status__caption"> <span>В пути 102 дня /  </span><a href="#!" title="That&amp;apos;s what this widget is" class="question-icon"></a><span>Отслеживается 99 дней  </span><a href="#!" title="Another tooltip" class="question-icon"></a></div>
                     </div>
-                    <div class="form-footer">
-                      <div class="current-login">Вы авторизованы под ником <span class="current-nickname"> Nikolay1975</span></div>
-                      <button type="submit" class="btn">Добавить комментарий</button>
-                    </div>
-                  </form>
-                </div>
-                <ul class="comments-list">
-                  <li> 
-                    <div class="comment">
-                      <div class="comment__head">
-                        <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
-                        <div class="comment__title"><b> Марина Егорова </b>
-                          <div class="comment__date">10.07.2017, 13:45</div>
-                        </div>
+                  </div>
+                  <div class="block__header">
+                    <div class="section-subtitle margin-0">Прогнозируемый период поступления посылки: <span class="color-grey medium">24.04.2017 — 02.05.2017</span><a href="#!" title="Another tooltip 2" class="question-icon"></a></div>
+                  </div>
+                  <div class="tracking-steps">
+                    <div class="tracking-steps__item">
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__date">12.04.2017</div>
+                        <div class="tracking-steps__time">09:16</div>
+                        <div class="tracking-steps__duration">7 день</div>
                       </div>
-                      <div class="comment__body">
-                        <div class="comment__text">В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест. В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест.</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__icon icon-1"></div>
+                      </div>
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__title">Прибыло в страну назначения <a href="#!" title="Another tooltip 3" class="question-icon"></a></div>
+                        <div class="tracking-steps__description">Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта</div>
                       </div>
                     </div>
-                  </li>
-                  <li> 
-                    <div class="comment">
-                      <div class="comment__head">
-                        <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
-                        <div class="comment__title"><b>Евгения Большова</b>
-                          <div class="comment__date">10.07.2017, в 13:45</div>
-                        </div>
+                    <div class="tracking-steps__item">
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__date">10.04.2017</div>
+                        <div class="tracking-steps__time">09:16</div>
+                        <div class="tracking-steps__duration">5 день</div>
                       </div>
-                      <div class="comment__body">
-                        <div class="comment__text">Очень желательно заполнить поле с телефоном (или мобильным номером). Если продавец укажет его на наклейке с адресом доставки, то в этом случае есть вероятность того, что при поступлении посылки в ваше почтовое отделение, его сотрудник позвонит по указанному номеру и оповестит вас о возможности прийти и забрать вашу посылку. В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест.</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
+                      <div class="tracking-steps__section"><span class="blue-divider"></span>
+                        <div class="tracking-steps__icon icon-2"></div>
                       </div>
-                      <div class="comment comment--reply">
-                        <div class="comment__head">
-                          <div class="comment__avatar"><img src="images/default-avatar.png" alt="avatar"></div>
-                          <div class="comment__title"><b> Валентин Иванов </b> ответил пользователю <b> Евгения Большова </b>
-                            <div class="comment__date">10.07.2017, в 13:45</div>
-                          </div>
-                        </div>
-                        <div class="comment__body">
-                          <div class="comment__text">Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн, с доставкой до дома или больницы. Скетчи вариантов логотипа: Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн. Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн, с доставкой до дома или больницы. Скетчи вариантов логотипа: Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн.</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
-                        </div>
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__title">Отправлено в страну назначения<a href="#!" title="Another tooltip 4" class="question-icon"> </a></div>
+                        <div class="tracking-steps__description">Почтовое отправление в процессе передачи почте страны назначения, для доставки в одно из мест международного обмена, и последующих операция импорта / экспорта. </div>
                       </div>
-                      <div class="comment comment--reply">
+                    </div>
+                    <div class="tracking-steps__item">
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__date">11.04.2017</div>
+                        <div class="tracking-steps__time">09:16</div>
+                        <div class="tracking-steps__duration">6 день</div>
+                      </div>
+                      <div class="tracking-steps__section"><span class="blue-divider"></span>
+                        <div class="tracking-steps__icon icon-3"></div>
+                      </div>
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__title">Прибыло в сортировочный центр – Нидерланды<a href="#!" title="Another tooltip 5" class="question-icon"></a></div>
+                        <div class="tracking-steps__description">Прибытие почтового отправления в промежуточный узел почтовой связи для сортировки, выбора маршрута и отправкив сторону получателя.</div>
+                      </div>
+                    </div>
+                    <div class="tracking-steps__item">
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__date">5.04.2017</div>
+                        <div class="tracking-steps__time">09:16</div>
+                        <div class="tracking-steps__duration">1 день</div>
+                      </div>
+                      <div class="tracking-steps__section"><span class="blue-divider"></span>
+                        <div class="tracking-steps__icon icon-4"></div>
+                      </div>
+                      <div class="tracking-steps__section">
+                        <div class="tracking-steps__title">Подготовaка к отправке<a href="#!" title="Another tooltip 6" class="question-icon"></a></div>
+                        <div class="tracking-steps__description">Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="alert-block">
+                  <div class="alert-block__title">Обратите внимание</div>
+                  <div class="alert-block__text">Трек-код <b class="bold">RS806954342NL</b>, отслеживают <b class="bold">115 пользователей</b> AliWorld.ru </div>
+                  <div class="alert-block__text">Вероятно продавец мошенник, и выдает один трек-код разным покупателям либо очень сильно экономит на оплате трек-кодов. Будьте внимательны со сроком защиты заказа!</div>
+                </div>
+                <div class="tracking-info">
+                  <div class="section-subtitle">Информация о трек-коде: RS806954342NL</div>
+                  <div class="tracking-info__item">
+                    <div class="tracking-info__title">Добавлен в базу:</div>
+                    <div class="tracking-info__value">08.04.2017 20:44:03</div>
+                  </div>
+                  <div class="tracking-info__item">
+                    <div class="tracking-info__title">Последнее обновление:</div>
+                    <div class="tracking-info__value">16.07.2017 21:34:45</div>
+                  </div>
+                  <div class="tracking-info__item">
+                    <div class="tracking-info__title">Прогнозируемая дата доставки:</div>
+                    <div class="tracking-info__value">24.04.2017 — 02.05.2017</div>
+                  </div>
+                  <div class="tracking-info__item">
+                    <div class="tracking-info__title">Маршрут:</div>
+                    <div class="tracking-info__value">China — Ukraine</div>
+                  </div>
+                  <div class="tracking-info__item">
+                    <div class="tracking-info__title">Тип отправления:</div>
+                    <div class="tracking-info__value">Регистрируемое почтовое отправление</div>
+                  </div>
+                  <div class="tracking-info__item">
+                    <div class="tracking-info__title">Ожидайте статус:</div>
+                    <div class="tracking-info__value">Импорт</div>
+                  </div>
+                </div>
+                <div class="coments-block">
+                  <div class="coments-block__section">
+                    <div class="page-title page-title--20px">Комментарии<span class="coments-counter">13</span></div>
+                    <form class="commets-form">
+                      <div class="form-group">
+                        <textarea placeholder="Текст комментария..."></textarea>
+                      </div>
+                      <div class="form-footer">
+                        <div class="current-login">Вы авторизованы под ником <span class="current-nickname"> Nikolay1975</span></div>
+                        <button type="submit" class="btn">Добавить комментарий</button>
+                      </div>
+                    </form>
+                  </div>
+                  <ul class="comments-list">
+                    <li> 
+                      <div class="comment">
                         <div class="comment__head">
                           <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
-                          <div class="comment__title"><b> Валентин Иванов </b> ответил пользователю <b> Евгения Большова </b>
-                            <div class="comment__date">10.07.2017, в 13:45</div>
+                          <div class="comment__title"><b> Марина Егорова </b>
+                            <div class="comment__date">10.07.2017, 13:45</div>
                           </div>
                         </div>
                         <div class="comment__body">
-                          <div class="comment__text">В какой графе оставлять номер почтового отделения?</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
+                          <div class="comment__text">В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест. В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест.</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                  <li> 
-                    <div class="comment">
-                      <div class="comment__head">
-                        <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
-                        <div class="comment__title"><b> Марина Егорова </b>
-                          <div class="comment__date">10.07.2017, 13:45</div>
-                        </div>
-                      </div>
-                      <div class="comment__body">
-                        <div class="comment__text">В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест. В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест.</div>
-                        <form class="commets-form">
-                          <div class="form-group">
-                            <textarea placeholder="Текст ответа на комментарий..."></textarea>
-                          </div>
-                          <div class="text-right"><a href="#!" class="cancel-btn">Отмена</a>
-                            <button type="submit" class="btn btn-medium">Ответить</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </li>
-                  <li> 
-                    <div class="comment">
-                      <div class="comment__head">
-                        <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
-                        <div class="comment__title"><b> Евгения Большова </b>
-                          <div class="comment__date">10.07.2017, в 13:45</div>
-                        </div>
-                      </div>
-                      <div class="comment__body">
-                        <div class="comment__text">Очень желательно заполнить поле с телефоном (или мобильным номером). Если продавец укажет его на наклейке с адресом доставки, то в этом случае есть вероятность того, что при поступлении посылки в ваше почтовое отделение, его сотрудник позвонит по указанному номеру и оповестит вас о возможности прийти и забрать вашу посылку. В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест.</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
-                      </div>
-                      <div class="comment comment--reply">
+                    </li>
+                    <li> 
+                      <div class="comment">
                         <div class="comment__head">
-                          <div class="comment__avatar"><img src="images/default-avatar.png" alt="avatar"></div>
-                          <div class="comment__title"><b> Валентин Иванов </b> ответил пользователю <b> Евгения Большова </b>
+                          <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
+                          <div class="comment__title"><b>Евгения Большова</b>
                             <div class="comment__date">10.07.2017, в 13:45</div>
                           </div>
                         </div>
                         <div class="comment__body">
-                          <div class="comment__text">Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн, с доставкой до дома или больницы. Скетчи вариантов логотипа: Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн. Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн, с доставкой до дома или больницы. Скетчи вариантов логотипа: Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн.</div>
+                          <div class="comment__text">Очень желательно заполнить поле с телефоном (или мобильным номером). Если продавец укажет его на наклейке с адресом доставки, то в этом случае есть вероятность того, что при поступлении посылки в ваше почтовое отделение, его сотрудник позвонит по указанному номеру и оповестит вас о возможности прийти и забрать вашу посылку. В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест.</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
+                        </div>
+                        <div class="comment comment--reply">
+                          <div class="comment__head">
+                            <div class="comment__avatar"><img src="images/default-avatar.png" alt="avatar"></div>
+                            <div class="comment__title"><b> Валентин Иванов </b> ответил пользователю <b> Евгения Большова </b>
+                              <div class="comment__date">10.07.2017, в 13:45</div>
+                            </div>
+                          </div>
+                          <div class="comment__body">
+                            <div class="comment__text">Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн, с доставкой до дома или больницы. Скетчи вариантов логотипа: Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн. Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн, с доставкой до дома или больницы. Скетчи вариантов логотипа: Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн.</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
+                          </div>
+                        </div>
+                        <div class="comment comment--reply">
+                          <div class="comment__head">
+                            <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
+                            <div class="comment__title"><b> Валентин Иванов </b> ответил пользователю <b> Евгения Большова </b>
+                              <div class="comment__date">10.07.2017, в 13:45</div>
+                            </div>
+                          </div>
+                          <div class="comment__body">
+                            <div class="comment__text">В какой графе оставлять номер почтового отделения?</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li> 
+                      <div class="comment">
+                        <div class="comment__head">
+                          <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
+                          <div class="comment__title"><b> Марина Егорова </b>
+                            <div class="comment__date">10.07.2017, 13:45</div>
+                          </div>
+                        </div>
+                        <div class="comment__body">
+                          <div class="comment__text">В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест. В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест.</div>
                           <form class="commets-form">
                             <div class="form-group">
                               <textarea placeholder="Текст ответа на комментарий..."></textarea>
@@ -367,276 +337,308 @@
                           </form>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                    <li> 
+                      <div class="comment">
+                        <div class="comment__head">
+                          <div class="comment__avatar"><img src="pictures/article-avatar.png" alt="avatar"></div>
+                          <div class="comment__title"><b> Евгения Большова </b>
+                            <div class="comment__date">10.07.2017, в 13:45</div>
+                          </div>
+                        </div>
+                        <div class="comment__body">
+                          <div class="comment__text">Очень желательно заполнить поле с телефоном (или мобильным номером). Если продавец укажет его на наклейке с адресом доставки, то в этом случае есть вероятность того, что при поступлении посылки в ваше почтовое отделение, его сотрудник позвонит по указанному номеру и оповестит вас о возможности прийти и забрать вашу посылку. В итоге останавливаюсь на цветовой схеме, близкой к изначальной. Разрабатываю слоган и приступаю к фирменному стилю. Графика стиля базируется на условной дорожной схеме, по которой крест, символизирующий аптеку, движется к точке назначения. Стиль акцентирует внимание на уникальном торговом предложении бренда – доставке. Второй вариант знака – состоящий из перетекающих друг в друга точек крест.</div><a href="#!" class="btn btn-medium btn-transparent">Ответить</a>
+                        </div>
+                        <div class="comment comment--reply">
+                          <div class="comment__head">
+                            <div class="comment__avatar"><img src="images/default-avatar.png" alt="avatar"></div>
+                            <div class="comment__title"><b> Валентин Иванов </b> ответил пользователю <b> Евгения Большова </b>
+                              <div class="comment__date">10.07.2017, в 13:45</div>
+                            </div>
+                          </div>
+                          <div class="comment__body">
+                            <div class="comment__text">Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн, с доставкой до дома или больницы. Скетчи вариантов логотипа: Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн. Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн, с доставкой до дома или больницы. Скетчи вариантов логотипа: Аптека Vitamia предлагает, наряду с традиционным магазином, возможность заказать лекарства онлайн.</div>
+                            <form class="commets-form">
+                              <div class="form-group">
+                                <textarea placeholder="Текст ответа на комментарий..."></textarea>
+                              </div>
+                              <div class="text-right"><a href="#!" class="cancel-btn">Отмена</a>
+                                <button type="submit" class="btn btn-medium">Ответить</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="middle__aside parcsel-tracking-aside">
-              <div class="block">
-                <div class="page-title">Службы доставки</div>
-                <ul class="deliveries-list js-custom-scroll">
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-1.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Emirates post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-2.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Latvijas Pasts</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-3.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Canada Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-4.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Swiss Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-5.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">China Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-6.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Post NL</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-7.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Czech Post </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-8.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Почта России</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-9.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Korea Post </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-10.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Poczta Polska</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-1.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Emirates post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-2.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Latvijas Pasts</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-3.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Canada Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-4.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Swiss Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-5.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">China Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-6.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Post NL</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-7.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Czech Post </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-8.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Почта России</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-9.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Korea Post </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-10.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Poczta Polska</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-1.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Emirates post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-2.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Latvijas Pasts</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-3.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Canada Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-4.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Swiss Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-5.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">China Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-6.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Post NL</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-7.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Czech Post </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-8.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Почта России</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-9.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Korea Post </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-10.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Poczta Polska</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-1.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Emirates post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-2.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Latvijas Pasts</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-3.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Canada Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-4.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">Swiss Post</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="delivery-item">
-                      <div class="delivery-item__image"><img src="pictures/delivery-brand-5.jpg" alt="delivery-brand"></div>
-                      <div class="delivery-item__title">China Post</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="block new-comments">
-                <div class="page-title">Новые комментарии</div>
-                <div class="aside-comments">
-                  <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
-                  <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
-                  <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
-                  <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
-                  <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
-                  <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
+              <div class="middle__aside parcsel-tracking-aside">
+                <div class="block">
+                  <div class="page-title">Службы доставки</div>
+                  <ul class="deliveries-list js-custom-scroll">
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-1.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Emirates post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-2.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Latvijas Pasts</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-3.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Canada Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-4.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Swiss Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-5.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">China Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-6.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Post NL</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-7.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Czech Post </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-8.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Почта России</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-9.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Korea Post </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-10.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Poczta Polska</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-1.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Emirates post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-2.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Latvijas Pasts</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-3.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Canada Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-4.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Swiss Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-5.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">China Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-6.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Post NL</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-7.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Czech Post </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-8.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Почта России</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-9.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Korea Post </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-10.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Poczta Polska</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-1.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Emirates post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-2.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Latvijas Pasts</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-3.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Canada Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-4.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Swiss Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-5.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">China Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-6.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Post NL</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-7.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Czech Post </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-8.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Почта России</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-9.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Korea Post </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-10.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Poczta Polska</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-1.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Emirates post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-2.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Latvijas Pasts</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-3.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Canada Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-4.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">Swiss Post</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery-item">
+                        <div class="delivery-item__image"><img src="pictures/delivery-brand-5.jpg" alt="delivery-brand"></div>
+                        <div class="delivery-item__title">China Post</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="block new-comments">
+                  <div class="page-title">Новые комментарии</div>
+                  <div class="aside-comments">
+                    <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
+                    <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
+                    <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
+                    <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
+                    <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
+                    <div class="aside-comment"> <span class="bold">Ярослав Родный </span>к записи  <a href="#!"> «Самый популярный запрос на АлиЭкспресс – спиннеры»</a> в разделе <a href="#!"> «Статьи»</a></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__section">
-          <div class="copyright">2017 © AliWorld </br> Гид по миру покупок в AliExpress</div>
-          <div class="visible-desktop-large"> 
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__section">
+            <div class="copyright">2017 © AliWorld </br> Гид по миру покупок в AliExpress</div>
+            <div class="visible-desktop-large"> 
+              <div class="footer-link circs-icon"><a href="#!">Политика конфиденциальности</a></div>
+              <div class="footer-link mail-icon"><a href="#!">Связь с администрацией</a></div>
+            </div>
+          </div>
+          <div class="footer__section">
+            <ul class="footer-nav">
+              <li><a href="#!">О сайте</a></li>
+              <li><a href="#!">Статьи</a></li>
+              <li><a href="#!">Обзоры товаров</a></li>
+              <li><a href="#!" class="visible-desktop-large">Жалобы на магазины</a></li>
+              <li><a href="#!" class="visible-desktop-large">Трекинг покупок</a></li>
+              <li><a href="#!" class="visible-desktop-large">Новости</a></li>
+            </ul>
+          </div>
+          <div class="footer__section hidden-desktop-large">
+            <ul class="footer-nav">
+              <li><a href="#!">Жалобы на магазины</a></li>
+              <li><a href="#!">Трекинг покупок</a></li>
+              <li><a href="#!">Новости</a></li>
+            </ul>
+          </div>
+          <div class="footer__section hidden-desktop-large">
             <div class="footer-link circs-icon"><a href="#!">Политика конфиденциальности</a></div>
             <div class="footer-link mail-icon"><a href="#!">Связь с администрацией</a></div>
           </div>
         </div>
-        <div class="footer__section">
-          <ul class="footer-nav">
-            <li><a href="#!">О сайте</a></li>
-            <li><a href="#!">Статьи</a></li>
-            <li><a href="#!">Обзоры товаров</a></li>
-            <li><a href="#!" class="visible-desktop-large">Жалобы на магазины</a></li>
-            <li><a href="#!" class="visible-desktop-large">Трекинг покупок</a></li>
-            <li><a href="#!" class="visible-desktop-large">Новости</a></li>
-          </ul>
-        </div>
-        <div class="footer__section hidden-desktop-large">
-          <ul class="footer-nav">
-            <li><a href="#!">Жалобы на магазины</a></li>
-            <li><a href="#!">Трекинг покупок</a></li>
-            <li><a href="#!">Новости</a></li>
-          </ul>
-        </div>
-        <div class="footer__section hidden-desktop-large">
-          <div class="footer-link circs-icon"><a href="#!">Политика конфиденциальности</a></div>
-          <div class="footer-link mail-icon"><a href="#!">Связь с администрацией</a></div>
-        </div>
-      </div>
-    </footer>
-    <!-- #footer-->
+      </footer>
+      <!-- #footer-->
+    </div>
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/dropzone.js"></script>
     <script src="js/owl.carousel.min.js"></script>

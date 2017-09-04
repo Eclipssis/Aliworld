@@ -4,47 +4,48 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
-    #wrapper
+    .page
+      #wrapper
 
-      //= template/header.jade
+        //= template/header.jade
 
-      section.middle
-        .container
-          
-          //= template/breadcrumb.jade
+        section.middle
+          .container
+            
+            //= template/breadcrumb.jade
 
-          .block.block--white
-            .registration-wrap
-              .title-h1.text-center Регистрация нового пользователя
+            .block.block--white
+              .registration-wrap
+                .title-h1.text-center Регистрация нового пользователя
 
-              form.registration-form
-                .form-group
-                  label(for="input-1") E-mail:
-                  input#input-1(type="text", placeholder="Введите адрес электронной почты:")
+                form.registration-form
+                  .form-group
+                    label(for="input-1") E-mail:
+                    input#input-1(type="text", placeholder="Введите адрес электронной почты:")
 
-                .form-group
-                  label(for="input-2") Пароль:
-                  input#input-2(type="password", placeholder="Введите пароль...")
+                  .form-group
+                    label(for="input-2") Пароль:
+                    input#input-2(type="password", placeholder="Введите пароль...")
 
-                .form-group
-                  label(for="input-3") Повторите пароль:
-                  input#input-3(type="password", placeholder="Повторите пароль...")
+                  .form-group
+                    label(for="input-3") Повторите пароль:
+                    input#input-3(type="password", placeholder="Повторите пароль...")
 
-                .form-group
-                  label(for="input-4") Имя:
-                  input#input-4(type="text", placeholder="Введите ваше имя...")
+                  .form-group
+                    label(for="input-4") Имя:
+                    input#input-4(type="text", placeholder="Введите ваше имя...")
 
-                .form-group 
-                  label(for="input-5") "Логин"
-                  input#input-5(type="text", placeholder="Введите ваш логин...")
-                
-                .form-group.text-center
-                  button(type="submit").btn Регистрация
+                  .form-group 
+                    label(for="input-5") "Логин"
+                    input#input-5(type="text", placeholder="Введите ваш логин...")
+                  
+                  .form-group.text-center
+                    button(type="submit").btn Регистрация
 
-                .form-caption Нажимая на кнопку «Регистрация», вы соглашаетесь с условиями 
-                  a(href="#!") Публичной оферты
-                  |  . 
+                  .form-caption Нажимая на кнопку «Регистрация», вы соглашаетесь с условиями 
+                    a(href="#!") Публичной оферты
+                    |  . 
 
-    //= template/footer.jade
+      //= template/footer.jade
 
     //= template/scripts.jade

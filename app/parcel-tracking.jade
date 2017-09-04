@@ -4,385 +4,386 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
-    #wrapper
+    .page
+      #wrapper
 
-      //= template/header.jade
+        //= template/header.jade
 
-      section.middle
-        .container
+        section.middle
+          .container
+            
+            //= template/breadcrumb.jade
+
+            .page-title Отслеживание почтового отправления
+
+            form.tracking-parcel.tracking-parcel--purple-bg
+              .tracking-parcel__body
+              
+
+                .tracking-parcel__input
+                  input(type="text" placeholder="Необходимо ввести трек-код...")
+                
+                button(type="submit").btn.tracking-parcel__submit Отследить 
+                  span.hidden-mobile посылку
+
+              .tracking-parcel__footer
+                .tracking-parcel__description Пример : 
+                  a(href="#!") RA219828196FI
+                  | , 
+                  a(href="#!") RS806954342NL
+                .tracking-parcel__description Для того, что бы отследить посылку, укажите трек-код полученный у продавца, кликните по кнопке «Отследить посылку»
+              
+
+            .middle__row
+              .middle__content
+
+                .block.block--white
+                  .block__header
+
+                    .section-subtitle Отслеживание почтового отправления: RS806954342NL
+
+                    .tracking-status
+                      .tracking-status__value(style="width:50%")
+
+                      .tracking-status__caption 
+                        span В пути 102 дня /  
+                        a(href="#!" title="That&apos;s what this widget is").question-icon
+                        span Отслеживается 99 дней  
+                        a(href="#!" title="Another tooltip").question-icon
+
+                  .block__header
+                    .section-subtitle.margin-0 Прогнозируемый период поступления посылки: 
+                      span.color-grey.medium 24.04.2017 — 02.05.2017
+                      a(href="#!" title="Another tooltip 2").question-icon
+
+                  .tracking-steps
+                    .tracking-steps__item
+                      .tracking-steps__section
+                        .tracking-steps__date 12.04.2017
+                        .tracking-steps__time 09:16
+                        .tracking-steps__duration 7 день
+
+                      .tracking-steps__section
+                        .tracking-steps__icon.icon-1
+
+                      .tracking-steps__section
+                        .tracking-steps__title Прибыло в страну назначения 
+                          a(href="#!" title="Another tooltip 3").question-icon
+
+                        .tracking-steps__description Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта
+
+                    
+
+                    .tracking-steps__item
+                      .tracking-steps__section
+                        .tracking-steps__date 10.04.2017
+                        .tracking-steps__time 09:16
+                        .tracking-steps__duration 5 день
+
+                      .tracking-steps__section
+                        span.blue-divider
+                        .tracking-steps__icon.icon-2
+
+                      .tracking-steps__section
+                        .tracking-steps__title Отправлено в страну назначения
+                          a(href="#!" title="Another tooltip 4").question-icon 
+
+                        .tracking-steps__description Почтовое отправление в процессе передачи почте страны назначения, для доставки в одно из мест международного обмена, и последующих операция импорта / экспорта. 
+
+                    .tracking-steps__item
+                      .tracking-steps__section
+                        .tracking-steps__date 11.04.2017
+                        .tracking-steps__time 09:16
+                        .tracking-steps__duration 6 день
+
+                      .tracking-steps__section
+                        span.blue-divider
+                        .tracking-steps__icon.icon-3
+
+                      .tracking-steps__section
+                        .tracking-steps__title Прибыло в сортировочный центр – Нидерланды
+                          a(href="#!" title="Another tooltip 5").question-icon
+
+                        .tracking-steps__description Прибытие почтового отправления в промежуточный узел почтовой связи для сортировки, выбора маршрута и отправкив сторону получателя.
+
+                    .tracking-steps__item
+                      .tracking-steps__section
+                        .tracking-steps__date 5.04.2017
+                        .tracking-steps__time 09:16
+                        .tracking-steps__duration 1 день
+
+                      .tracking-steps__section
+                        span.blue-divider
+                        .tracking-steps__icon.icon-4
+
+                      .tracking-steps__section
+                        .tracking-steps__title Подготовaка к отправке
+                          a(href="#!" title="Another tooltip 6").question-icon
+
+                        .tracking-steps__description Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта
+    
+                .alert-block
+                  .alert-block__title Обратите внимание
+                  .alert-block__text Трек-код <b class="bold">RS806954342NL</b>, отслеживают <b class="bold">115 пользователей</b> AliWorld.ru 
+                  .alert-block__text Вероятно продавец мошенник, и выдает один трек-код разным покупателям либо очень сильно экономит на оплате трек-кодов. Будьте внимательны со сроком защиты заказа!
+                
+                .tracking-info
+                  .section-subtitle Информация о трек-коде: RS806954342NL
+
+                  .tracking-info__item
+                    .tracking-info__title Добавлен в базу:
+                    .tracking-info__value 08.04.2017 20:44:03
+
+                  .tracking-info__item
+                    .tracking-info__title Последнее обновление:
+                    .tracking-info__value 16.07.2017 21:34:45
+
+                  .tracking-info__item
+                    .tracking-info__title Прогнозируемая дата доставки:
+                    .tracking-info__value 24.04.2017 — 02.05.2017
+
+                  .tracking-info__item
+                    .tracking-info__title Маршрут:
+                    .tracking-info__value China — Ukraine
+
+                  .tracking-info__item
+                    .tracking-info__title Тип отправления:
+                    .tracking-info__value Регистрируемое почтовое отправление
+
+                  .tracking-info__item
+                    .tracking-info__title Ожидайте статус:
+                    .tracking-info__value Импорт
           
-          //= template/breadcrumb.jade
+                //= template/coments-block.jade
 
-          .page-title Отслеживание почтового отправления
 
-          form.tracking-parcel.tracking-parcel--purple-bg
-            .tracking-parcel__body
+
+
+              .middle__aside.parcsel-tracking-aside
+              
+                .block
+                  .page-title Службы доставки
+
+                  ul.deliveries-list.js-custom-scroll
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-1.jpg", alt="delivery-brand")
+                        .delivery-item__title Emirates post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-2.jpg", alt="delivery-brand")
+                        .delivery-item__title Latvijas Pasts
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-3.jpg", alt="delivery-brand")
+                        .delivery-item__title Canada Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-4.jpg", alt="delivery-brand")
+                        .delivery-item__title Swiss Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
+                        .delivery-item__title China Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-6.jpg", alt="delivery-brand")
+                        .delivery-item__title Post NL
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-7.jpg", alt="delivery-brand")
+                        .delivery-item__title Czech Post 
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-8.jpg", alt="delivery-brand")
+                        .delivery-item__title Почта России
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-9.jpg", alt="delivery-brand")
+                        .delivery-item__title Korea Post 
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-10.jpg", alt="delivery-brand")
+                        .delivery-item__title Poczta Polska
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-1.jpg", alt="delivery-brand")
+                        .delivery-item__title Emirates post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-2.jpg", alt="delivery-brand")
+                        .delivery-item__title Latvijas Pasts
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-3.jpg", alt="delivery-brand")
+                        .delivery-item__title Canada Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-4.jpg", alt="delivery-brand")
+                        .delivery-item__title Swiss Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
+                        .delivery-item__title China Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-6.jpg", alt="delivery-brand")
+                        .delivery-item__title Post NL
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-7.jpg", alt="delivery-brand")
+                        .delivery-item__title Czech Post 
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-8.jpg", alt="delivery-brand")
+                        .delivery-item__title Почта России
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-9.jpg", alt="delivery-brand")
+                        .delivery-item__title Korea Post 
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-10.jpg", alt="delivery-brand")
+                        .delivery-item__title Poczta Polska
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-1.jpg", alt="delivery-brand")
+                        .delivery-item__title Emirates post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-2.jpg", alt="delivery-brand")
+                        .delivery-item__title Latvijas Pasts
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-3.jpg", alt="delivery-brand")
+                        .delivery-item__title Canada Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-4.jpg", alt="delivery-brand")
+                        .delivery-item__title Swiss Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
+                        .delivery-item__title China Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-6.jpg", alt="delivery-brand")
+                        .delivery-item__title Post NL
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-7.jpg", alt="delivery-brand")
+                        .delivery-item__title Czech Post 
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-8.jpg", alt="delivery-brand")
+                        .delivery-item__title Почта России
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-9.jpg", alt="delivery-brand")
+                        .delivery-item__title Korea Post 
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-10.jpg", alt="delivery-brand")
+                        .delivery-item__title Poczta Polska
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-1.jpg", alt="delivery-brand")
+                        .delivery-item__title Emirates post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-2.jpg", alt="delivery-brand")
+                        .delivery-item__title Latvijas Pasts
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-3.jpg", alt="delivery-brand")
+                        .delivery-item__title Canada Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-4.jpg", alt="delivery-brand")
+                        .delivery-item__title Swiss Post
+                    li
+                      .delivery-item
+                        .delivery-item__image
+                          img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
+                        .delivery-item__title China Post
+
+                .block.new-comments
+                  .page-title Новые комментарии
+                
+                  .aside-comments
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                    .aside-comment 
+                      span.bold Ярослав Родный 
+                      | к записи  
+                      a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
+                      |  в разделе 
+                      a(href="#!")  «Статьи»
+                
             
 
-              .tracking-parcel__input
-                input(type="text" placeholder="Необходимо ввести трек-код...")
-              
-              button(type="submit").btn.tracking-parcel__submit Отследить 
-                span.hidden-mobile посылку
-
-            .tracking-parcel__footer
-              .tracking-parcel__description Пример : 
-                a(href="#!") RA219828196FI
-                | , 
-                a(href="#!") RS806954342NL
-              .tracking-parcel__description Для того, что бы отследить посылку, укажите трек-код полученный у продавца, кликните по кнопке «Отследить посылку»
-            
-
-          .middle__row
-            .middle__content
-
-              .block.block--white
-                .block__header
-
-                  .section-subtitle Отслеживание почтового отправления: RS806954342NL
-
-                  .tracking-status
-                    .tracking-status__value(style="width:50%")
-
-                    .tracking-status__caption 
-                      span В пути 102 дня /  
-                      a(href="#!" title="That&apos;s what this widget is").question-icon
-                      span Отслеживается 99 дней  
-                      a(href="#!" title="Another tooltip").question-icon
-
-                .block__header
-                  .section-subtitle.margin-0 Прогнозируемый период поступления посылки: 
-                    span.color-grey.medium 24.04.2017 — 02.05.2017
-                    a(href="#!" title="Another tooltip 2").question-icon
-
-                .tracking-steps
-                  .tracking-steps__item
-                    .tracking-steps__section
-                      .tracking-steps__date 12.04.2017
-                      .tracking-steps__time 09:16
-                      .tracking-steps__duration 7 день
-
-                    .tracking-steps__section
-                      .tracking-steps__icon.icon-1
-
-                    .tracking-steps__section
-                      .tracking-steps__title Прибыло в страну назначения 
-                        a(href="#!" title="Another tooltip 3").question-icon
-
-                      .tracking-steps__description Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта
-
-                  
-
-                  .tracking-steps__item
-                    .tracking-steps__section
-                      .tracking-steps__date 10.04.2017
-                      .tracking-steps__time 09:16
-                      .tracking-steps__duration 5 день
-
-                    .tracking-steps__section
-                      span.blue-divider
-                      .tracking-steps__icon.icon-2
-
-                    .tracking-steps__section
-                      .tracking-steps__title Отправлено в страну назначения
-                        a(href="#!" title="Another tooltip 4").question-icon 
-
-                      .tracking-steps__description Почтовое отправление в процессе передачи почте страны назначения, для доставки в одно из мест международного обмена, и последующих операция импорта / экспорта. 
-
-                  .tracking-steps__item
-                    .tracking-steps__section
-                      .tracking-steps__date 11.04.2017
-                      .tracking-steps__time 09:16
-                      .tracking-steps__duration 6 день
-
-                    .tracking-steps__section
-                      span.blue-divider
-                      .tracking-steps__icon.icon-3
-
-                    .tracking-steps__section
-                      .tracking-steps__title Прибыло в сортировочный центр – Нидерланды
-                        a(href="#!" title="Another tooltip 5").question-icon
-
-                      .tracking-steps__description Прибытие почтового отправления в промежуточный узел почтовой связи для сортировки, выбора маршрута и отправкив сторону получателя.
-
-                  .tracking-steps__item
-                    .tracking-steps__section
-                      .tracking-steps__date 5.04.2017
-                      .tracking-steps__time 09:16
-                      .tracking-steps__duration 1 день
-
-                    .tracking-steps__section
-                      span.blue-divider
-                      .tracking-steps__icon.icon-4
-
-                    .tracking-steps__section
-                      .tracking-steps__title Подготовaка к отправке
-                        a(href="#!" title="Another tooltip 6").question-icon
-
-                      .tracking-steps__description Почтовое отправление прибыло в страну назначения в место международного почтового обмена для последующих операций импорта / экспорта
-  
-              .alert-block
-                .alert-block__title Обратите внимание
-                .alert-block__text Трек-код <b class="bold">RS806954342NL</b>, отслеживают <b class="bold">115 пользователей</b> AliWorld.ru 
-                .alert-block__text Вероятно продавец мошенник, и выдает один трек-код разным покупателям либо очень сильно экономит на оплате трек-кодов. Будьте внимательны со сроком защиты заказа!
-              
-              .tracking-info
-                .section-subtitle Информация о трек-коде: RS806954342NL
-
-                .tracking-info__item
-                  .tracking-info__title Добавлен в базу:
-                  .tracking-info__value 08.04.2017 20:44:03
-
-                .tracking-info__item
-                  .tracking-info__title Последнее обновление:
-                  .tracking-info__value 16.07.2017 21:34:45
-
-                .tracking-info__item
-                  .tracking-info__title Прогнозируемая дата доставки:
-                  .tracking-info__value 24.04.2017 — 02.05.2017
-
-                .tracking-info__item
-                  .tracking-info__title Маршрут:
-                  .tracking-info__value China — Ukraine
-
-                .tracking-info__item
-                  .tracking-info__title Тип отправления:
-                  .tracking-info__value Регистрируемое почтовое отправление
-
-                .tracking-info__item
-                  .tracking-info__title Ожидайте статус:
-                  .tracking-info__value Импорт
-        
-              //= template/coments-block.jade
-
-
-
-
-            .middle__aside.parcsel-tracking-aside
-            
-              .block
-                .page-title Службы доставки
-
-                ul.deliveries-list.js-custom-scroll
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-1.jpg", alt="delivery-brand")
-                      .delivery-item__title Emirates post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-2.jpg", alt="delivery-brand")
-                      .delivery-item__title Latvijas Pasts
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-3.jpg", alt="delivery-brand")
-                      .delivery-item__title Canada Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-4.jpg", alt="delivery-brand")
-                      .delivery-item__title Swiss Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
-                      .delivery-item__title China Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-6.jpg", alt="delivery-brand")
-                      .delivery-item__title Post NL
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-7.jpg", alt="delivery-brand")
-                      .delivery-item__title Czech Post 
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-8.jpg", alt="delivery-brand")
-                      .delivery-item__title Почта России
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-9.jpg", alt="delivery-brand")
-                      .delivery-item__title Korea Post 
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-10.jpg", alt="delivery-brand")
-                      .delivery-item__title Poczta Polska
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-1.jpg", alt="delivery-brand")
-                      .delivery-item__title Emirates post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-2.jpg", alt="delivery-brand")
-                      .delivery-item__title Latvijas Pasts
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-3.jpg", alt="delivery-brand")
-                      .delivery-item__title Canada Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-4.jpg", alt="delivery-brand")
-                      .delivery-item__title Swiss Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
-                      .delivery-item__title China Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-6.jpg", alt="delivery-brand")
-                      .delivery-item__title Post NL
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-7.jpg", alt="delivery-brand")
-                      .delivery-item__title Czech Post 
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-8.jpg", alt="delivery-brand")
-                      .delivery-item__title Почта России
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-9.jpg", alt="delivery-brand")
-                      .delivery-item__title Korea Post 
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-10.jpg", alt="delivery-brand")
-                      .delivery-item__title Poczta Polska
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-1.jpg", alt="delivery-brand")
-                      .delivery-item__title Emirates post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-2.jpg", alt="delivery-brand")
-                      .delivery-item__title Latvijas Pasts
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-3.jpg", alt="delivery-brand")
-                      .delivery-item__title Canada Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-4.jpg", alt="delivery-brand")
-                      .delivery-item__title Swiss Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
-                      .delivery-item__title China Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-6.jpg", alt="delivery-brand")
-                      .delivery-item__title Post NL
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-7.jpg", alt="delivery-brand")
-                      .delivery-item__title Czech Post 
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-8.jpg", alt="delivery-brand")
-                      .delivery-item__title Почта России
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-9.jpg", alt="delivery-brand")
-                      .delivery-item__title Korea Post 
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-10.jpg", alt="delivery-brand")
-                      .delivery-item__title Poczta Polska
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-1.jpg", alt="delivery-brand")
-                      .delivery-item__title Emirates post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-2.jpg", alt="delivery-brand")
-                      .delivery-item__title Latvijas Pasts
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-3.jpg", alt="delivery-brand")
-                      .delivery-item__title Canada Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-4.jpg", alt="delivery-brand")
-                      .delivery-item__title Swiss Post
-                  li
-                    .delivery-item
-                      .delivery-item__image
-                        img(src="pictures/delivery-brand-5.jpg", alt="delivery-brand")
-                      .delivery-item__title China Post
-
-              .block.new-comments
-                .page-title Новые комментарии
-              
-                .aside-comments
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-                  .aside-comment 
-                    span.bold Ярослав Родный 
-                    | к записи  
-                    a(href="#!")  «Самый популярный запрос на АлиЭкспресс – спиннеры»
-                    |  в разделе 
-                    a(href="#!")  «Статьи»
-              
-          
-
-    //= template/footer.jade
+      //= template/footer.jade
 
     //= template/scripts.jade

@@ -4,21 +4,22 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
-    #wrapper
+    .page
+      #wrapper
 
-      //= template/header.jade
+        //= template/header.jade
 
-      section.middle.middle-empty-page
-        .empty-page
-          .container
-            .empty-page-title Промашечка вышла :(
-            .empty-page-error 404
-            .empty-page-message Наверно вы ошиблись при наборе адреса или ссылка, по которой вы пришли, была удалена, перемещена или временно не доступна.
+        section.middle.middle-empty-page
+          .empty-page
+            .container
+              .empty-page-title Промашечка вышла :(
+              .empty-page-error 404
+              .empty-page-message Наверно вы ошиблись при наборе адреса или ссылка, по которой вы пришли, была удалена, перемещена или временно не доступна.
 
-            .text-center
-              a(href="#!").btn Перейти на главную страницу
-          
+              .text-center
+                a(href="#!").btn Перейти на главную страницу
+            
 
-    //= template/footer.jade
+      //= template/footer.jade
 
     //= template/scripts.jade
